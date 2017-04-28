@@ -22,7 +22,7 @@
 /**开始*/
 - (void)start;
 
-- (void)findServer;
+- (void)findServerOnPort:(NSInteger)port;
 
 - (void)connectToserver;
 

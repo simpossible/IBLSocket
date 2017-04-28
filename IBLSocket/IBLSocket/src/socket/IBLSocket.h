@@ -47,10 +47,17 @@
 /**upd 方法*/
 - (void)reciveFrom:(NSString *)ip atPort:(NSInteger)port;
 
+
+/**
+  点对点发送数据
+  目前支持协议 udp
+ @param data data
+ @param ip 目标ip  如果ip 为nil 或者 @“” 那么会广播数据。广播数据 需要开启广播选项 setEnableBroadCast
+ @param port 数据发送端口
+ */
 - (void)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port;
 
 - (void)setEnableBroadCast:(BOOL)en;
-
 
 - (void)stop;
 
