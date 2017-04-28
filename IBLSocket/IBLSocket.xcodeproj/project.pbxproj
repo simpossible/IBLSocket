@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A41D52091EA868C1000D8F1E /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = A41D52061EA868C1000D8F1E /* IBLSocketAddr.m */; };
+		A41D520A1EA868C1000D8F1E /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = A41D52081EA868C1000D8F1E /* IBLSocketConnector.m */; };
+		A44D20341E9B27D100966E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20331E9B27D100966E63 /* main.m */; };
+		A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20361E9B27D100966E63 /* AppDelegate.m */; };
+		A44D203A1E9B27D100966E63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20391E9B27D100966E63 /* ViewController.m */; };
+		A44D203D1E9B27D100966E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D203B1E9B27D100966E63 /* Main.storyboard */; };
+		A44D203F1E9B27D200966E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44D203E1E9B27D200966E63 /* Assets.xcassets */; };
+		A44D20421E9B27D200966E63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D20401E9B27D200966E63 /* LaunchScreen.storyboard */; };
+		A4816B7E1EAC90FD005268F7 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A4816B791EAC90FD005268F7 /* IBLSocket.m */; };
+		A4816B7F1EAC90FD005268F7 /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = A4816B7B1EAC90FD005268F7 /* IBLTcpSoket.m */; };
+		A4816B801EAC90FD005268F7 /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A4816B7D1EAC90FD005268F7 /* IBLUdpSocket.m */; };
+		A4816B851EAC91FB005268F7 /* IBLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A4816B841EAC91FB005268F7 /* IBLClient.m */; };
+		A4816B881EAC920A005268F7 /* IBLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A4816B871EAC920A005268F7 /* IBLServer.m */; };
+		A4816B8E1EAC92C7005268F7 /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A4816B8D1EAC92C7005268F7 /* IBLSocketUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A41D52051EA868C1000D8F1E /* IBLSocketAddr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketAddr.h; sourceTree = "<group>"; };
+		A41D52061EA868C1000D8F1E /* IBLSocketAddr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketAddr.m; sourceTree = "<group>"; };
+		A41D52071EA868C1000D8F1E /* IBLSocketConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketConnector.h; sourceTree = "<group>"; };
+		A41D52081EA868C1000D8F1E /* IBLSocketConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketConnector.m; sourceTree = "<group>"; };
+		A44D202F1E9B27D100966E63 /* IBLSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBLSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44D20331E9B27D100966E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A44D20351E9B27D100966E63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A44D20361E9B27D100966E63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A44D20381E9B27D100966E63 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A44D20391E9B27D100966E63 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A44D203C1E9B27D100966E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A44D203E1E9B27D200966E63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A44D20411E9B27D200966E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A44D20431E9B27D200966E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4816B781EAC90FD005268F7 /* IBLSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocket.h; sourceTree = "<group>"; };
+		A4816B791EAC90FD005268F7 /* IBLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocket.m; sourceTree = "<group>"; };
+		A4816B7A1EAC90FD005268F7 /* IBLTcpSoket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLTcpSoket.h; sourceTree = "<group>"; };
+		A4816B7B1EAC90FD005268F7 /* IBLTcpSoket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLTcpSoket.m; sourceTree = "<group>"; };
+		A4816B7C1EAC90FD005268F7 /* IBLUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLUdpSocket.h; sourceTree = "<group>"; };
+		A4816B7D1EAC90FD005268F7 /* IBLUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLUdpSocket.m; sourceTree = "<group>"; };
+		A4816B831EAC91FB005268F7 /* IBLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLClient.h; sourceTree = "<group>"; };
+		A4816B841EAC91FB005268F7 /* IBLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLClient.m; sourceTree = "<group>"; };
+		A4816B861EAC920A005268F7 /* IBLServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLServer.h; sourceTree = "<group>"; };
+		A4816B871EAC920A005268F7 /* IBLServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLServer.m; sourceTree = "<group>"; };
+		A4816B8C1EAC92C7005268F7 /* IBLSocketUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketUtil.h; sourceTree = "<group>"; };
+		A4816B8D1EAC92C7005268F7 /* IBLSocketUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketUtil.m; sourceTree = "<group>"; };
+		A4B1DC091EB1FF3000020830 /* IBLSocketDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketDefine.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A44D202C1E9B27D100966E63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A41D52041EA868C1000D8F1E /* modle */ = {
+			isa = PBXGroup;
+			children = (
+				A41D52051EA868C1000D8F1E /* IBLSocketAddr.h */,
+				A41D52061EA868C1000D8F1E /* IBLSocketAddr.m */,
+				A41D52071EA868C1000D8F1E /* IBLSocketConnector.h */,
+				A41D52081EA868C1000D8F1E /* IBLSocketConnector.m */,
+			);
+			path = modle;
+			sourceTree = "<group>";
+		};
+		A44D20261E9B27D100966E63 = {
+			isa = PBXGroup;
+			children = (
+				A44D20311E9B27D100966E63 /* IBLSocket */,
+				A44D20301E9B27D100966E63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A44D20301E9B27D100966E63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A44D202F1E9B27D100966E63 /* IBLSocket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A44D20311E9B27D100966E63 /* IBLSocket */ = {
+			isa = PBXGroup;
+			children = (
+				A44D20491E9B27FD00966E63 /* include */,
+				A44D204A1E9B27FD00966E63 /* src */,
+				A44D20351E9B27D100966E63 /* AppDelegate.h */,
+				A44D20361E9B27D100966E63 /* AppDelegate.m */,
+				A44D20381E9B27D100966E63 /* ViewController.h */,
+				A44D20391E9B27D100966E63 /* ViewController.m */,
+				A44D203B1E9B27D100966E63 /* Main.storyboard */,
+				A44D203E1E9B27D200966E63 /* Assets.xcassets */,
+				A44D20401E9B27D200966E63 /* LaunchScreen.storyboard */,
+				A44D20431E9B27D200966E63 /* Info.plist */,
+				A44D20321E9B27D100966E63 /* Supporting Files */,
+			);
+			path = IBLSocket;
+			sourceTree = "<group>";
+		};
+		A44D20321E9B27D100966E63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A44D20331E9B27D100966E63 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A44D20491E9B27FD00966E63 /* include */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		A44D204A1E9B27FD00966E63 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A4816B891EAC9223005268F7 /* util */,
+				A4816B811EAC91DE005268F7 /* client */,
+				A4816B821EAC91DE005268F7 /* server */,
+				A4816B771EAC90FD005268F7 /* socket */,
+				A41D52041EA868C1000D8F1E /* modle */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A4816B771EAC90FD005268F7 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				A4816B781EAC90FD005268F7 /* IBLSocket.h */,
+				A4816B791EAC90FD005268F7 /* IBLSocket.m */,
+				A4816B7A1EAC90FD005268F7 /* IBLTcpSoket.h */,
+				A4816B7B1EAC90FD005268F7 /* IBLTcpSoket.m */,
+				A4816B7C1EAC90FD005268F7 /* IBLUdpSocket.h */,
+				A4816B7D1EAC90FD005268F7 /* IBLUdpSocket.m */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		A4816B811EAC91DE005268F7 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				A4816B831EAC91FB005268F7 /* IBLClient.h */,
+				A4816B841EAC91FB005268F7 /* IBLClient.m */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		A4816B821EAC91DE005268F7 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				A4816B861EAC920A005268F7 /* IBLServer.h */,
+				A4816B871EAC920A005268F7 /* IBLServer.m */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		A4816B891EAC9223005268F7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A4816B8C1EAC92C7005268F7 /* IBLSocketUtil.h */,
+				A4816B8D1EAC92C7005268F7 /* IBLSocketUtil.m */,
+				A4B1DC091EB1FF3000020830 /* IBLSocketDefine.h */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A44D202E1E9B27D100966E63 /* IBLSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A44D20461E9B27D200966E63 /* Build configuration list for PBXNativeTarget "IBLSocket" */;
+			buildPhases = (
+				A44D202B1E9B27D100966E63 /* Sources */,
+				A44D202C1E9B27D100966E63 /* Frameworks */,
+				A44D202D1E9B27D100966E63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IBLSocket;
+			productName = IBLSocket;
+			productReference = A44D202F1E9B27D100966E63 /* IBLSocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A44D20271E9B27D100966E63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Ahead;
+				TargetAttributes = {
+					A44D202E1E9B27D100966E63 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MHZFCBBQ75;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A44D202A1E9B27D100966E63 /* Build configuration list for PBXProject "IBLSocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A44D20261E9B27D100966E63;
+			productRefGroup = A44D20301E9B27D100966E63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A44D202E1E9B27D100966E63 /* IBLSocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A44D202D1E9B27D100966E63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44D20421E9B27D200966E63 /* LaunchScreen.storyboard in Resources */,
+				A44D203F1E9B27D200966E63 /* Assets.xcassets in Resources */,
+				A44D203D1E9B27D100966E63 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A44D202B1E9B27D100966E63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4816B7F1EAC90FD005268F7 /* IBLTcpSoket.m in Sources */,
+				A44D203A1E9B27D100966E63 /* ViewController.m in Sources */,
+				A4816B801EAC90FD005268F7 /* IBLUdpSocket.m in Sources */,
+				A4816B851EAC91FB005268F7 /* IBLClient.m in Sources */,
+				A41D52091EA868C1000D8F1E /* IBLSocketAddr.m in Sources */,
+				A4816B8E1EAC92C7005268F7 /* IBLSocketUtil.m in Sources */,
+				A41D520A1EA868C1000D8F1E /* IBLSocketConnector.m in Sources */,
+				A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */,
+				A4816B7E1EAC90FD005268F7 /* IBLSocket.m in Sources */,
+				A4816B881EAC920A005268F7 /* IBLServer.m in Sources */,
+				A44D20341E9B27D100966E63 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A44D203B1E9B27D100966E63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44D203C1E9B27D100966E63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A44D20401E9B27D200966E63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A44D20411E9B27D200966E63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A44D20441E9B27D200966E63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A44D20451E9B27D200966E63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A44D20471E9B27D200966E63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MHZFCBBQ75;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/src/util/IBLSocketDefine.h";
+				INFOPLIST_FILE = IBLSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ahead.bellar.cn.IBLSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A44D20481E9B27D200966E63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MHZFCBBQ75;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/src/util/IBLSocketDefine.h";
+				INFOPLIST_FILE = IBLSocket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ahead.bellar.cn.IBLSocket;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A44D202A1E9B27D100966E63 /* Build configuration list for PBXProject "IBLSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44D20441E9B27D200966E63 /* Debug */,
+				A44D20451E9B27D200966E63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A44D20461E9B27D200966E63 /* Build configuration list for PBXNativeTarget "IBLSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44D20471E9B27D200966E63 /* Debug */,
+				A44D20481E9B27D200966E63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A44D20271E9B27D100966E63 /* Project object */;
+}
