@@ -57,6 +57,16 @@
  */
 - (int)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port;
 
+
+/**
+ udp 点对点发送数据
+
+ @param data data
+ @param addr 对方地址
+ @return 结果
+ */
+- (int)sendData:(NSData *)data toAddr:(IBLSocketAddr*)addr;
+
 - (void)setEnableBroadCast:(BOOL)en;
 
 - (void)stop;

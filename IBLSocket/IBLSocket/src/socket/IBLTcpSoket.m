@@ -46,8 +46,6 @@
     IBLSocketHeader *header = malloc(headerlen);
     header->len = headerlen + data.length;
     header->protoType =2;
-    header->fromIp = inet_addr([_currentBindedIp UTF8String]);
-    header->fromPort = (unsigned int)_currentBindedPort;
     
     void * protocolData = malloc(header->len);
     memcpy(protocolData, header, headerlen);//拷贝头

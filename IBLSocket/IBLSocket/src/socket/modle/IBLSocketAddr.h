@@ -10,6 +10,7 @@
 #import <sys/socket.h>
 #import <netinet/in.h>
 
+
 @interface IBLSocketAddr : NSObject
 
 @property (nonatomic, copy, readonly) NSString *ip;
@@ -18,10 +19,8 @@
 
 + (instancetype)addrForSocketAddr:(struct sockaddr_in *)addr;
 
-+ (instancetype)addrForHeader:(IBLSocketHeader *)header;
 
 + (struct sockaddr_in)v4AddrForIp:(NSString *)ip andPort:(NSInteger)port;
 + (struct sockaddr_in)v4BoradCastAddrForPort:(NSInteger)port;
-
 + (struct sockaddr_in)v4BoradCastAnyIpForPort:(NSInteger)port;
 @end

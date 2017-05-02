@@ -14,12 +14,20 @@
 
 - (void)serverFinded:(NSString *)serverName;
 
-
 @end
+
+typedef NS_ENUM(NSUInteger,IBLClientState) {
+    IBLClientStateNone,
+    IBLClientStateFindingServer,
+    IBLClientStateConnecting,
+    IBLClientStateConnFail,
+};
 
 @interface IBLClient : NSObject
 
 @property (nonatomic, weak) id<IBLClientProtocol> delegate;
+
+@property (nonatomic, assign) IBLClientState clientState;
 
 /**开始*/
 - (void)start;

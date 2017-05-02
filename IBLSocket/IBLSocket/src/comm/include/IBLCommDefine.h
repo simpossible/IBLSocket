@@ -51,5 +51,8 @@ typedef NS_ENUM(int8_t,IBLCommError){
 #import "IBLComm.h"
 
 
+FOUNDATION_EXTERN  NSString * const COMMMODULEKEY;
+FOUNDATION_EXTERN  NSString * const COMMLOOKFORSERVER;//寻找服务器
+FOUNDATION_EXTERN  NSString * const COMMSERVERHERE;//服务端回复寻找指令
 
 #endif /* IBLCommDefine_h */

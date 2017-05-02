@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^IBLCOMMDataBlock)(NSData *finaldata,IBLCommHeader header);
+typedef void (^IBLCOMMDataBlock)(NSData *finaldata,IBLCommHeader commheader);
 typedef void (^IBLCOMMErrorBlock)(IBLCommError code);
 
+
+/**
+ 通讯层
+ */
 @interface IBLComm : NSObject
 
 /**

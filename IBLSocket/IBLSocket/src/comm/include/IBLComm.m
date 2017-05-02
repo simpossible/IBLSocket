@@ -10,6 +10,10 @@
 
 @implementation IBLComm
 
+NSString * const  COMMMODULEKEY = @"key";
+NSString * const  COMMLOOKFORSERVER = @"hi";
+NSString * const  COMMSERVERHERE = @"yeah";
+
 + (NSData *)dataForData:(NSData *)orgData header:(IBLCommHeader)header {
     if (orgData) {
         NSLog(@"send data type %d",header.type);

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IBLSocket/src/socket/IBLUdpSocket.m"
-            timestampString = "515343052.631279"
+            filePath = "IBLSocket/src/comm/server/IBLServer.m"
+            timestampString = "515434622.39067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-sendData:ToIp:atPort:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-dataComes:fromAddr:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IBLSocket/src/comm/server/IBLServer.m"
-            timestampString = "515343191.146387"
+            filePath = "IBLSocket/src/comm/client/IBLClient.m"
+            timestampString = "515438047.620302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "-dataComes:fromAddr:"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-dealUpdJsonMessage:andMessageSender:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

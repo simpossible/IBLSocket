@@ -16,17 +16,7 @@
         char addrBuf[16];
         inet_ntop(AF_INET, &addr->sin_addr, addrBuf, INET_ADDRSTRLEN);
         _ip = [NSString stringWithUTF8String:addrBuf];
-        _port = addr->sin_port;
-    }
-    return self;
-}
-
-- (instancetype)initWithHeader:(IBLSocketHeader *)header {
-    if (self = [super init]) {
-        char addrBuf[16];
-        inet_ntop(AF_INET, &header->fromIp, addrBuf, INET_ADDRSTRLEN);
-        _ip = [NSString stringWithUTF8String:addrBuf];
-        _port = header->fromPort;
+        _port =ntohs(addr->sin_port);
     }
     return self;
 }
@@ -36,9 +26,7 @@
     return [[self alloc] initWithAddr:addr];
 }
 
-+ (instancetype)addrForHeader:(IBLSocketHeader *)header {
-    return [[self alloc] initWithHeader:header];
-}
+
 
 + (struct sockaddr_in)v4AddrForIp:(NSString *)ip andPort:(NSInteger)port {
      struct sockaddr_in addr;

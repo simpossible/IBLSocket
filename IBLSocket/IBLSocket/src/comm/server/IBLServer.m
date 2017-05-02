@@ -10,6 +10,7 @@
 #import "IBLSocket.h"
 #import "IBLTcpSoket.h"
 #import "IBLUdpSocket.h"
+#import "IBLSocketAddr.h"
 
 @interface IBLServer ()<IBLSocketProtocol>
 
@@ -63,14 +64,18 @@
     }];
 }
 
-- (void)dataComes:(NSData *)data {
-    [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader header) {
-        if (header.type == IBLCommTypeJson) {
+
+- (void)udpDataComes:(NSData *)data from:(IBLSocketAddr *)addr{
+    
+    NSLog(@"the data from is %@ %ld",addr.ip,addr.port);
+    [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader commheader) {
+        if (commheader.type == IBLCommTypeJson) {
             NSError *error;
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:finaldata options:NSJSONReadingAllowFragments error:&error];
             if (!dic) {
                 return ;
             }
+            [self dealUpdJsonMessage:dic andMessageSender:addr];
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([self.delegate respondsToSelector:@selector(recvBroadast:)]) {
                     [self.delegate recvBroadast:[NSString stringWithFormat:@"%@",dic]];
@@ -81,6 +86,25 @@
     } fail:^(IBLCommError code) {
         
     }];
+}
+
+/**
+ *  udp 连接逻辑
+ */
+- (void)dealUpdJsonMessage:(NSDictionary *)info andMessageSender:(IBLSocketAddr *)senderAddr{
+    NSString *key = info[COMMMODULEKEY];
+    if ([key isEqualToString:COMMLOOKFORSERVER]) {//有客户端在等待连接
+        //回复客户端 需要进行连接的端口
+        NSInteger responsePort = [info[@"port"] integerValue];
+        NSDictionary *dic = @{
+                              @"key":COMMSERVERHERE,
+                              @"port":@(11111),
+                              };
+        NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+        NSData *jsondata =[IBLComm jsonDataForData:data];
+        [self.udpSocket sendData:jsondata ToIp:senderAddr.ip atPort:responsePort];
+        
+    }
 }
 
 - (void)stop {

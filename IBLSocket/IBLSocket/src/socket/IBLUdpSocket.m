@@ -70,6 +70,13 @@
     setsockopt(_socket, SOL_SOCKET, SO_BROADCAST, &n, sizeof(n));
 }
 
+/**
+ 点对点发送数据
+ 目前支持协议 udp
+ @param data data
+ @param ip 目标ip  如果ip 为nil 或者 @“” 那么会广播数据。广播数据 需要开启广播选项 setEnableBroadCast
+ @param port 数据发送端口
+ */
 - (int)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port {
     
     
@@ -77,10 +84,6 @@
     IBLSocketHeader *header = malloc(headerlen);
     header->len = headerlen + data.length;
     header->protoType =2;
-    if (ip && ![ip isEqualToString:@""]) {
-         header->fromIp = inet_addr([_currentBindedIp UTF8String]);
-    }
-    header->fromPort = (unsigned int)_currentBindedPort;
     
     void * protocolData = malloc(header->len);
     memcpy(protocolData, header, headerlen);//拷贝头
@@ -104,21 +107,20 @@
     return 0;
 }
 
+- (int)sendData:(NSData *)data toAddr:(IBLSocketAddr *)addr {
+    return [self sendData:data ToIp:addr.ip atPort:addr.port];
+}
+
 
 //udp有消息边界 一次recv from 就是一个包啦。所以不能以流的方式拿udp 数据
 - (void)reciveFrom:(NSString *)ip atPort:(NSInteger)port {
     
-    struct sockaddr_in server;
-    if (ip && ![ip isEqualToString:@""]) {
-        server = [IBLSocketAddr v4AddrForIp:ip andPort:port];
-    }else {
-        server = [IBLSocketAddr v4BoradCastAnyIpForPort:port];//广播
-    }
+    struct sockaddr_in sender;
     
     char *buffer = malloc(_recvBuuferSize);
-    unsigned int len = sizeof(server);
+    unsigned int len = sizeof(sender);
    
-    ssize_t size =  recvfrom(_socket, buffer, _recvBuuferSize, 0, (struct sockaddr *)&server, &len);
+    ssize_t size =  recvfrom(_socket, buffer, _recvBuuferSize, 0, (struct sockaddr *)&sender, &len);
     
     IBLSocketHeader *header = (IBLSocketHeader *)buffer;
     int headerlen = sizeof(IBLSocketHeader);
@@ -126,13 +128,15 @@
     if (size != header->len) {
         //包和实际实际数据大小不匹配
         [self reportError:IBLSocketErrorCodeUDPRecvSizeError msg:@"size not fit"];
-        
     }else {
         
         if (size > headerlen) {
             NSData *data = [[NSData alloc] initWithBytes:buffer+headerlen length:size-headerlen];
-            if ([self.delegate respondsToSelector:@selector(dataComes:)]) {
-                [self.delegate dataComes:data];
+            
+            IBLSocketAddr *addr = [IBLSocketAddr addrForSocketAddr:(struct sockaddr_in*)&sender];
+            
+            if ([self.delegate respondsToSelector:@selector(udpDataComes:from:)]) {
+                [self.delegate udpDataComes:data from:addr];
             }
             
         }else {        

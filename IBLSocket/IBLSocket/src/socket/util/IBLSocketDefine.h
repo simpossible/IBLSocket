@@ -14,9 +14,7 @@
  */
 typedef struct  {
     size_t len;//当前数据的总长度
-    int8_t protoType;// 1.tcp 2.udp
-    unsigned int fromIp;
-    unsigned int fromPort;
+    int8_t protoType;// 1.tcp 2.udp    
 }IBLSocketHeader;
 
 
@@ -48,8 +46,6 @@ typedef void (^IBLSocketError)(int code,NSString *msg);
  @param data data
  @param addr 发送方的地址
  */
-- (void)dataComes:(NSData *)data fromAddr:(IBLSocketAddr *)addr;
-
-- (void)udpDataComes:(NSData *)data;
+- (void)udpDataComes:(NSData *)data from:(IBLSocketAddr*)addr;
 
 @end

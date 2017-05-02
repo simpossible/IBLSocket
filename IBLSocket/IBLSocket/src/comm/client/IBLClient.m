@@ -10,7 +10,7 @@
 
 #import "IBLUdpSocket.h"
 #import "IBLTcpSoket.h"
-
+#import "IBLSocketAddr.h"
 
 @interface IBLClient ()<IBLSocketProtocol>
 
@@ -24,6 +24,9 @@
 
 /**广播端口*/
 @property (nonatomic, assign) NSInteger broadCastPort;
+
+/** 接收服务端udp 消息的端口 默认广播端口 + 1 */
+@property (nonatomic, assign) NSInteger recvServerUdpPort;
 
 @end
 
@@ -48,6 +51,18 @@
     if (!self.udpSocket) {
         self.udpSocket = [[IBLUdpSocket alloc] init];
         [self.udpSocket setEnableBroadCast:YES];
+        
+        NSInteger recvServerport = port +1;
+        [self.udpSocket bindOnIp:nil atPort:recvServerport error:^(int code, NSString *msg) {
+            if (code == 0) {
+                self.recvServerUdpPort = recvServerport;
+                [self.udpSocket startReciveDataFromIp:nil andPort:port];
+                [self.delegate toLogMsg:[NSString stringWithFormat:@"绑定成功 %@",msg]];
+            }else {
+                [self.delegate toLogMsg:[NSString stringWithFormat:@"绑定失败 %@",msg]];
+            }
+        }];
+
         self.udpSocket.delegate = self;
     }
     
@@ -60,8 +75,9 @@
     static int clientcount = 0;
     clientcount ++;
     NSDictionary *dic = @{
-                          @"key":@"hi",
-                          @"count":@(clientcount)
+                          @"key":COMMLOOKFORSERVER,
+                          @"count":@(clientcount),
+                          @"port":@(self.recvServerUdpPort)
                           };
     
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
@@ -69,8 +85,7 @@
 }
 
 - (void)toBroadCast {
-    int state =  [self.udpSocket sendData:[self heartData] ToIp:nil atPort:self.broadCastPort];
-    
+    int state =  [self.udpSocket sendData:[self heartData] ToIp:nil atPort:self.broadCastPort];    
     
     if (state == 0) {
         if ([self.delegate respondsToSelector:@selector(toLogMsg:)]) {
@@ -80,19 +95,51 @@
 }
 
 
-- (void)dataComes:(NSData *)data fromAddr:(IBLSocketAddr *)addr {
-    
-    [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader header) {
-        if (header.type == IBLCommTypeJson) {
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:finaldata options:NSJSONReadingAllowFragments error:nil];
-            if ([self.delegate respondsToSelector:@selector(recvBroadast:)]) {
-                [self.delegate recvBroadast:[NSString stringWithFormat:@"%@",dic]];
-            }
 
+
+- (void)udpDataComes:(NSData *)data from:(IBLSocketAddr *)addr{
+    
+    NSLog(@"the data from is %@ %ld",addr.ip,addr.port);
+    [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader commheader) {
+        if (commheader.type == IBLCommTypeJson) {
+            NSError *error;
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:finaldata options:NSJSONReadingAllowFragments error:&error];
+            if (!dic) {
+                return ;
+            }
+            [self dealUpdJsonMessage:dic andMessageSender:addr];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if ([self.delegate respondsToSelector:@selector(recvBroadast:)]) {
+                    [self.delegate recvBroadast:[NSString stringWithFormat:@"%@",dic]];
+                }
+            });
+            
         }
     } fail:^(IBLCommError code) {
         
     }];
+}
+
+/**
+ *  udp 连接逻辑
+ */
+- (void)dealUpdJsonMessage:(NSDictionary *)info andMessageSender:(IBLSocketAddr *)senderAddr{
+    NSString *key = info[COMMMODULEKEY];
+    if ([key isEqualToString:COMMSERVERHERE]) {//有客户端在等待连接
+        
+        //停止广播进入tcp 连接状态
+        [self.broadCastTimer invalidate];
+        self.broadCastTimer = nil;
+        
+        NSInteger port = [info[@"port"] integerValue];        
+        [self tcpLinkToIp:senderAddr.ip port:port];
+        
+    }
+}
+
+
+- (void)tcpLinkToIp:(NSString *)ip port:(NSInteger)port {
+
 }
 
 - (void)stop {
