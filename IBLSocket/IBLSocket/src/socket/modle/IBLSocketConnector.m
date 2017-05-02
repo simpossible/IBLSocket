@@ -43,9 +43,9 @@
         if (self.dataThread.isCancelled) {
             [NSThread exit];
         }
-        char *buffer = malloc(sizeof(IBLScoketHeader));
-        ssize_t len = recv((int)self.index, buffer, sizeof(IBLScoketHeader), 0);
-        IBLScoketHeader *header = (IBLScoketHeader *)buffer;
+        char *buffer = malloc(sizeof(IBLSocketHeader));
+        ssize_t len = recv((int)self.index, buffer, sizeof(IBLSocketHeader), 0);
+        IBLSocketHeader *header = (IBLSocketHeader *)buffer;
         
         if (len < 0) {//失败
             NSLog(@"socket 连接异常");

@@ -24,13 +24,36 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-      _socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+        _socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+        _recvBuuferSize = 102;//默认值
     }
     return self;
 }
 
 - (void)startReciveData {
 
+}
+
+- (void)bindOnIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err{
+    
+    struct sockaddr_in addr;
+    if (ip && ![ip isEqualToString:@""]) {
+        addr = [IBLSocketAddr v4AddrForIp:ip andPort:port];
+    }else {
+        addr = [IBLSocketAddr v4BoradCastAnyIpForPort:port];
+    }
+    int state = bind(_socket, (struct sockaddr *)&addr, sizeof(addr));
+    if (state < 0) {
+        char *errorstr = strerror(state);
+        NSString *nstr = [NSString stringWithFormat:@"bind 错误 %s",errorstr];
+        if (err) {
+            err(state,nstr);
+        }
+    }else {
+        if (err) {
+            err(0,@"");
+        }
+    }
 }
 
 //udp 不支持
@@ -47,13 +70,16 @@
     setsockopt(_socket, SOL_SOCKET, SO_BROADCAST, &n, sizeof(n));
 }
 
-- (void)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port {
+- (int)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port {
     
-    int headerlen = sizeof(IBLScoketHeader);
-    IBLScoketHeader *header = malloc(headerlen);
+    
+    int headerlen = sizeof(IBLSocketHeader);
+    IBLSocketHeader *header = malloc(headerlen);
     header->len = headerlen + data.length;
     header->protoType =2;
-    header->fromIp = inet_addr([_currentBindedIp UTF8String]);
+    if (ip && ![ip isEqualToString:@""]) {
+         header->fromIp = inet_addr([_currentBindedIp UTF8String]);
+    }
     header->fromPort = (unsigned int)_currentBindedPort;
     
     void * protocolData = malloc(header->len);
@@ -62,42 +88,57 @@
     
     struct sockaddr_in addr = [IBLSocketAddr v4BoradCastAddrForPort:port];
    
-   
+    NSData *protocoldt = [NSData dataWithBytes:protocolData length:header->len];
+    NSLog(@"the protocol data is %@",protocoldt);
     
-    sendto(_socket, protocolData, header->len, 0, (struct sockaddr*)&addr, sizeof(addr));
+    size_t state = sendto(_socket, protocolData, header->len, 0, (struct sockaddr*)&addr, sizeof(addr));
     
+    int result = 0;
+    if (state != header->len) {
+        perror("udp 发送数据失败");
+        result = 2;
+        
+    }
     free(header);
     free(protocolData);
+    return 0;
 }
 
 
+//udp有消息边界 一次recv from 就是一个包啦。所以不能以流的方式拿udp 数据
 - (void)reciveFrom:(NSString *)ip atPort:(NSInteger)port {
     
     struct sockaddr_in server;
-    if (ip || ![ip isEqualToString:@""]) {
+    if (ip && ![ip isEqualToString:@""]) {
         server = [IBLSocketAddr v4AddrForIp:ip andPort:port];
     }else {
         server = [IBLSocketAddr v4BoradCastAnyIpForPort:port];//广播
     }
     
-    char *buffer = malloc(sizeof(IBLScoketHeader));
+    char *buffer = malloc(_recvBuuferSize);
     unsigned int len = sizeof(server);
-    ssize_t size =  recvfrom(_socket, buffer, sizeof(IBLScoketHeader), 0, (struct sockaddr *)&server, &len);
-    IBLScoketHeader *header = (IBLScoketHeader *)buffer;
+   
+    ssize_t size =  recvfrom(_socket, buffer, _recvBuuferSize, 0, (struct sockaddr *)&server, &len);
     
-    if (size < header->len) {
-        size_t restLen = header->len - len;
-        char *restBuffer = malloc(header->len);
-        ssize_t lenght =recvfrom(_socket, buffer, restLen, 0, (struct sockaddr *)&server, &len);
-        if (lenght != restLen) {
-            NSLog(@"数据接收异常");
-        }
-        NSData *data = [[NSData alloc] initWithBytes:restBuffer length:restLen];
-        IBLSocketAddr *addr = [IBLSocketAddr addrForSocketAddr:&server];
-        if ([self.delegate respondsToSelector:@selector(dataComes:)]) {
-            [self.delegate dataComes:data];
+    IBLSocketHeader *header = (IBLSocketHeader *)buffer;
+    int headerlen = sizeof(IBLSocketHeader);
+    
+    if (size != header->len) {
+        //包和实际实际数据大小不匹配
+        [self reportError:IBLSocketErrorCodeUDPRecvSizeError msg:@"size not fit"];
+        
+    }else {
+        
+        if (size > headerlen) {
+            NSData *data = [[NSData alloc] initWithBytes:buffer+headerlen length:size-headerlen];
+            if ([self.delegate respondsToSelector:@selector(dataComes:)]) {
+                [self.delegate dataComes:data];
+            }
+            
+        }else {        
         }
     }
+    free(buffer);
 }
 
 - (void)startReciveDataFromIp:(NSString *)ip andPort:(NSInteger)port {
@@ -110,7 +151,18 @@
 }
 
 - (void)reciveData {
-    [self reciveFrom:self.dataRecvIp atPort:self.dataRecvPort];
+    while (1) {
+        if ([self.udpRecvThread isCancelled]) {
+            [NSThread exit];
+        }
+        [self reciveFrom:self.dataRecvIp atPort:self.dataRecvPort];
+    }
+}
+
+- (void)stop {
+    [self.udpRecvThread cancel];
+    self.udpRecvThread = nil;
+    close(_socket);
 }
 
 @end

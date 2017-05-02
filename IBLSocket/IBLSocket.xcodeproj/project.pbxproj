@@ -17,6 +17,8 @@
 		A41862AE1EB322B900030C79 /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862A61EB322B900030C79 /* IBLSocketUtil.m */; };
 		A41862B21EB322C400030C79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862B11EB322C400030C79 /* ViewController.m */; };
 		A41862B81EB3244800030C79 /* IBLComm.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862B71EB3244800030C79 /* IBLComm.m */; };
+		A41862C51EB341A800030C79 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862C41EB341A800030C79 /* ServerController.m */; };
+		A41862CB1EB341D500030C79 /* ClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862CA1EB341D500030C79 /* ClientController.m */; };
 		A44D20341E9B27D100966E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20331E9B27D100966E63 /* main.m */; };
 		A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20361E9B27D100966E63 /* AppDelegate.m */; };
 		A44D203D1E9B27D100966E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D203B1E9B27D100966E63 /* Main.storyboard */; };
@@ -48,6 +50,10 @@
 		A41862B51EB3237600030C79 /* Prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
 		A41862B61EB3244800030C79 /* IBLComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLComm.h; sourceTree = "<group>"; };
 		A41862B71EB3244800030C79 /* IBLComm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLComm.m; sourceTree = "<group>"; };
+		A41862C31EB341A800030C79 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
+		A41862C41EB341A800030C79 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
+		A41862C91EB341D500030C79 /* ClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientController.h; sourceTree = "<group>"; };
+		A41862CA1EB341D500030C79 /* ClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientController.m; sourceTree = "<group>"; };
 		A44D202F1E9B27D100966E63 /* IBLSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBLSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44D20331E9B27D100966E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A44D20351E9B27D100966E63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,8 +151,12 @@
 		A41862AF1EB322C400030C79 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A41862C91EB341D500030C79 /* ClientController.h */,
+				A41862CA1EB341D500030C79 /* ClientController.m */,
 				A41862B01EB322C400030C79 /* ViewController.h */,
 				A41862B11EB322C400030C79 /* ViewController.m */,
+				A41862C31EB341A800030C79 /* ServerController.h */,
+				A41862C41EB341A800030C79 /* ServerController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -241,8 +251,8 @@
 				TargetAttributes = {
 					A44D202E1E9B27D100966E63 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = MHZFCBBQ75;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 4SND9369ME;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -293,6 +303,8 @@
 				A41862A81EB322B900030C79 /* IBLServer.m in Sources */,
 				A41862A91EB322B900030C79 /* IBLSocket.m in Sources */,
 				A41862AA1EB322B900030C79 /* IBLTcpSoket.m in Sources */,
+				A41862C51EB341A800030C79 /* ServerController.m in Sources */,
+				A41862CB1EB341D500030C79 /* ClientController.m in Sources */,
 				A44D20341E9B27D100966E63 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,13 +425,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MHZFCBBQ75;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 4SND9369ME;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
 				INFOPLIST_FILE = IBLSocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ahead.bellar.cn.IBLSocket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.develop.socket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "99a8252f-5848-4938-bdb3-a55e16c2d2e3";
+				PROVISIONING_PROFILE_SPECIFIER = AllBellarPP;
 			};
 			name = Debug;
 		};
@@ -427,12 +442,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MHZFCBBQ75;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
 				INFOPLIST_FILE = IBLSocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ahead.bellar.cn.IBLSocket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.develop.socket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

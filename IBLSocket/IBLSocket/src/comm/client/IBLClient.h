@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol IBLClientProtocol <NSObject>
+@protocol IBLClientProtocol <IBLCommProtocol>
 
 - (void)clientRecvData:(NSData *)data;
 
@@ -19,6 +19,8 @@
 
 @interface IBLClient : NSObject
 
+@property (nonatomic, weak) id<IBLClientProtocol> delegate;
+
 /**开始*/
 - (void)start;
 
@@ -27,5 +29,5 @@
 - (void)connectToserver;
 
 
-
+- (void)stop;
 @end

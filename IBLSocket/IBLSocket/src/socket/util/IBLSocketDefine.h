@@ -13,18 +13,22 @@
  socket 通信协议
  */
 typedef struct  {
-    
     size_t len;//当前数据的总长度
     int8_t protoType;// 1.tcp 2.udp
     unsigned int fromIp;
     unsigned int fromPort;
-}IBLScoketHeader;
+}IBLSocketHeader;
 
 
 
 
 @class IBLSocketConnector;
 @class IBLSocketAddr;
+
+typedef NS_ENUM(int,IBLSocketErrorCode) {
+    IBLSocketErrorCodeUDPRecvSizeError,
+    IBLSocketErrorCodeUDPRecvFail,
+};
 
 typedef void (^IBLSocketError)(int code,NSString *msg);
 
@@ -38,7 +42,6 @@ typedef void (^IBLSocketError)(int code,NSString *msg);
 
 - (void)dataComes:(NSData *)data from:(IBLSocketConnector *)connector;
 
-
 /**
  数据接收
  非基于连接的发送
@@ -46,5 +49,7 @@ typedef void (^IBLSocketError)(int code,NSString *msg);
  @param addr 发送方的地址
  */
 - (void)dataComes:(NSData *)data fromAddr:(IBLSocketAddr *)addr;
+
+- (void)udpDataComes:(NSData *)data;
 
 @end

@@ -18,7 +18,7 @@
 
 + (instancetype)addrForSocketAddr:(struct sockaddr_in *)addr;
 
-+ (instancetype)addrForHeader:(IBLScoketHeader *)header;
++ (instancetype)addrForHeader:(IBLSocketHeader *)header;
 
 + (struct sockaddr_in)v4AddrForIp:(NSString *)ip andPort:(NSInteger)port;
 + (struct sockaddr_in)v4BoradCastAddrForPort:(NSInteger)port;

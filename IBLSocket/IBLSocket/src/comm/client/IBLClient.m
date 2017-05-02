@@ -33,6 +33,7 @@
     if (self = [super init]) {
         NSDictionary *dic = @{
                               @"key":@"hi",
+                              @"a":@"b"
                               };
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
@@ -43,6 +44,7 @@
 
 
 - (void)findServerOnPort:(NSInteger)port {
+    self.broadCastPort = port;
     if (!self.udpSocket) {
         self.udpSocket = [[IBLUdpSocket alloc] init];
         [self.udpSocket setEnableBroadCast:YES];
@@ -54,8 +56,27 @@
     }
 }
 
+- (NSData *)heartData {
+    static int clientcount = 0;
+    clientcount ++;
+    NSDictionary *dic = @{
+                          @"key":@"hi",
+                          @"count":@(clientcount)
+                          };
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    return [IBLComm jsonDataForData:jsonData];
+}
+
 - (void)toBroadCast {
-    [self.udpSocket sendData:self.broadCastData ToIp:nil atPort:self.broadCastPort];
+    int state =  [self.udpSocket sendData:[self heartData] ToIp:nil atPort:self.broadCastPort];
+    
+    
+    if (state == 0) {
+        if ([self.delegate respondsToSelector:@selector(toLogMsg:)]) {
+            [self.delegate toLogMsg:[NSString stringWithFormat:@"客户端发送数据成功 len %ld",self.broadCastData.length]];
+        }
+    }
 }
 
 
@@ -64,10 +85,17 @@
     [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader header) {
         if (header.type == IBLCommTypeJson) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:finaldata options:NSJSONReadingAllowFragments error:nil];
-            NSLog(@"收到了udp消息 ： %@",dic);
+            if ([self.delegate respondsToSelector:@selector(recvBroadast:)]) {
+                [self.delegate recvBroadast:[NSString stringWithFormat:@"%@",dic]];
+            }
+
         }
     } fail:^(IBLCommError code) {
         
     }];
+}
+
+- (void)stop {
+    [self.udpSocket stop];
 }
 @end

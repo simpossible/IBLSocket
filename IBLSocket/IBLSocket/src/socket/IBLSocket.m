@@ -107,19 +107,17 @@
 
 
 
-
-- (void)reportError:(int)code msg:(NSString *)msg {
-    if ([self.delegate respondsToSelector:@selector(socketError:message:)]) {
-        [self.delegate socketError:code message:msg];
-    }
-}
-
-
 - (void)reciveFrom:(NSString *)ip atPort:(NSInteger)port {
 
 }
 
 - (void)stopstopSocket {
     close(_socket);
+}
+
+- (void)reportError:(IBLSocketErrorCode)code msg:(NSString *)msg {
+    if ([self.delegate respondsToSelector:@selector(socketError:message:)]) {
+        [self.delegate socketError:IBLSocketErrorCodeUDPRecvSizeError message:@"UDP：收到包与实际大小不匹配"];
+    }
 }
 @end

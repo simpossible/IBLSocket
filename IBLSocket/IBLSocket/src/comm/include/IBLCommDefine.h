@@ -35,6 +35,14 @@ typedef NS_ENUM(int8_t,IBLCommType) {
 };
 
 
+@protocol IBLCommProtocol <NSObject>
+
+- (void)recvBroadast:(NSString*)msg;
+
+- (void)toLogMsg:(NSString *)msg;
+
+@end
+
 
 typedef NS_ENUM(int8_t,IBLCommError){
     IBLCommErrorDataError,

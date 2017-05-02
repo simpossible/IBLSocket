@@ -42,8 +42,8 @@
 
 - (void)sendData:(NSData *)data ToConnector:(IBLSocketConnector *)connctor result:(IBLSocketError)result{
         
-    int headerlen = sizeof(IBLScoketHeader);
-    IBLScoketHeader *header = malloc(headerlen);
+    int headerlen = sizeof(IBLSocketHeader);
+    IBLSocketHeader *header = malloc(headerlen);
     header->len = headerlen + data.length;
     header->protoType =2;
     header->fromIp = inet_addr([_currentBindedIp UTF8String]);
@@ -85,9 +85,9 @@
         if (self.recvThread.isCancelled) {
             [NSThread exit];
         }
-        char *buffer = malloc(sizeof(IBLScoketHeader));
-        ssize_t len = recv(_socket, buffer, sizeof(IBLScoketHeader), 0);
-        IBLScoketHeader *header = (IBLScoketHeader *)buffer;
+        char *buffer = malloc(sizeof(IBLSocketHeader));
+        ssize_t len = recv(_socket, buffer, sizeof(IBLSocketHeader), 0);
+        IBLSocketHeader *header = (IBLSocketHeader *)buffer;
         
         if (len < header->len) {
             size_t restLen = header->len - len;
