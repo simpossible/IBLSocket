@@ -21,11 +21,22 @@
     return self;
 }
 
+- (instancetype)initWithIp:(NSString *)ip andPort:(NSInteger)port {
+    if (self = [super init]) {
+        _ip= ip;
+        _port = port;
+    }
+    return self;
+}
+
 
 + (instancetype)addrForSocketAddr:(struct sockaddr_in *)addr {
     return [[self alloc] initWithAddr:addr];
 }
 
++ (instancetype)addrForIp:(NSString *)ip andPort:(NSInteger)port {
+    return [[self alloc] initWithIp:ip andPort:port];
+}
 
 
 + (struct sockaddr_in)v4AddrForIp:(NSString *)ip andPort:(NSInteger)port {
@@ -37,7 +48,7 @@
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = inet_addr([ip UTF8String]);
     addr.sin_len = sizeof(addr);
-    addr.sin_port = port;
+    addr.sin_port = htons(port);
     memset(&addr.sin_zero, 0, 8);
     return addr;
 }
@@ -53,7 +64,8 @@
 + (struct sockaddr_in)v4BoradCastAnyIpForPort:(NSInteger)port {
     struct sockaddr_in si_recv;
     int addrlen = sizeof(si_recv);
-    bzero(&si_recv,addrlen);
+//    bzero(&si_recv,addrlen);
+    si_recv.sin_len = addrlen;
     si_recv.sin_family = AF_INET;
     si_recv.sin_port = htons(port);
     si_recv.sin_addr.s_addr = INADDR_ANY;

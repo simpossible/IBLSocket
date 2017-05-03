@@ -30,7 +30,9 @@
     [self.view addSubview:self.textview];
     
     self.server = [IBLServer serverWithBoradCastPort:43210];
+    self.server.serverName = @"服务器1";
     self.server.delegate = self;
+    [self.server start];
     
     self.stopButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 60, 60)];
     [self.stopButton setTitle:@"stop" forState:UIControlStateNormal];

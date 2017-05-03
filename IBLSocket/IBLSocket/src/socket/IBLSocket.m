@@ -38,41 +38,28 @@
 }
 
 
-- (void)bindOnIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err{
+- (int)bindOnIp:(NSString *)ip atPort:(NSInteger)port{
     self.currentBindedIp = ip;
     self.currentBindedPort = port;
-    struct sockaddr_in addr = [IBLSocketAddr v4AddrForIp:ip andPort:port];
-    int state = bind(_socket, (struct sockaddr *)&addr, addr.sin_len);
-    if (state < 0) {
-        char *errorstr = strerror(state);
-        NSString *nstr = [NSString stringWithFormat:@"bind 错误 %s",errorstr];
-        if (err) {
-            err(state,nstr);
-        }
+    struct sockaddr_in addr;
+    if (!ip || [ip isEqualToString:@""]) {
+        addr = [IBLSocketAddr v4BoradCastAnyIpForPort:port];
+    }else {
+        addr = [IBLSocketAddr v4AddrForIp:ip andPort:port];
     }
+    int state = bind(_socket, (struct sockaddr *)&addr, addr.sin_len);
+    return state;
 }
 
-- (void)connectToIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err{
+- (int)connectToIp:(NSString *)ip atPort:(NSInteger)port{
     struct sockaddr_in addr = [IBLSocketAddr v4AddrForIp:ip andPort:port];
     int state = connect(_socket, (struct sockaddr *)&addr, addr.sin_len);
-    if (state < 0) {
-        char *errorstr = strerror(state);
-        NSString *nstr = [NSString stringWithFormat:@"bind 错误 %s",errorstr];
-        if (err) {
-            err(state,nstr);
-        }
-    }
+    return state;
 }
 
-- (void)listen:(int)number error:(IBLSocketError)err{
-   int state = listen(_socket, number);
-    if (state < 0) {
-        char *errorstr = strerror(state);
-        NSString *nstr = [NSString stringWithFormat:@"bind 错误 %s",errorstr];
-        if (err) {
-            err(state,nstr);
-        }
-    }
+- (int)listen:(int)number{
+    int state = listen(_socket, number);
+    return state;
 }
 
 - (void)accept {
@@ -105,7 +92,9 @@
     }
 }
 
+- (void)sendData:(NSData *)data {
 
+}
 
 - (void)reciveFrom:(NSString *)ip atPort:(NSInteger)port {
 

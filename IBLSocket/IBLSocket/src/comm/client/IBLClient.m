@@ -28,6 +28,8 @@
 /** 接收服务端udp 消息的端口 默认广播端口 + 1 */
 @property (nonatomic, assign) NSInteger recvServerUdpPort;
 
+@property (nonatomic, strong) NSMutableArray * servers;//发现的服务端
+
 @end
 
 @implementation IBLClient
@@ -41,11 +43,12 @@
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         self.broadCastData = [IBLComm jsonDataForData:jsonData];
+        self.servers = [NSMutableArray array];
     }
     return self;
 }
 
-
+#pragma mark - 服务端客户端地址协商
 - (void)findServerOnPort:(NSInteger)port {
     self.broadCastPort = port;
     if (!self.udpSocket) {
@@ -53,22 +56,18 @@
         [self.udpSocket setEnableBroadCast:YES];
         
         NSInteger recvServerport = port +1;
-        [self.udpSocket bindOnIp:nil atPort:recvServerport error:^(int code, NSString *msg) {
-            if (code == 0) {
-                self.recvServerUdpPort = recvServerport;
-                [self.udpSocket startReciveDataFromIp:nil andPort:port];
-                [self.delegate toLogMsg:[NSString stringWithFormat:@"绑定成功 %@",msg]];
-            }else {
-                [self.delegate toLogMsg:[NSString stringWithFormat:@"绑定失败 %@",msg]];
-            }
-        }];
-
+        int state = [self.udpSocket bindOnIp:nil atPort:recvServerport];
+        if (state == 0 ) {
+            self.recvServerUdpPort = recvServerport;
+            [self.udpSocket startReciveDataFromIp:nil andPort:port];
+        }
         self.udpSocket.delegate = self;
     }
     
     if (!self.broadCastTimer) {
         self.broadCastTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(toBroadCast) userInfo:nil repeats:YES];
     }
+    self.clientState = IBLClientStateFindingServer;
 }
 
 - (NSData *)heartData {
@@ -93,8 +92,6 @@
         }
     }
 }
-
-
 
 
 - (void)udpDataComes:(NSData *)data from:(IBLSocketAddr *)addr{
@@ -125,24 +122,73 @@
  */
 - (void)dealUpdJsonMessage:(NSDictionary *)info andMessageSender:(IBLSocketAddr *)senderAddr{
     NSString *key = info[COMMMODULEKEY];
-    if ([key isEqualToString:COMMSERVERHERE]) {//有客户端在等待连接
+    if ([key isEqualToString:COMMSERVERHERE]) {//服务端发回自己的消息
         
         //停止广播进入tcp 连接状态
         [self.broadCastTimer invalidate];
         self.broadCastTimer = nil;
+        NSInteger port = [info[@"port"] integerValue];
+        NSString *name = info[@"name"]?:@"";
         
-        NSInteger port = [info[@"port"] integerValue];        
-        [self tcpLinkToIp:senderAddr.ip port:port];
+        IBLServer *server = [IBLServer serverWithName:name andIp:senderAddr.ip andPort:port];
         
+        if ([self.delegate respondsToSelector:@selector(serverFinded:)]) {
+            [self.delegate serverFinded:server];
+        }
+    }
+}
+
+#pragma mark - 开始进行tcp 连接
+
+- (void)initialTcpSocket {
+    if (!self.tcpScokt) {
+        self.tcpScokt = [[IBLTcpSoket alloc] init];
+    }
+}
+
+- (void)connectToserver:(IBLServer *)server {
+    
+    if (self.clientState != IBLClientStateConnecting  && self.clientState != IBLClientStateConnected) {
+        self.clientState = IBLClientStateConnecting;
+        [self initialTcpSocket];
+        int state = [self.tcpScokt connectToIp:server.hostIp atPort:server.hostPort];
+        if (state == 0) {
+            self.clientState = IBLClientStateConnected;
+        }else {
+            self.clientState = IBLClientStateConnFail;
+            NSString *error = [NSString stringWithFormat:@"error is %s",strerror(state)];
+        }
+    }
+   
+}
+
+#pragma mark - 登录
+
+- (void)loginWithName:(NSString *)name {
+    if (self.clientState == IBLClientStateConnected) {
+        NSDictionary *loginDic = @{
+                                   @"name":name?:@"",
+                                   };
+        NSData *logData = [IBLComm jsonDataForJsonObj:loginDic];
+        [self.tcpScokt sendData:logData result:^(int code, NSString *msg) {
+            if (code == 0) {
+                //连接已断开
+            }
+        }];
     }
 }
 
 
-- (void)tcpLinkToIp:(NSString *)ip port:(NSInteger)port {
-
-}
-
 - (void)stop {
     [self.udpSocket stop];
 }
+
+
+- (void)setClientState:(IBLClientState)clientState {
+    _clientState = clientState;
+    if ([self.delegate respondsToSelector:@selector(clientStateChanged:)]) {
+        [self.delegate clientStateChanged:clientState];
+    }
+}
+
 @end

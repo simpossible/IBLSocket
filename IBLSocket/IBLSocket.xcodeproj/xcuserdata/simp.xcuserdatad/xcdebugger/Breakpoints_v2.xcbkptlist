@@ -9,13 +9,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IBLSocket/src/comm/server/IBLServer.m"
-            timestampString = "515434622.39067"
+            filePath = "IBLSocket/src/comm/client/IBLClient.m"
+            timestampString = "515521135.561396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-dataComes:fromAddr:"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "-loginWithName:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[IBLClient loginWithName:]"
+                  moduleName = "IBLSocket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simp/AdvanceSkill/myApp/mysocket/IBLSocket/IBLSocket/src/comm/client/IBLClient.m"
+                  timestampString = "515522174.617854"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[IBLClient loginWithName:]_block_invoke"
+                  moduleName = "IBLSocket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/simp/AdvanceSkill/myApp/mysocket/IBLSocket/IBLSocket/src/comm/client/IBLClient.m"
+                  timestampString = "515522174.620073"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IBLSocket/src/comm/client/IBLClient.m"
+            timestampString = "515521135.561396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-loginWithName:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +74,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IBLSocket/src/comm/client/IBLClient.m"
-            timestampString = "515438047.620302"
+            timestampString = "515521149.042871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "-dealUpdJsonMessage:andMessageSender:"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "-connectToserver:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IBLSocket/src/socket/IBLSocket.m"
+            timestampString = "515521878.934929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-connectToIp:atPort:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

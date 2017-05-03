@@ -35,6 +35,8 @@ typedef void (^IBLCOMMErrorBlock)(IBLCommError code);
  */
 + (NSData *)jsonDataForData:(NSData *)orgData;
 
++ (NSData *)jsonDataForJsonObj:(NSDictionary *)dic;
+
 
 /**
  解析数据

@@ -18,7 +18,7 @@
 @property (nonatomic, assign, readonly) NSInteger port;
 
 + (instancetype)addrForSocketAddr:(struct sockaddr_in *)addr;
-
++ (instancetype)addrForIp:(NSString*)ip andPort:(NSInteger)port;
 
 + (struct sockaddr_in)v4AddrForIp:(NSString *)ip andPort:(NSInteger)port;
 + (struct sockaddr_in)v4BoradCastAddrForPort:(NSInteger)port;

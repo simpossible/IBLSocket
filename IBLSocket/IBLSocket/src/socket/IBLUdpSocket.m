@@ -34,7 +34,7 @@
 
 }
 
-- (void)bindOnIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err{
+- (int)bindOnIp:(NSString *)ip atPort:(NSInteger)port {
     
     struct sockaddr_in addr;
     if (ip && ![ip isEqualToString:@""]) {
@@ -43,26 +43,15 @@
         addr = [IBLSocketAddr v4BoradCastAnyIpForPort:port];
     }
     int state = bind(_socket, (struct sockaddr *)&addr, sizeof(addr));
-    if (state < 0) {
-        char *errorstr = strerror(state);
-        NSString *nstr = [NSString stringWithFormat:@"bind 错误 %s",errorstr];
-        if (err) {
-            err(state,nstr);
-        }
-    }else {
-        if (err) {
-            err(0,@"");
-        }
-    }
+    return state;
 }
 
 //udp 不支持
-- (void)connectToIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err{
-
+- (int)connectToIp:(NSString *)ip atPort:(NSInteger)port{
+    return -1;
 }
 
 - (void)accept {
-    
 }
 
 - (void)setEnableBroadCast:(BOOL)en {
@@ -92,7 +81,6 @@
     struct sockaddr_in addr = [IBLSocketAddr v4BoradCastAddrForPort:port];
    
     NSData *protocoldt = [NSData dataWithBytes:protocolData length:header->len];
-    NSLog(@"the protocol data is %@",protocoldt);
     
     size_t state = sendto(_socket, protocolData, header->len, 0, (struct sockaddr*)&addr, sizeof(addr));
     

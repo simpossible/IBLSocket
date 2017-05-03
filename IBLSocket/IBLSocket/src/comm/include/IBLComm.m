@@ -16,12 +16,10 @@ NSString * const  COMMSERVERHERE = @"yeah";
 
 + (NSData *)dataForData:(NSData *)orgData header:(IBLCommHeader)header {
     if (orgData) {
-        NSLog(@"send data type %d",header.type);
         NSMutableData *data = [NSMutableData dataWithBytes:&header length:sizeof(header)];
         [data appendData:orgData];
         
         IBLCommHeader *header1 = [data bytes];
-        NSLog(@"the buffer is %@",orgData);
         return data;
     }
     return nil;
@@ -31,6 +29,14 @@ NSString * const  COMMSERVERHERE = @"yeah";
     IBLCommHeader header;
     header.type = IBLCommTypeJson;
     return  [self dataForData:orgData header:header];
+}
+
++ (NSData *)jsonDataForJsonObj:(NSDictionary *)dic {
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    if (data) {
+        return  [self jsonDataForData:data];
+    }
+    return data;
 }
 
 

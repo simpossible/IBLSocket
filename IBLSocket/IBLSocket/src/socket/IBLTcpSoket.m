@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSThread *recvThread;
 
-
+@property (nonatomic, strong) dispatch_queue_t tcpSendDataQueue;
 
 @end
 
@@ -29,6 +29,11 @@
     return self;
 }
 
+- (void)initialDataSendQueue {
+    if (!self.tcpSendDataQueue) {
+        self.tcpSendDataQueue = dispatch_queue_create("tcp_send_data", DISPATCH_QUEUE_SERIAL);
+    }
+}
 
 
 
@@ -41,39 +46,74 @@
 }
 
 - (void)sendData:(NSData *)data ToConnector:(IBLSocketConnector *)connctor result:(IBLSocketError)result{
+    [self initialDataSendQueue];
+    dispatch_async(self.tcpSendDataQueue, ^{
+        int headerlen = sizeof(IBLSocketHeader);
+        IBLSocketHeader *header = malloc(headerlen);
+        header->len = headerlen + data.length;
+        header->protoType =2;
         
-    int headerlen = sizeof(IBLSocketHeader);
-    IBLSocketHeader *header = malloc(headerlen);
-    header->len = headerlen + data.length;
-    header->protoType =2;
-    
-    void * protocolData = malloc(header->len);
-    memcpy(protocolData, header, headerlen);//拷贝头
-    memcpy(protocolData+headerlen, [data bytes], data.length);
-    
-    ssize_t size = send((int)connctor.index, protocolData,header->len, 0);
-    if (size < 0) {
-        if (result) {
-            result(1,[NSString stringWithFormat:@"%s",strerror((int)size)]);
+        void * protocolData = malloc(header->len);
+        memcpy(protocolData, header, headerlen);//拷贝头
+        memcpy(protocolData+headerlen, [data bytes], data.length);
+        
+        ssize_t size = send((int)connctor.index, protocolData,header->len, 0);
+        if (size < 0) {
+            if (result) {
+                result(1,[NSString stringWithFormat:@"%s",strerror((int)size)]);
+            }
+        }else if (size == 0) {
+            if (result) {
+                result(2,@"连接已关闭");
+            }
         }
-    }else if (size == 0) {
-        if (result) {
-            result(2,@"连接已关闭");
+        if (size != header->len) {
+            if (result) {
+                result(3,[NSString stringWithFormat:@"发送数据不符合期望。org :%ld sended :%ld",size,header->len]);
+            }
         }
-    }
-    if (size != header->len) {
-        if (result) {
-            result(3,[NSString stringWithFormat:@"发送数据不符合期望。org :%ld sended :%ld",size,header->len]);
-        }
-    }
-    
-    free(header);
-    free(protocolData);
+        
+        free(header);
+        free(protocolData);
+    });
 }
+
+- (void)sendData:(NSData *)data result:(IBLSocketError)result{
+    [self initialDataSendQueue];
+    dispatch_async(self.tcpSendDataQueue, ^{
+        int headerlen = sizeof(IBLSocketHeader);
+        IBLSocketHeader *header = malloc(headerlen);
+        header->len = headerlen + data.length;
+        header->protoType =2;
+        
+        void * protocolData = malloc(header->len);
+        memcpy(protocolData, header, headerlen);//拷贝头
+        memcpy(protocolData+headerlen, [data bytes], data.length);
+        
+        ssize_t size = send(_socket, protocolData,header->len, 0);
+        if (size < 0) {
+            if (result) {
+                result(1,[NSString stringWithFormat:@"%s",strerror((int)size)]);
+            }
+        }else if (size == 0) {
+            if (result) {
+                result(2,@"连接已关闭");
+            }
+        }
+        if (size != header->len) {
+            if (result) {
+                result(3,[NSString stringWithFormat:@"发送数据不符合期望。org :%ld sended :%ld",size,header->len]);
+            }
+        }
+        free(header);
+        free(protocolData);
+    });
+}
+
 
 - (void)connectToIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err {
     isConnector = YES;
-    [super connectToIp:ip atPort:port error:err];
+    [super connectToIp:ip atPort:port ];
 }
 
 
@@ -108,6 +148,8 @@
         
     }
 }
+
+
 
 
 - (void)startReciveDataForConnector:(IBLSocketConnector *)connector {
