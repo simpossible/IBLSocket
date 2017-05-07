@@ -154,8 +154,10 @@
         int state = [self.tcpScokt connectToIp:server.hostIp atPort:server.hostPort];
         if (state == 0) {
             self.clientState = IBLClientStateConnected;
+            NSLog(@"连接服务器成功");
         }else {
             self.clientState = IBLClientStateConnFail;
+            NSLog(@"连接服务器失败");
             NSString *error = [NSString stringWithFormat:@"error is %s",strerror(state)];
         }
     }
@@ -167,18 +169,21 @@
 - (void)loginWithName:(NSString *)name {
     if (self.clientState == IBLClientStateConnected) {
         NSDictionary *loginDic = @{
+                                   @"key":@"login",
                                    @"name":name?:@"",
                                    };
-        NSData *logData = [IBLComm jsonDataForJsonObj:loginDic];
+        NSData *logData = [IBLComm jsonDataForJsonObj:loginDic dest:0];
         [self.tcpScokt sendData:logData result:^(int code, NSString *msg) {
             if (code == 0) {
                 //连接已断开
             }
         }];
+        
+        
     }
 }
 
-
+#pragma mark - 停止
 - (void)stop {
     [self.udpSocket stop];
 }
@@ -189,6 +194,10 @@
     if ([self.delegate respondsToSelector:@selector(clientStateChanged:)]) {
         [self.delegate clientStateChanged:clientState];
     }
+}
+
+- (void)dealloc {
+    [self.tcpScokt stop];
 }
 
 @end

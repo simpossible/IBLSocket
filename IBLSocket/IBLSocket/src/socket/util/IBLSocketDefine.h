@@ -32,13 +32,15 @@ typedef void (^IBLSocketError)(int code,NSString *msg);
 
 @protocol IBLSocketProtocol <NSObject>
 
+@optional
+
 - (void)dataComes:(NSData *)data;
 
 - (void)socketError:(int)errCode message:(NSString *)msg;
 
 - (void)connectorJoined:(IBLSocketConnector *)connector;
 
-- (void)dataComes:(NSData *)data from:(IBLSocketConnector *)connector;
+
 
 /**
  数据接收

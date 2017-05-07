@@ -47,8 +47,8 @@
         ssize_t len = recv((int)self.index, buffer, sizeof(IBLSocketHeader), 0);
         IBLSocketHeader *header = (IBLSocketHeader *)buffer;
         
-        if (len < 0) {//失败
-            NSLog(@"socket 连接异常");
+        if (len <= 0) {//失败
+            NSLog(@"socket 连接异常");//取消这个connector
             return;
         }
         

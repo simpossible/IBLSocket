@@ -128,5 +128,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     IBLServer *server = [self.servers objectAtIndex:indexPath.row];
     [self.client connectToserver:server];
+    [self.client loginWithName:@"hehe"];
 }
 @end

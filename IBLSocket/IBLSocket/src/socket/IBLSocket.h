@@ -42,8 +42,20 @@
  */
 - (int)listen:(int)number;
 
+
+/**
+ 开始接收连接
+ */
 - (void)accept;
 
+
+/**
+ 发送数据到连接者
+ 所有发送数据都是异步接口
+ @param data data
+ @param connctor 连接着
+ @param result 回调
+ */
 - (void)sendData:(NSData *)data ToConnector:(IBLSocketConnector *)connctor result:(IBLSocketError)result;
 
 
@@ -95,11 +107,11 @@
  */
 - (void)setEnableBroadCast:(BOOL)en;
 
-
 /**
  关闭socket
  */
 - (void)stop;
+
 
 - (void)reportError:(IBLSocketErrorCode)code msg:(NSString *)msg;
 

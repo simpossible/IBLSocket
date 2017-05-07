@@ -66,10 +66,13 @@
             if (result) {
                 result(2,@"连接已关闭");
             }
-        }
-        if (size != header->len) {
-            if (result) {
-                result(3,[NSString stringWithFormat:@"发送数据不符合期望。org :%ld sended :%ld",size,header->len]);
+        }else {
+            if (size != header->len) {
+                if (result) {
+                    result(3,[NSString stringWithFormat:@"发送数据不符合期望。org :%ld sended :%ld",size,header->len]);
+                }
+            }else {
+                result(0,@"ok");
             }
         }
         
@@ -134,7 +137,7 @@
             if (lenght != restLen) {
                 NSLog(@"数据接收异常");
             }            
-            NSData *data = [[NSData alloc] initWithBytes:restBuffer length:restLen];
+            NSData *data = [[NSData alloc] initWithBytes:restBuffer length:restLen];            
             if ([self.delegate respondsToSelector:@selector(dataComes:)]) {
                 [self.delegate dataComes:data];
             }

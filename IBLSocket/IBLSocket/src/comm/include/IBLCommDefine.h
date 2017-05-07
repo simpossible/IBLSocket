@@ -14,6 +14,8 @@
  */
 typedef struct {
     int8_t type;//数据类型  0:text 1:json 2:image 3:pure data 4:voice 5:music 6
+    int toId;//发送的目标客户端id 0 默认为收到的人处理。 其他则转发给其他客户端
+    int fromId;//数据源头
 }IBLCommHeader;
 
 
@@ -54,5 +56,6 @@ typedef NS_ENUM(int8_t,IBLCommError){
 FOUNDATION_EXTERN  NSString * const COMMMODULEKEY;
 FOUNDATION_EXTERN  NSString * const COMMLOOKFORSERVER;//寻找服务器
 FOUNDATION_EXTERN  NSString * const COMMSERVERHERE;//服务端回复寻找指令
+FOUNDATION_EXTERN  NSString * const COMMLOGIN;
 
 #endif /* IBLCommDefine_h */

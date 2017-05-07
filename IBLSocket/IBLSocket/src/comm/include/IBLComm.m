@@ -13,6 +13,7 @@
 NSString * const  COMMMODULEKEY = @"key";
 NSString * const  COMMLOOKFORSERVER = @"hi";
 NSString * const  COMMSERVERHERE = @"yeah";
+NSString * const  COMMLOGIN; = @"login";
 
 + (NSData *)dataForData:(NSData *)orgData header:(IBLCommHeader)header {
     if (orgData) {
@@ -31,10 +32,25 @@ NSString * const  COMMSERVERHERE = @"yeah";
     return  [self dataForData:orgData header:header];
 }
 
++ (NSData *)jsondataForData:(NSData *)orgData dest:(int)dest {
+    IBLCommHeader header;
+    header.type = IBLCommTypeJson;
+    header.toId = dest;
+    return [self dataForData:orgData header:header];
+}
+
 + (NSData *)jsonDataForJsonObj:(NSDictionary *)dic {
     NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     if (data) {
         return  [self jsonDataForData:data];
+    }
+    return data;
+}
+
++ (NSData *)jsonDataForJsonObj:(NSDictionary *)dic dest:(int)dest {
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    if (data) {
+        return  [self jsondataForData:data dest:dest];
     }
     return data;
 }

@@ -19,6 +19,8 @@
 		A41862B81EB3244800030C79 /* IBLComm.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862B71EB3244800030C79 /* IBLComm.m */; };
 		A41862C51EB341A800030C79 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862C41EB341A800030C79 /* ServerController.m */; };
 		A41862CB1EB341D500030C79 /* ClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862CA1EB341D500030C79 /* ClientController.m */; };
+		A440D0011EBB60CB005E0726 /* IBLMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A440D0001EBB60CB005E0726 /* IBLMessageDispatcher.m */; };
+		A440D0041EBB77C0005E0726 /* IBLConnectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A440D0031EBB77C0005E0726 /* IBLConnectorManager.m */; };
 		A44D20341E9B27D100966E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20331E9B27D100966E63 /* main.m */; };
 		A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20361E9B27D100966E63 /* AppDelegate.m */; };
 		A44D203D1E9B27D100966E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D203B1E9B27D100966E63 /* Main.storyboard */; };
@@ -54,6 +56,10 @@
 		A41862C41EB341A800030C79 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
 		A41862C91EB341D500030C79 /* ClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientController.h; sourceTree = "<group>"; };
 		A41862CA1EB341D500030C79 /* ClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientController.m; sourceTree = "<group>"; };
+		A440CFFF1EBB60CB005E0726 /* IBLMessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLMessageDispatcher.h; sourceTree = "<group>"; };
+		A440D0001EBB60CB005E0726 /* IBLMessageDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLMessageDispatcher.m; sourceTree = "<group>"; };
+		A440D0021EBB77C0005E0726 /* IBLConnectorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLConnectorManager.h; sourceTree = "<group>"; };
+		A440D0031EBB77C0005E0726 /* IBLConnectorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLConnectorManager.m; sourceTree = "<group>"; };
 		A44D202F1E9B27D100966E63 /* IBLSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBLSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44D20331E9B27D100966E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A44D20351E9B27D100966E63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -108,6 +114,10 @@
 			children = (
 				A41862951EB322B900030C79 /* IBLServer.h */,
 				A41862961EB322B900030C79 /* IBLServer.m */,
+				A440CFFF1EBB60CB005E0726 /* IBLMessageDispatcher.h */,
+				A440D0001EBB60CB005E0726 /* IBLMessageDispatcher.m */,
+				A440D0021EBB77C0005E0726 /* IBLConnectorManager.h */,
+				A440D0031EBB77C0005E0726 /* IBLConnectorManager.m */,
 			);
 			path = server;
 			sourceTree = "<group>";
@@ -299,11 +309,13 @@
 				A41862AE1EB322B900030C79 /* IBLSocketUtil.m in Sources */,
 				A41862B21EB322C400030C79 /* ViewController.m in Sources */,
 				A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */,
+				A440D0011EBB60CB005E0726 /* IBLMessageDispatcher.m in Sources */,
 				A41862B81EB3244800030C79 /* IBLComm.m in Sources */,
 				A41862A81EB322B900030C79 /* IBLServer.m in Sources */,
 				A41862A91EB322B900030C79 /* IBLSocket.m in Sources */,
 				A41862AA1EB322B900030C79 /* IBLTcpSoket.m in Sources */,
 				A41862C51EB341A800030C79 /* ServerController.m in Sources */,
+				A440D0041EBB77C0005E0726 /* IBLConnectorManager.m in Sources */,
 				A41862CB1EB341D500030C79 /* ClientController.m in Sources */,
 				A44D20341E9B27D100966E63 /* main.m in Sources */,
 			);
