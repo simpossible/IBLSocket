@@ -13,14 +13,14 @@
 NSString * const  COMMMODULEKEY = @"key";
 NSString * const  COMMLOOKFORSERVER = @"hi";
 NSString * const  COMMSERVERHERE = @"yeah";
-NSString * const  COMMLOGIN; = @"login";
+NSString * const  COMMLOGIN = @"login";
 
 + (NSData *)dataForData:(NSData *)orgData header:(IBLCommHeader)header {
     if (orgData) {
         NSMutableData *data = [NSMutableData dataWithBytes:&header length:sizeof(header)];
         [data appendData:orgData];
         
-        IBLCommHeader *header1 = [data bytes];
+//        IBLCommHeader *header1 = [data bytes];
         return data;
     }
     return nil;

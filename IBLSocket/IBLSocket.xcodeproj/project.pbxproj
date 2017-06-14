@@ -7,20 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A41862A71EB322B900030C79 /* IBLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862931EB322B900030C79 /* IBLClient.m */; };
-		A41862A81EB322B900030C79 /* IBLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862961EB322B900030C79 /* IBLServer.m */; };
-		A41862A91EB322B900030C79 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862991EB322B900030C79 /* IBLSocket.m */; };
-		A41862AA1EB322B900030C79 /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = A418629B1EB322B900030C79 /* IBLTcpSoket.m */; };
-		A41862AB1EB322B900030C79 /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A418629D1EB322B900030C79 /* IBLUdpSocket.m */; };
-		A41862AC1EB322B900030C79 /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862A01EB322B900030C79 /* IBLSocketAddr.m */; };
-		A41862AD1EB322B900030C79 /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862A21EB322B900030C79 /* IBLSocketConnector.m */; };
-		A41862AE1EB322B900030C79 /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862A61EB322B900030C79 /* IBLSocketUtil.m */; };
 		A41862B21EB322C400030C79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862B11EB322C400030C79 /* ViewController.m */; };
-		A41862B81EB3244800030C79 /* IBLComm.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862B71EB3244800030C79 /* IBLComm.m */; };
 		A41862C51EB341A800030C79 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862C41EB341A800030C79 /* ServerController.m */; };
 		A41862CB1EB341D500030C79 /* ClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862CA1EB341D500030C79 /* ClientController.m */; };
-		A440D0011EBB60CB005E0726 /* IBLMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A440D0001EBB60CB005E0726 /* IBLMessageDispatcher.m */; };
-		A440D0041EBB77C0005E0726 /* IBLConnectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A440D0031EBB77C0005E0726 /* IBLConnectorManager.m */; };
+		A44285631EBF54CA00E6D780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285621EBF54CA00E6D780 /* AppDelegate.m */; };
+		A44285661EBF54CA00E6D780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285651EBF54CA00E6D780 /* main.m */; };
+		A44285691EBF54CB00E6D780 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285681EBF54CB00E6D780 /* ViewController.m */; };
+		A442856B1EBF54CB00E6D780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A442856A1EBF54CB00E6D780 /* Assets.xcassets */; };
+		A442856E1EBF54CB00E6D780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A442856C1EBF54CB00E6D780 /* Main.storyboard */; };
+		A44285941EBF54E800E6D780 /* IBLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285771EBF54E800E6D780 /* IBLClient.m */; };
+		A44285951EBF54E800E6D780 /* IBLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285771EBF54E800E6D780 /* IBLClient.m */; };
+		A44285961EBF54E800E6D780 /* IBLComm.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857A1EBF54E800E6D780 /* IBLComm.m */; };
+		A44285971EBF54E800E6D780 /* IBLComm.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857A1EBF54E800E6D780 /* IBLComm.m */; };
+		A44285981EBF54E800E6D780 /* IBLConnectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857E1EBF54E800E6D780 /* IBLConnectorManager.m */; };
+		A44285991EBF54E800E6D780 /* IBLConnectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857E1EBF54E800E6D780 /* IBLConnectorManager.m */; };
+		A442859A1EBF54E800E6D780 /* IBLMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285801EBF54E800E6D780 /* IBLMessageDispatcher.m */; };
+		A442859B1EBF54E800E6D780 /* IBLMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285801EBF54E800E6D780 /* IBLMessageDispatcher.m */; };
+		A442859C1EBF54E800E6D780 /* IBLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285821EBF54E800E6D780 /* IBLServer.m */; };
+		A442859D1EBF54E800E6D780 /* IBLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285821EBF54E800E6D780 /* IBLServer.m */; };
+		A442859E1EBF54E800E6D780 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285861EBF54E800E6D780 /* IBLSocket.m */; };
+		A442859F1EBF54E800E6D780 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285861EBF54E800E6D780 /* IBLSocket.m */; };
+		A44285A01EBF54E800E6D780 /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285881EBF54E800E6D780 /* IBLTcpSoket.m */; };
+		A44285A11EBF54E800E6D780 /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285881EBF54E800E6D780 /* IBLTcpSoket.m */; };
+		A44285A21EBF54E800E6D780 /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A442858A1EBF54E800E6D780 /* IBLUdpSocket.m */; };
+		A44285A31EBF54E800E6D780 /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A442858A1EBF54E800E6D780 /* IBLUdpSocket.m */; };
+		A44285A41EBF54E800E6D780 /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = A442858D1EBF54E800E6D780 /* IBLSocketAddr.m */; };
+		A44285A51EBF54E800E6D780 /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = A442858D1EBF54E800E6D780 /* IBLSocketAddr.m */; };
+		A44285A61EBF54E800E6D780 /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = A442858F1EBF54E800E6D780 /* IBLSocketConnector.m */; };
+		A44285A71EBF54E800E6D780 /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = A442858F1EBF54E800E6D780 /* IBLSocketConnector.m */; };
+		A44285A81EBF54E800E6D780 /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285931EBF54E800E6D780 /* IBLSocketUtil.m */; };
+		A44285A91EBF54E800E6D780 /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285931EBF54E800E6D780 /* IBLSocketUtil.m */; };
 		A44D20341E9B27D100966E63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20331E9B27D100966E63 /* main.m */; };
 		A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A44D20361E9B27D100966E63 /* AppDelegate.m */; };
 		A44D203D1E9B27D100966E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44D203B1E9B27D100966E63 /* Main.storyboard */; };
@@ -29,37 +45,46 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A41862921EB322B900030C79 /* IBLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLClient.h; sourceTree = "<group>"; };
-		A41862931EB322B900030C79 /* IBLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLClient.m; sourceTree = "<group>"; };
-		A41862951EB322B900030C79 /* IBLServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLServer.h; sourceTree = "<group>"; };
-		A41862961EB322B900030C79 /* IBLServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLServer.m; sourceTree = "<group>"; };
-		A41862981EB322B900030C79 /* IBLSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocket.h; sourceTree = "<group>"; };
-		A41862991EB322B900030C79 /* IBLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocket.m; sourceTree = "<group>"; };
-		A418629A1EB322B900030C79 /* IBLTcpSoket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLTcpSoket.h; sourceTree = "<group>"; };
-		A418629B1EB322B900030C79 /* IBLTcpSoket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLTcpSoket.m; sourceTree = "<group>"; };
-		A418629C1EB322B900030C79 /* IBLUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLUdpSocket.h; sourceTree = "<group>"; };
-		A418629D1EB322B900030C79 /* IBLUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLUdpSocket.m; sourceTree = "<group>"; };
-		A418629F1EB322B900030C79 /* IBLSocketAddr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketAddr.h; sourceTree = "<group>"; };
-		A41862A01EB322B900030C79 /* IBLSocketAddr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketAddr.m; sourceTree = "<group>"; };
-		A41862A11EB322B900030C79 /* IBLSocketConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketConnector.h; sourceTree = "<group>"; };
-		A41862A21EB322B900030C79 /* IBLSocketConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketConnector.m; sourceTree = "<group>"; };
-		A41862A41EB322B900030C79 /* IBLSocketDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketDefine.h; sourceTree = "<group>"; };
-		A41862A51EB322B900030C79 /* IBLSocketUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketUtil.h; sourceTree = "<group>"; };
-		A41862A61EB322B900030C79 /* IBLSocketUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketUtil.m; sourceTree = "<group>"; };
 		A41862B01EB322C400030C79 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A41862B11EB322C400030C79 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A41862B41EB322F500030C79 /* IBLCommDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBLCommDefine.h; sourceTree = "<group>"; };
 		A41862B51EB3237600030C79 /* Prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
-		A41862B61EB3244800030C79 /* IBLComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLComm.h; sourceTree = "<group>"; };
-		A41862B71EB3244800030C79 /* IBLComm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLComm.m; sourceTree = "<group>"; };
 		A41862C31EB341A800030C79 /* ServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerController.h; sourceTree = "<group>"; };
 		A41862C41EB341A800030C79 /* ServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerController.m; sourceTree = "<group>"; };
 		A41862C91EB341D500030C79 /* ClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientController.h; sourceTree = "<group>"; };
 		A41862CA1EB341D500030C79 /* ClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientController.m; sourceTree = "<group>"; };
-		A440CFFF1EBB60CB005E0726 /* IBLMessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLMessageDispatcher.h; sourceTree = "<group>"; };
-		A440D0001EBB60CB005E0726 /* IBLMessageDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLMessageDispatcher.m; sourceTree = "<group>"; };
-		A440D0021EBB77C0005E0726 /* IBLConnectorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLConnectorManager.h; sourceTree = "<group>"; };
-		A440D0031EBB77C0005E0726 /* IBLConnectorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLConnectorManager.m; sourceTree = "<group>"; };
+		A442855F1EBF54CA00E6D780 /* server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = server.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44285611EBF54CA00E6D780 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A44285621EBF54CA00E6D780 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A44285651EBF54CA00E6D780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A44285671EBF54CB00E6D780 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A44285681EBF54CB00E6D780 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A442856A1EBF54CB00E6D780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A442856D1EBF54CB00E6D780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A442856F1EBF54CB00E6D780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A44285761EBF54E800E6D780 /* IBLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLClient.h; sourceTree = "<group>"; };
+		A44285771EBF54E800E6D780 /* IBLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLClient.m; sourceTree = "<group>"; };
+		A44285791EBF54E800E6D780 /* IBLComm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLComm.h; sourceTree = "<group>"; };
+		A442857A1EBF54E800E6D780 /* IBLComm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLComm.m; sourceTree = "<group>"; };
+		A442857B1EBF54E800E6D780 /* IBLCommDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLCommDefine.h; sourceTree = "<group>"; };
+		A442857D1EBF54E800E6D780 /* IBLConnectorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLConnectorManager.h; sourceTree = "<group>"; };
+		A442857E1EBF54E800E6D780 /* IBLConnectorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLConnectorManager.m; sourceTree = "<group>"; };
+		A442857F1EBF54E800E6D780 /* IBLMessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLMessageDispatcher.h; sourceTree = "<group>"; };
+		A44285801EBF54E800E6D780 /* IBLMessageDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLMessageDispatcher.m; sourceTree = "<group>"; };
+		A44285811EBF54E800E6D780 /* IBLServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLServer.h; sourceTree = "<group>"; };
+		A44285821EBF54E800E6D780 /* IBLServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLServer.m; sourceTree = "<group>"; };
+		A44285851EBF54E800E6D780 /* IBLSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocket.h; sourceTree = "<group>"; };
+		A44285861EBF54E800E6D780 /* IBLSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocket.m; sourceTree = "<group>"; };
+		A44285871EBF54E800E6D780 /* IBLTcpSoket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLTcpSoket.h; sourceTree = "<group>"; };
+		A44285881EBF54E800E6D780 /* IBLTcpSoket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLTcpSoket.m; sourceTree = "<group>"; };
+		A44285891EBF54E800E6D780 /* IBLUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLUdpSocket.h; sourceTree = "<group>"; };
+		A442858A1EBF54E800E6D780 /* IBLUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLUdpSocket.m; sourceTree = "<group>"; };
+		A442858C1EBF54E800E6D780 /* IBLSocketAddr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketAddr.h; sourceTree = "<group>"; };
+		A442858D1EBF54E800E6D780 /* IBLSocketAddr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketAddr.m; sourceTree = "<group>"; };
+		A442858E1EBF54E800E6D780 /* IBLSocketConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketConnector.h; sourceTree = "<group>"; };
+		A442858F1EBF54E800E6D780 /* IBLSocketConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketConnector.m; sourceTree = "<group>"; };
+		A44285911EBF54E800E6D780 /* IBLSocketDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketDefine.h; sourceTree = "<group>"; };
+		A44285921EBF54E800E6D780 /* IBLSocketUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBLSocketUtil.h; sourceTree = "<group>"; };
+		A44285931EBF54E800E6D780 /* IBLSocketUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBLSocketUtil.m; sourceTree = "<group>"; };
 		A44D202F1E9B27D100966E63 /* IBLSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBLSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44D20331E9B27D100966E63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A44D20351E9B27D100966E63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A442855C1EBF54CA00E6D780 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A44D202C1E9B27D100966E63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,83 +113,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A418628F1EB322B900030C79 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				A41862901EB322B900030C79 /* comm */,
-				A41862971EB322B900030C79 /* socket */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		A41862901EB322B900030C79 /* comm */ = {
-			isa = PBXGroup;
-			children = (
-				A41862B31EB322E100030C79 /* include */,
-				A41862911EB322B900030C79 /* client */,
-				A41862941EB322B900030C79 /* server */,
-			);
-			path = comm;
-			sourceTree = "<group>";
-		};
-		A41862911EB322B900030C79 /* client */ = {
-			isa = PBXGroup;
-			children = (
-				A41862921EB322B900030C79 /* IBLClient.h */,
-				A41862931EB322B900030C79 /* IBLClient.m */,
-			);
-			path = client;
-			sourceTree = "<group>";
-		};
-		A41862941EB322B900030C79 /* server */ = {
-			isa = PBXGroup;
-			children = (
-				A41862951EB322B900030C79 /* IBLServer.h */,
-				A41862961EB322B900030C79 /* IBLServer.m */,
-				A440CFFF1EBB60CB005E0726 /* IBLMessageDispatcher.h */,
-				A440D0001EBB60CB005E0726 /* IBLMessageDispatcher.m */,
-				A440D0021EBB77C0005E0726 /* IBLConnectorManager.h */,
-				A440D0031EBB77C0005E0726 /* IBLConnectorManager.m */,
-			);
-			path = server;
-			sourceTree = "<group>";
-		};
-		A41862971EB322B900030C79 /* socket */ = {
-			isa = PBXGroup;
-			children = (
-				A41862981EB322B900030C79 /* IBLSocket.h */,
-				A41862991EB322B900030C79 /* IBLSocket.m */,
-				A418629A1EB322B900030C79 /* IBLTcpSoket.h */,
-				A418629B1EB322B900030C79 /* IBLTcpSoket.m */,
-				A418629C1EB322B900030C79 /* IBLUdpSocket.h */,
-				A418629D1EB322B900030C79 /* IBLUdpSocket.m */,
-				A418629E1EB322B900030C79 /* modle */,
-				A41862A31EB322B900030C79 /* util */,
-			);
-			path = socket;
-			sourceTree = "<group>";
-		};
-		A418629E1EB322B900030C79 /* modle */ = {
-			isa = PBXGroup;
-			children = (
-				A418629F1EB322B900030C79 /* IBLSocketAddr.h */,
-				A41862A01EB322B900030C79 /* IBLSocketAddr.m */,
-				A41862A11EB322B900030C79 /* IBLSocketConnector.h */,
-				A41862A21EB322B900030C79 /* IBLSocketConnector.m */,
-			);
-			path = modle;
-			sourceTree = "<group>";
-		};
-		A41862A31EB322B900030C79 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				A41862A41EB322B900030C79 /* IBLSocketDefine.h */,
-				A41862A51EB322B900030C79 /* IBLSocketUtil.h */,
-				A41862A61EB322B900030C79 /* IBLSocketUtil.m */,
-			);
-			path = util;
-			sourceTree = "<group>";
-		};
 		A41862AF1EB322C400030C79 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,20 +126,129 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		A41862B31EB322E100030C79 /* include */ = {
+		A44285601EBF54CA00E6D780 /* server */ = {
 			isa = PBXGroup;
 			children = (
-				A41862B41EB322F500030C79 /* IBLCommDefine.h */,
-				A41862B61EB3244800030C79 /* IBLComm.h */,
-				A41862B71EB3244800030C79 /* IBLComm.m */,
+				A44285611EBF54CA00E6D780 /* AppDelegate.h */,
+				A44285621EBF54CA00E6D780 /* AppDelegate.m */,
+				A44285671EBF54CB00E6D780 /* ViewController.h */,
+				A44285681EBF54CB00E6D780 /* ViewController.m */,
+				A442856A1EBF54CB00E6D780 /* Assets.xcassets */,
+				A442856C1EBF54CB00E6D780 /* Main.storyboard */,
+				A442856F1EBF54CB00E6D780 /* Info.plist */,
+				A44285641EBF54CA00E6D780 /* Supporting Files */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		A44285641EBF54CA00E6D780 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A44285651EBF54CA00E6D780 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A44285731EBF54E800E6D780 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A44285741EBF54E800E6D780 /* comm */,
+				A44285831EBF54E800E6D780 /* frend */,
+				A44285841EBF54E800E6D780 /* socket */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A44285741EBF54E800E6D780 /* comm */ = {
+			isa = PBXGroup;
+			children = (
+				A44285751EBF54E800E6D780 /* client */,
+				A44285781EBF54E800E6D780 /* include */,
+				A442857C1EBF54E800E6D780 /* server */,
+			);
+			path = comm;
+			sourceTree = "<group>";
+		};
+		A44285751EBF54E800E6D780 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				A44285761EBF54E800E6D780 /* IBLClient.h */,
+				A44285771EBF54E800E6D780 /* IBLClient.m */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		A44285781EBF54E800E6D780 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A44285791EBF54E800E6D780 /* IBLComm.h */,
+				A442857A1EBF54E800E6D780 /* IBLComm.m */,
+				A442857B1EBF54E800E6D780 /* IBLCommDefine.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		A442857C1EBF54E800E6D780 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				A442857D1EBF54E800E6D780 /* IBLConnectorManager.h */,
+				A442857E1EBF54E800E6D780 /* IBLConnectorManager.m */,
+				A442857F1EBF54E800E6D780 /* IBLMessageDispatcher.h */,
+				A44285801EBF54E800E6D780 /* IBLMessageDispatcher.m */,
+				A44285811EBF54E800E6D780 /* IBLServer.h */,
+				A44285821EBF54E800E6D780 /* IBLServer.m */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		A44285831EBF54E800E6D780 /* frend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = frend;
+			sourceTree = "<group>";
+		};
+		A44285841EBF54E800E6D780 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				A44285851EBF54E800E6D780 /* IBLSocket.h */,
+				A44285861EBF54E800E6D780 /* IBLSocket.m */,
+				A44285871EBF54E800E6D780 /* IBLTcpSoket.h */,
+				A44285881EBF54E800E6D780 /* IBLTcpSoket.m */,
+				A44285891EBF54E800E6D780 /* IBLUdpSocket.h */,
+				A442858A1EBF54E800E6D780 /* IBLUdpSocket.m */,
+				A442858B1EBF54E800E6D780 /* modle */,
+				A44285901EBF54E800E6D780 /* util */,
+			);
+			path = socket;
+			sourceTree = "<group>";
+		};
+		A442858B1EBF54E800E6D780 /* modle */ = {
+			isa = PBXGroup;
+			children = (
+				A442858C1EBF54E800E6D780 /* IBLSocketAddr.h */,
+				A442858D1EBF54E800E6D780 /* IBLSocketAddr.m */,
+				A442858E1EBF54E800E6D780 /* IBLSocketConnector.h */,
+				A442858F1EBF54E800E6D780 /* IBLSocketConnector.m */,
+			);
+			path = modle;
+			sourceTree = "<group>";
+		};
+		A44285901EBF54E800E6D780 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A44285911EBF54E800E6D780 /* IBLSocketDefine.h */,
+				A44285921EBF54E800E6D780 /* IBLSocketUtil.h */,
+				A44285931EBF54E800E6D780 /* IBLSocketUtil.m */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		A44D20261E9B27D100966E63 = {
 			isa = PBXGroup;
 			children = (
 				A44D20311E9B27D100966E63 /* IBLSocket */,
+				A44285601EBF54CA00E6D780 /* server */,
 				A44D20301E9B27D100966E63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -193,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				A44D202F1E9B27D100966E63 /* IBLSocket.app */,
+				A442855F1EBF54CA00E6D780 /* server.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,7 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				A41862AF1EB322C400030C79 /* UI */,
-				A418628F1EB322B900030C79 /* src */,
+				A44285731EBF54E800E6D780 /* src */,
 				A44D20491E9B27FD00966E63 /* include */,
 				A44D20351E9B27D100966E63 /* AppDelegate.h */,
 				A44D20361E9B27D100966E63 /* AppDelegate.m */,
@@ -233,6 +298,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A442855E1EBF54CA00E6D780 /* server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A44285701EBF54CB00E6D780 /* Build configuration list for PBXNativeTarget "server" */;
+			buildPhases = (
+				A442855B1EBF54CA00E6D780 /* Sources */,
+				A442855C1EBF54CA00E6D780 /* Frameworks */,
+				A442855D1EBF54CA00E6D780 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = server;
+			productName = server;
+			productReference = A442855F1EBF54CA00E6D780 /* server.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A44D202E1E9B27D100966E63 /* IBLSocket */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44D20461E9B27D200966E63 /* Build configuration list for PBXNativeTarget "IBLSocket" */;
@@ -259,6 +341,11 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Ahead;
 				TargetAttributes = {
+					A442855E1EBF54CA00E6D780 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MHZFCBBQ75;
+						ProvisioningStyle = Automatic;
+					};
 					A44D202E1E9B27D100966E63 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4SND9369ME;
@@ -280,11 +367,21 @@
 			projectRoot = "";
 			targets = (
 				A44D202E1E9B27D100966E63 /* IBLSocket */,
+				A442855E1EBF54CA00E6D780 /* server */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A442855D1EBF54CA00E6D780 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A442856B1EBF54CB00E6D780 /* Assets.xcassets in Resources */,
+				A442856E1EBF54CB00E6D780 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A44D202D1E9B27D100966E63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,25 +395,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A442855B1EBF54CA00E6D780 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44285A11EBF54E800E6D780 /* IBLTcpSoket.m in Sources */,
+				A44285A51EBF54E800E6D780 /* IBLSocketAddr.m in Sources */,
+				A442859B1EBF54E800E6D780 /* IBLMessageDispatcher.m in Sources */,
+				A44285A31EBF54E800E6D780 /* IBLUdpSocket.m in Sources */,
+				A44285951EBF54E800E6D780 /* IBLClient.m in Sources */,
+				A44285691EBF54CB00E6D780 /* ViewController.m in Sources */,
+				A44285971EBF54E800E6D780 /* IBLComm.m in Sources */,
+				A442859D1EBF54E800E6D780 /* IBLServer.m in Sources */,
+				A44285991EBF54E800E6D780 /* IBLConnectorManager.m in Sources */,
+				A44285661EBF54CA00E6D780 /* main.m in Sources */,
+				A442859F1EBF54E800E6D780 /* IBLSocket.m in Sources */,
+				A44285A71EBF54E800E6D780 /* IBLSocketConnector.m in Sources */,
+				A44285A91EBF54E800E6D780 /* IBLSocketUtil.m in Sources */,
+				A44285631EBF54CA00E6D780 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A44D202B1E9B27D100966E63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41862A71EB322B900030C79 /* IBLClient.m in Sources */,
-				A41862AC1EB322B900030C79 /* IBLSocketAddr.m in Sources */,
-				A41862AB1EB322B900030C79 /* IBLUdpSocket.m in Sources */,
-				A41862AD1EB322B900030C79 /* IBLSocketConnector.m in Sources */,
-				A41862AE1EB322B900030C79 /* IBLSocketUtil.m in Sources */,
+				A44285941EBF54E800E6D780 /* IBLClient.m in Sources */,
+				A442859A1EBF54E800E6D780 /* IBLMessageDispatcher.m in Sources */,
+				A44285A21EBF54E800E6D780 /* IBLUdpSocket.m in Sources */,
+				A44285961EBF54E800E6D780 /* IBLComm.m in Sources */,
+				A44285A61EBF54E800E6D780 /* IBLSocketConnector.m in Sources */,
 				A41862B21EB322C400030C79 /* ViewController.m in Sources */,
+				A44285A41EBF54E800E6D780 /* IBLSocketAddr.m in Sources */,
+				A442859E1EBF54E800E6D780 /* IBLSocket.m in Sources */,
+				A44285A81EBF54E800E6D780 /* IBLSocketUtil.m in Sources */,
 				A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */,
-				A440D0011EBB60CB005E0726 /* IBLMessageDispatcher.m in Sources */,
-				A41862B81EB3244800030C79 /* IBLComm.m in Sources */,
-				A41862A81EB322B900030C79 /* IBLServer.m in Sources */,
-				A41862A91EB322B900030C79 /* IBLSocket.m in Sources */,
-				A41862AA1EB322B900030C79 /* IBLTcpSoket.m in Sources */,
 				A41862C51EB341A800030C79 /* ServerController.m in Sources */,
-				A440D0041EBB77C0005E0726 /* IBLConnectorManager.m in Sources */,
+				A44285981EBF54E800E6D780 /* IBLConnectorManager.m in Sources */,
+				A44285A01EBF54E800E6D780 /* IBLTcpSoket.m in Sources */,
 				A41862CB1EB341D500030C79 /* ClientController.m in Sources */,
+				A442859C1EBF54E800E6D780 /* IBLServer.m in Sources */,
 				A44D20341E9B27D100966E63 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +442,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A442856C1EBF54CB00E6D780 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A442856D1EBF54CB00E6D780 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		A44D203B1E9B27D100966E63 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -343,6 +469,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A44285711EBF54CB00E6D780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MHZFCBBQ75;
+				INFOPLIST_FILE = server/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = ahead.bellar.cn.server;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A44285721EBF54CB00E6D780 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = MHZFCBBQ75;
+				INFOPLIST_FILE = server/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = ahead.bellar.cn.server;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		A44D20441E9B27D200966E63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -467,6 +625,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A44285701EBF54CB00E6D780 /* Build configuration list for PBXNativeTarget "server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44285711EBF54CB00E6D780 /* Debug */,
+				A44285721EBF54CB00E6D780 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A44D202A1E9B27D100966E63 /* Build configuration list for PBXProject "IBLSocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
