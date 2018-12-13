@@ -72,7 +72,7 @@
 */
 
 - (void)recvBroadast:(NSString*)msg {
-    [self.textview setText:[self.textview.text stringByAppendingString:@"______________________\n"]];
+    [self.textview setText:[self.textview.text stringByAppendingString:@"broadcast______________________\n"]];
     [self.textview setText:[self.textview.text stringByAppendingString:msg]];
 }
 

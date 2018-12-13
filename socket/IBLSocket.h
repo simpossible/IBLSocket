@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IBLSocketConnector.h"
-
+#import "IBLSocketDefine.h"
 
 
 
@@ -77,7 +77,14 @@
  */
 - (void)startReciveDataForConnector:(IBLSocketConnector*)connector;
 
-/**upd 方法*/
+
+////////////////////UDP///////////////
+
+/**
+ * upd 方法
+ @param ip 目标ip  如果ip 为nil 或者 @“” 那么会广播数据。广播数据 需要开启广播选项 setEnableBroadCast
+ @param port 数据发送端口
+ */
 - (void)reciveFrom:(NSString *)ip atPort:(NSInteger)port;
 
 

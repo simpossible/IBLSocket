@@ -1,0 +1,16 @@
+PODS:
+  - IBLSocket (0.0.1)
+
+DEPENDENCIES:
+  - IBLSocket (from `../socket`)
+
+EXTERNAL SOURCES:
+  IBLSocket:
+    :path: "../socket"
+
+SPEC CHECKSUMS:
+  IBLSocket: 12600b50100185e82e9b083813554bebf4a3c3ef
+
+PODFILE CHECKSUM: 66c45fa24002d080bfee73bc80fb4e92f0e23825
+
+COCOAPODS: 1.5.3
