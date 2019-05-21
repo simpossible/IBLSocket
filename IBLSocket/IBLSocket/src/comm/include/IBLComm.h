@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IBLCommDefine.h"
 
 typedef void (^IBLCOMMDataBlock)(NSData *finaldata,IBLCommHeader commheader);
 typedef void (^IBLCOMMErrorBlock)(IBLCommError code);

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IBLCommDefine.h"
 
 @protocol IBLServerProtocol <IBLCommProtocol>
 

@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSThread *recvThread;
 
-@property (nonatomic, strong) dispatch_queue_t tcpSendDataQueue;
+@property (nonatomic) dispatch_queue_t tcpSendDataQueue;
 
 @end
 
@@ -116,7 +116,8 @@
 
 - (void)connectToIp:(NSString *)ip atPort:(NSInteger)port error:(IBLSocketError)err {
     isConnector = YES;
-    [super connectToIp:ip atPort:port ];
+   int state = [super connectToIp:ip atPort:port ];
+   
 }
 
 

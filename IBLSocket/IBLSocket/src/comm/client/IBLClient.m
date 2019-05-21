@@ -152,6 +152,7 @@
         self.clientState = IBLClientStateConnecting;
         [self initialTcpSocket];
         int state = [self.tcpScokt connectToIp:server.hostIp atPort:server.hostPort];
+        NSLog(@"%@",[NSString stringWithFormat:@"%s",strerror((int)state)]);
         if (state == 0) {
             self.clientState = IBLClientStateConnected;
             NSLog(@"连接服务器成功");

@@ -7,88 +7,130 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E50FBB5F880CD36E8919827EC9F1647 /* Pods-server-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 546E7B123FEE7C6BF5E3B4AA5617BB32 /* Pods-server-dummy.m */; };
-		129247EDD1AF44C227BA2BF81F3E5B65 /* IBLTcpSoket.h in Headers */ = {isa = PBXBuildFile; fileRef = 12003499C223BA4E0E33D7AA19205F72 /* IBLTcpSoket.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		209A5B51C3C5DBC1AC07DB90B03C7443 /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC67321D28A53EC097E55D057E5F9F0 /* IBLSocketConnector.m */; };
-		238906E6279105F5E225D49E1BBB996E /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4E466FD7412B6D5C1A37E3D7ADDF72 /* IBLSocketAddr.m */; };
-		26E46C369A04443D0197CF9935E0B197 /* IBLSocketAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E57A8784ECE4275677C2FB3B11660D1 /* IBLSocketAddr.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		41EC272C18AD45890B41FB1B1D1CEF7E /* IBLUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 47D62773E185026F34DCF2A51898769C /* IBLUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4944A1E7E7396175BCC4BCB03A0F669B /* Pods-IBLSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E25FA2E5BB00FEFA735A51D620C04B8 /* Pods-IBLSocket-dummy.m */; };
-		5B9D05B1E7E0478F95E033B542C88054 /* IBLSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 098A3C570FDEA91469FC27C8E9335599 /* IBLSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		70DD3557470DD589FC52A37DBEB4957F /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6F93655C107FA493E8DE18A7C7493C /* IBLTcpSoket.m */; };
-		B35953911ACD707F596F9E5449EE0A93 /* IBLSocketDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = AC3C7D1B785D36A3CAA23FF094664B2C /* IBLSocketDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B7E675603AAF64EB477F60AAC09D7631 /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1009B65E660B5837BDF915B7E71A6EF5 /* IBLUdpSocket.m */; };
-		BEB43330E7BCFA2ECC872A4487C6990C /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E457B020A45B740FC4C62132B321E /* IBLSocketUtil.m */; };
-		D4FBC7F1C407414E36ECBE5097AC9CA6 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 793776BD76058DFBC00E6F5F3B89D1A0 /* IBLSocket.m */; };
-		E1FB97FA213338947A866ADFC5B90971 /* IBLSocketUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E46904395CFC23716B7417B23BC27A9 /* IBLSocketUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E37C07BF2247B81672195FC5D3E34132 /* IBLSocketConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = D545C3A056E9F163AF597AFB03FE3F77 /* IBLSocketConnector.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FB94338FC21F30B16521ACF07DDD3506 /* IBLSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0248AC652190A58FD937C50407CCD99 /* IBLSocket-dummy.m */; };
+		04FE625EC2B95439F352BFFEB91374FE /* IBLSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C5678A89F5374ECC09BA5DFC3F96CB6C /* IBLSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AA38004A038DD0A532F6665B4E93446 /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CB6F8499A6F9014A24A55A0F7E70DF /* IBLSocketConnector.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1602A12C523DBFCFA53D5C143D098732 /* IBLSocketConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = B749B223EC6021FCF7642FD923903E30 /* IBLSocketConnector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		22D11DF04B16C1C0AF0ABC5AC7090FEC /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3EBB838885CBDC2878E98732995DD /* IBLSocketUtil.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		25722FFC14DB9AF5129A077FD217371B /* Pods-IMClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D502AFE6D38C4E69DA96F7835B928C86 /* Pods-IMClient-dummy.m */; };
+		27927EE15CA3456CA5541548671AC63A /* IBLSocketAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DE414E9634BB8DA4E47EEA66AC6C07 /* IBLSocketAddr.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2DBB9ADB1BC856700CB188A4F91FF944 /* IBLSocketConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CB6F8499A6F9014A24A55A0F7E70DF /* IBLSocketConnector.m */; };
+		2DD61238AED961CCD6A2F4CA6B42387C /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A98B4F5A1A43286B21336F80916BCC2 /* IBLUdpSocket.m */; };
+		3DA91C8E1EDC399F23FC680847E44562 /* IBLSocketUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 350F0D2FABF0D68AA967698E91B35E17 /* IBLSocketUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41E013F2D67849D52A7715F31C5B537A /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B1F46A60A1B47236C8220E600398B9 /* IBLSocketAddr.m */; };
+		4CB7ED8F60E4176627022BA646E3D159 /* IBLSocketDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = DCD7AA839C820457570D205058F8F7A9 /* IBLSocketDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58592D0B3D5765221126AE714C839B87 /* IBLTcpSoket.h in Headers */ = {isa = PBXBuildFile; fileRef = 630927FAD30F52FC41C9AAB8B2A5572E /* IBLTcpSoket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5883B876C5C6E0A1313EAAC9D49F9B88 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BB259F68B7BD4EA13A9237119EBF5B98 /* IBLSocket.m */; };
+		5A7791086E07918231AB92531A1A5C95 /* IBLSocketDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = DCD7AA839C820457570D205058F8F7A9 /* IBLSocketDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5CFD414AE0FCD909F4C0FE684C650EE6 /* IBLSocketConnector.h in Headers */ = {isa = PBXBuildFile; fileRef = B749B223EC6021FCF7642FD923903E30 /* IBLSocketConnector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6AF19A56839E77BC121374D355621EA2 /* IBLUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8856FCEFEC0A6EB903BA183BBD435385 /* IBLUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6F7001F3BFFA2BA5C859CEF4520DA060 /* IBLUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A98B4F5A1A43286B21336F80916BCC2 /* IBLUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		78B1AAE3BD9700626EBE910BF579D4DD /* IBLSocket-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7712DCF4334BFC173EBF51524EA18870 /* IBLSocket-iOS-dummy.m */; };
+		7AFC239473E50B8E9AE8898C049C8724 /* IBLSocketUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB3EBB838885CBDC2878E98732995DD /* IBLSocketUtil.m */; };
+		7DC78D146A245912FB038FC1D16E1909 /* IBLSocket-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B932EA179079B2DEAC5B354C37F6AB64 /* IBLSocket-macOS-dummy.m */; };
+		83531AB2302E1BE1C956CEAB347E691F /* IBLTcpSoket.h in Headers */ = {isa = PBXBuildFile; fileRef = 630927FAD30F52FC41C9AAB8B2A5572E /* IBLTcpSoket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		88E5DF0692E59545BBB698BA32FE4A39 /* IBLSocketAddr.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B1F46A60A1B47236C8220E600398B9 /* IBLSocketAddr.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		995DD70AA3B6281AC17CDD1B9862009C /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C160B77E250E907B6E2B3D5056B7320 /* IBLTcpSoket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9D972DE5314AACE09B681B625677374F /* Pods-server-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DAC2CDED75AFAA9C505C5F14CA8D7 /* Pods-server-dummy.m */; };
+		A3799EC885B6077ADF92B26DD9E5D085 /* Pods-IBLSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BEF00FC6C69E3DD985CF568400ED37 /* Pods-IBLSocket-dummy.m */; };
+		B0E3E29C1C8C1E48D8D3E80E242CD397 /* IBLSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BB259F68B7BD4EA13A9237119EBF5B98 /* IBLSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B1D407F6DA1557A904ABCE35DDCCE615 /* IBLUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8856FCEFEC0A6EB903BA183BBD435385 /* IBLUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFD5E2A9FB5D01D76D23ECC6AF0CAAA6 /* IBLSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C5678A89F5374ECC09BA5DFC3F96CB6C /* IBLSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DC1106119F16CA1C1FAE0EA652FE9200 /* IBLSocketAddr.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DE414E9634BB8DA4E47EEA66AC6C07 /* IBLSocketAddr.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E5CE36155215DB7A14BEC76F35812AF6 /* IBLSocketUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 350F0D2FABF0D68AA967698E91B35E17 /* IBLSocketUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F767DB218FFA2C0A0F9BCDD51EF9BA63 /* IBLTcpSoket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C160B77E250E907B6E2B3D5056B7320 /* IBLTcpSoket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		74EA86352D96E8513559F5B9A529004A /* PBXContainerItemProxy */ = {
+		60CB45774C9663839671365CEB7C61E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E99C1881080FD4143375523698D64E2B;
-			remoteInfo = IBLSocket;
+			remoteGlobalIDString = 35C263C5F6AEFDC23CA1F339BA5CDE26;
+			remoteInfo = "IBLSocket-macOS";
+		};
+		DC26235739A433CFF6202F6003F0DF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EAFE7208E5C252CF5ED9EF7342C3D0A;
+			remoteInfo = "IBLSocket-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04C4A5F1F9D53F938C229A9DDFCF3F9D /* Pods-IBLSocket-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBLSocket-acknowledgements.markdown"; sourceTree = "<group>"; };
-		098A3C570FDEA91469FC27C8E9335599 /* IBLSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocket.h; sourceTree = "<group>"; };
-		0E74CF974F2A0C73AA73ECF02328AC27 /* Pods-IBLSocket-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBLSocket-frameworks.sh"; sourceTree = "<group>"; };
-		1009B65E660B5837BDF915B7E71A6EF5 /* IBLUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLUdpSocket.m; sourceTree = "<group>"; };
-		12003499C223BA4E0E33D7AA19205F72 /* IBLTcpSoket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLTcpSoket.h; sourceTree = "<group>"; };
-		176FFF1B7C052C5372AF6209E6479D02 /* IBLSocket.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = IBLSocket.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1E57A8784ECE4275677C2FB3B11660D1 /* IBLSocketAddr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketAddr.h; sourceTree = "<group>"; };
-		1EDDCAD97EA906922C422DAF5FF3320E /* Pods-IBLSocket-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBLSocket-acknowledgements.plist"; sourceTree = "<group>"; };
-		2193172F193862B4D79EA4C0935DDA05 /* libIBLSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIBLSocket.a; path = libIBLSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E46904395CFC23716B7417B23BC27A9 /* IBLSocketUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketUtil.h; sourceTree = "<group>"; };
-		47D62773E185026F34DCF2A51898769C /* IBLUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLUdpSocket.h; sourceTree = "<group>"; };
-		546E7B123FEE7C6BF5E3B4AA5617BB32 /* Pods-server-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-server-dummy.m"; sourceTree = "<group>"; };
-		5AC67321D28A53EC097E55D057E5F9F0 /* IBLSocketConnector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocketConnector.m; sourceTree = "<group>"; };
-		5E42CD448257065D6174AD2610CBACF9 /* Pods-server-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-server-acknowledgements.plist"; sourceTree = "<group>"; };
-		677CCEC5AC4C1FA22E8B1BCA5CA61B80 /* IBLSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBLSocket-prefix.pch"; sourceTree = "<group>"; };
-		693A5A6492C0D9694F859B642915945E /* Pods-server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server.release.xcconfig"; sourceTree = "<group>"; };
-		6A12EE8EBC900C8E852E24B39761EFDA /* Pods-server-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-server-resources.sh"; sourceTree = "<group>"; };
-		793776BD76058DFBC00E6F5F3B89D1A0 /* IBLSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocket.m; sourceTree = "<group>"; };
-		7D982896EB70DAC92A7A3E57F47478D8 /* Pods-server-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-server-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8E75D6D65FD72414FF80ADB90A5BD0B5 /* Pods-IBLSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBLSocket.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95AAB098C253D76F12045130114618A6 /* Pods-server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server.debug.xcconfig"; sourceTree = "<group>"; };
-		9E25FA2E5BB00FEFA735A51D620C04B8 /* Pods-IBLSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBLSocket-dummy.m"; sourceTree = "<group>"; };
-		A0248AC652190A58FD937C50407CCD99 /* IBLSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBLSocket-dummy.m"; sourceTree = "<group>"; };
-		A9787DA3A5C0F64742636FE7BB5774CA /* libPods-IBLSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-IBLSocket.a"; path = "libPods-IBLSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC3C7D1B785D36A3CAA23FF094664B2C /* IBLSocketDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketDefine.h; sourceTree = "<group>"; };
-		C21E457B020A45B740FC4C62132B321E /* IBLSocketUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocketUtil.m; sourceTree = "<group>"; };
-		D4698EDBFC3EC17C09A6E98915340834 /* Pods-server-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-server-frameworks.sh"; sourceTree = "<group>"; };
-		D545C3A056E9F163AF597AFB03FE3F77 /* IBLSocketConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketConnector.h; sourceTree = "<group>"; };
-		D7802AF33DB8FFA8B9D08008BD67D617 /* IBLSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBLSocket.xcconfig; sourceTree = "<group>"; };
-		DC219CECDA34E2757DF947EECB088EDC /* Pods-IBLSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBLSocket.release.xcconfig"; sourceTree = "<group>"; };
-		DF4E466FD7412B6D5C1A37E3D7ADDF72 /* IBLSocketAddr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocketAddr.m; sourceTree = "<group>"; };
-		DF6F93655C107FA493E8DE18A7C7493C /* IBLTcpSoket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLTcpSoket.m; sourceTree = "<group>"; };
-		E02BB2A9765C6425540BE01D66C4E88D /* Pods-IBLSocket-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IBLSocket-resources.sh"; sourceTree = "<group>"; };
-		EB0AB691FACCB3AB067B2C418DC3B148 /* libPods-server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-server.a"; path = "libPods-server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12D03686EFC4E0C617AAEB67088E841A /* libPods-server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-server.a"; path = "libPods-server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		194874E6B63A2B0FA2DB76B7B4F3B860 /* Pods-IBLSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBLSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		340B52630EB0F4C50A5A5BBB206C0B57 /* Pods-IMClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMClient.debug.xcconfig"; sourceTree = "<group>"; };
+		343DAC2CDED75AFAA9C505C5F14CA8D7 /* Pods-server-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-server-dummy.m"; sourceTree = "<group>"; };
+		350F0D2FABF0D68AA967698E91B35E17 /* IBLSocketUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketUtil.h; sourceTree = "<group>"; };
+		3563A9CF5E4040E73EBE9FA2E7107CA5 /* libIBLSocket-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libIBLSocket-macOS.a"; path = "libIBLSocket-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A98B4F5A1A43286B21336F80916BCC2 /* IBLUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLUdpSocket.m; sourceTree = "<group>"; };
+		52BEF00FC6C69E3DD985CF568400ED37 /* Pods-IBLSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IBLSocket-dummy.m"; sourceTree = "<group>"; };
+		54800D6D164514125C8542F1351EDBBD /* libIBLSocket-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libIBLSocket-iOS.a"; path = "libIBLSocket-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B85C3819466A10136A2CF1DC420D1FD /* Pods-server-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-server-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62FB039A2112049B4C006FBD5835DE29 /* Pods-server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server.debug.xcconfig"; sourceTree = "<group>"; };
+		630927FAD30F52FC41C9AAB8B2A5572E /* IBLTcpSoket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLTcpSoket.h; sourceTree = "<group>"; };
+		66141E02BF60F177244EAD6CEA2B1597 /* Pods-server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-server.release.xcconfig"; sourceTree = "<group>"; };
+		71B1F46A60A1B47236C8220E600398B9 /* IBLSocketAddr.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocketAddr.m; sourceTree = "<group>"; };
+		7712DCF4334BFC173EBF51524EA18870 /* IBLSocket-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBLSocket-iOS-dummy.m"; sourceTree = "<group>"; };
+		7BB380DAF2A0C8FE7E16F96C2107395A /* IBLSocket-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IBLSocket-macOS-prefix.pch"; path = "../IBLSocket-macOS/IBLSocket-macOS-prefix.pch"; sourceTree = "<group>"; };
+		7C160B77E250E907B6E2B3D5056B7320 /* IBLTcpSoket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLTcpSoket.m; sourceTree = "<group>"; };
+		7EB3EBB838885CBDC2878E98732995DD /* IBLSocketUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocketUtil.m; sourceTree = "<group>"; };
+		8561BD5BC7D5F15906B0E98144858DC6 /* IBLSocket-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IBLSocket-iOS.xcconfig"; sourceTree = "<group>"; };
+		8856FCEFEC0A6EB903BA183BBD435385 /* IBLUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLUdpSocket.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E4E40974275510F32C7F944D0F93EF6 /* Pods-IMClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IMClient.release.xcconfig"; sourceTree = "<group>"; };
+		A62524C5F751D561234151FFD2C5C824 /* Pods-IBLSocket-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IBLSocket-acknowledgements.plist"; sourceTree = "<group>"; };
+		A9DE414E9634BB8DA4E47EEA66AC6C07 /* IBLSocketAddr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketAddr.h; sourceTree = "<group>"; };
+		AC81D7835BE2530B902D5FE001CBF305 /* IBLSocket.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IBLSocket.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AFC56A5415091A4646C2323ECA22AFB3 /* IBLSocket-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "IBLSocket-macOS.xcconfig"; path = "../IBLSocket-macOS/IBLSocket-macOS.xcconfig"; sourceTree = "<group>"; };
+		B6566750C248CCD0B0AF7CEF6C1A6E34 /* Pods-IBLSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IBLSocket.release.xcconfig"; sourceTree = "<group>"; };
+		B749B223EC6021FCF7642FD923903E30 /* IBLSocketConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketConnector.h; sourceTree = "<group>"; };
+		B932EA179079B2DEAC5B354C37F6AB64 /* IBLSocket-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IBLSocket-macOS-dummy.m"; path = "../IBLSocket-macOS/IBLSocket-macOS-dummy.m"; sourceTree = "<group>"; };
+		BB259F68B7BD4EA13A9237119EBF5B98 /* IBLSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocket.m; sourceTree = "<group>"; };
+		C5678A89F5374ECC09BA5DFC3F96CB6C /* IBLSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocket.h; sourceTree = "<group>"; };
+		C80347C8D71782B9E7DBBCB6C261FCE3 /* Pods-IMClient-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IMClient-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9AF646944A172931BA2AF6FF09749F2 /* libPods-IMClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-IMClient.a"; path = "libPods-IMClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAAE1BD500B45D5F76E3DCF98E6E933B /* Pods-IMClient-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IMClient-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D3CB6F8499A6F9014A24A55A0F7E70DF /* IBLSocketConnector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = IBLSocketConnector.m; sourceTree = "<group>"; };
+		D4297C8176C7FCE9EFB54BB2E9ED1B55 /* Pods-IBLSocket-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IBLSocket-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D502AFE6D38C4E69DA96F7835B928C86 /* Pods-IMClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IMClient-dummy.m"; sourceTree = "<group>"; };
+		DCD7AA839C820457570D205058F8F7A9 /* IBLSocketDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = IBLSocketDefine.h; sourceTree = "<group>"; };
+		E5AFA737F9A27C750E8524DDEF958336 /* Pods-server-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-server-acknowledgements.plist"; sourceTree = "<group>"; };
+		F182CAFD6BFDCCEE0CAE49C3C9477D62 /* IBLSocket-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBLSocket-iOS-prefix.pch"; sourceTree = "<group>"; };
+		FD546620E329F222E3ED110DC5F5D734 /* libPods-IBLSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-IBLSocket.a"; path = "libPods-IBLSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		771809C1523E409261E3EF39CB77C3D7 /* Frameworks */ = {
+		4C834A56F53569CD6B578D524F32B310 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B926CA277934EA579F9DE19FC38B9586 /* Frameworks */ = {
+		54BC3D20B8BEAC7EAF6B01A68A151CB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C64756576037A3F7CBB9EAD35C3F65A9 /* Frameworks */ = {
+		97E6A30A150954C1BDFE56B8DA9244A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B88517F9DE7B63EBAA3B244E215D24E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7B037A1E85A4E48CD388D88239E4922 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,166 +140,202 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		3CD2B4D13356E647D6710DBA80196A4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54800D6D164514125C8542F1351EDBBD /* libIBLSocket-iOS.a */,
+				3563A9CF5E4040E73EBE9FA2E7107CA5 /* libIBLSocket-macOS.a */,
+				FD546620E329F222E3ED110DC5F5D734 /* libPods-IBLSocket.a */,
+				C9AF646944A172931BA2AF6FF09749F2 /* libPods-IMClient.a */,
+				12D03686EFC4E0C617AAEB67088E841A /* libPods-server.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4577E57F13D815EEE00D2F461D419C52 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AC81D7835BE2530B902D5FE001CBF305 /* IBLSocket.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		514A2E0EFF2308ACDC2ADF43066156CE /* Pods-IMClient */ = {
+			isa = PBXGroup;
+			children = (
+				CAAE1BD500B45D5F76E3DCF98E6E933B /* Pods-IMClient-acknowledgements.markdown */,
+				C80347C8D71782B9E7DBBCB6C261FCE3 /* Pods-IMClient-acknowledgements.plist */,
+				D502AFE6D38C4E69DA96F7835B928C86 /* Pods-IMClient-dummy.m */,
+				340B52630EB0F4C50A5A5BBB206C0B57 /* Pods-IMClient.debug.xcconfig */,
+				9E4E40974275510F32C7F944D0F93EF6 /* Pods-IMClient.release.xcconfig */,
+			);
+			name = "Pods-IMClient";
+			path = "Target Support Files/Pods-IMClient";
+			sourceTree = "<group>";
+		};
+		5E8C9F646BA4CC22723B2B2216F00F4A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8561BD5BC7D5F15906B0E98144858DC6 /* IBLSocket-iOS.xcconfig */,
+				7712DCF4334BFC173EBF51524EA18870 /* IBLSocket-iOS-dummy.m */,
+				F182CAFD6BFDCCEE0CAE49C3C9477D62 /* IBLSocket-iOS-prefix.pch */,
+				AFC56A5415091A4646C2323ECA22AFB3 /* IBLSocket-macOS.xcconfig */,
+				B932EA179079B2DEAC5B354C37F6AB64 /* IBLSocket-macOS-dummy.m */,
+				7BB380DAF2A0C8FE7E16F96C2107395A /* IBLSocket-macOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../IBLSocket/Pods/Target Support Files/IBLSocket-iOS";
+			sourceTree = "<group>";
+		};
+		7634A1504B31140C3444B595C60AC7F8 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7AA839C820457570D205058F8F7A9 /* IBLSocketDefine.h */,
+				350F0D2FABF0D68AA967698E91B35E17 /* IBLSocketUtil.h */,
+				7EB3EBB838885CBDC2878E98732995DD /* IBLSocketUtil.m */,
+			);
+			name = util;
+			path = util;
+			sourceTree = "<group>";
+		};
+		8560111EB6BE2D29C5239E270A102EF8 /* Pods-IBLSocket */ = {
+			isa = PBXGroup;
+			children = (
+				D4297C8176C7FCE9EFB54BB2E9ED1B55 /* Pods-IBLSocket-acknowledgements.markdown */,
+				A62524C5F751D561234151FFD2C5C824 /* Pods-IBLSocket-acknowledgements.plist */,
+				52BEF00FC6C69E3DD985CF568400ED37 /* Pods-IBLSocket-dummy.m */,
+				194874E6B63A2B0FA2DB76B7B4F3B860 /* Pods-IBLSocket.debug.xcconfig */,
+				B6566750C248CCD0B0AF7CEF6C1A6E34 /* Pods-IBLSocket.release.xcconfig */,
+			);
+			name = "Pods-IBLSocket";
+			path = "Target Support Files/Pods-IBLSocket";
+			sourceTree = "<group>";
+		};
+		8B254B0937F78358E210EF9DA44317AB /* modle */ = {
+			isa = PBXGroup;
+			children = (
+				A9DE414E9634BB8DA4E47EEA66AC6C07 /* IBLSocketAddr.h */,
+				71B1F46A60A1B47236C8220E600398B9 /* IBLSocketAddr.m */,
+				B749B223EC6021FCF7642FD923903E30 /* IBLSocketConnector.h */,
+				D3CB6F8499A6F9014A24A55A0F7E70DF /* IBLSocketConnector.m */,
+			);
+			name = modle;
+			path = modle;
+			sourceTree = "<group>";
+		};
+		9F740EEF0B7CA9CCCCE730DE66347E5D /* IBLSocket */ = {
+			isa = PBXGroup;
+			children = (
+				C5678A89F5374ECC09BA5DFC3F96CB6C /* IBLSocket.h */,
+				BB259F68B7BD4EA13A9237119EBF5B98 /* IBLSocket.m */,
+				630927FAD30F52FC41C9AAB8B2A5572E /* IBLTcpSoket.h */,
+				7C160B77E250E907B6E2B3D5056B7320 /* IBLTcpSoket.m */,
+				8856FCEFEC0A6EB903BA183BBD435385 /* IBLUdpSocket.h */,
+				4A98B4F5A1A43286B21336F80916BCC2 /* IBLUdpSocket.m */,
+				8B254B0937F78358E210EF9DA44317AB /* modle */,
+				4577E57F13D815EEE00D2F461D419C52 /* Pod */,
+				5E8C9F646BA4CC22723B2B2216F00F4A /* Support Files */,
+				7634A1504B31140C3444B595C60AC7F8 /* util */,
+			);
+			name = IBLSocket;
+			path = ../../socket;
+			sourceTree = "<group>";
+		};
+		A529DFF54B2B55EFB268054899EA53E0 /* Pods-server */ = {
+			isa = PBXGroup;
+			children = (
+				5B85C3819466A10136A2CF1DC420D1FD /* Pods-server-acknowledgements.markdown */,
+				E5AFA737F9A27C750E8524DDEF958336 /* Pods-server-acknowledgements.plist */,
+				343DAC2CDED75AFAA9C505C5F14CA8D7 /* Pods-server-dummy.m */,
+				62FB039A2112049B4C006FBD5835DE29 /* Pods-server.debug.xcconfig */,
+				66141E02BF60F177244EAD6CEA2B1597 /* Pods-server.release.xcconfig */,
+			);
+			name = "Pods-server";
+			path = "Target Support Files/Pods-server";
+			sourceTree = "<group>";
+		};
+		AC3FD96EE2872850F2013E0898577F5D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8560111EB6BE2D29C5239E270A102EF8 /* Pods-IBLSocket */,
+				514A2E0EFF2308ACDC2ADF43066156CE /* Pods-IMClient */,
+				A529DFF54B2B55EFB268054899EA53E0 /* Pods-server */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CD5BF2BF2FE7F29606994F9E9AEADA4B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F740EEF0B7CA9CCCCE730DE66347E5D /* IBLSocket */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				CD5BF2BF2FE7F29606994F9E9AEADA4B /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				3CD2B4D13356E647D6710DBA80196A4B /* Products */,
+				AC3FD96EE2872850F2013E0898577F5D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		28E7B4F6B49E1B4BE395BDA4631C2864 /* Pods-IBLSocket */ = {
-			isa = PBXGroup;
-			children = (
-				04C4A5F1F9D53F938C229A9DDFCF3F9D /* Pods-IBLSocket-acknowledgements.markdown */,
-				1EDDCAD97EA906922C422DAF5FF3320E /* Pods-IBLSocket-acknowledgements.plist */,
-				9E25FA2E5BB00FEFA735A51D620C04B8 /* Pods-IBLSocket-dummy.m */,
-				0E74CF974F2A0C73AA73ECF02328AC27 /* Pods-IBLSocket-frameworks.sh */,
-				E02BB2A9765C6425540BE01D66C4E88D /* Pods-IBLSocket-resources.sh */,
-				8E75D6D65FD72414FF80ADB90A5BD0B5 /* Pods-IBLSocket.debug.xcconfig */,
-				DC219CECDA34E2757DF947EECB088EDC /* Pods-IBLSocket.release.xcconfig */,
-			);
-			name = "Pods-IBLSocket";
-			path = "Target Support Files/Pods-IBLSocket";
-			sourceTree = "<group>";
-		};
-		526ED4858443726C0AF51BE2F4E4C43B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D7802AF33DB8FFA8B9D08008BD67D617 /* IBLSocket.xcconfig */,
-				A0248AC652190A58FD937C50407CCD99 /* IBLSocket-dummy.m */,
-				677CCEC5AC4C1FA22E8B1BCA5CA61B80 /* IBLSocket-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../IBLSocket/Pods/Target Support Files/IBLSocket";
-			sourceTree = "<group>";
-		};
-		76E14DD4FCD99414E59E055033C125F7 /* Pods-server */ = {
-			isa = PBXGroup;
-			children = (
-				7D982896EB70DAC92A7A3E57F47478D8 /* Pods-server-acknowledgements.markdown */,
-				5E42CD448257065D6174AD2610CBACF9 /* Pods-server-acknowledgements.plist */,
-				546E7B123FEE7C6BF5E3B4AA5617BB32 /* Pods-server-dummy.m */,
-				D4698EDBFC3EC17C09A6E98915340834 /* Pods-server-frameworks.sh */,
-				6A12EE8EBC900C8E852E24B39761EFDA /* Pods-server-resources.sh */,
-				95AAB098C253D76F12045130114618A6 /* Pods-server.debug.xcconfig */,
-				693A5A6492C0D9694F859B642915945E /* Pods-server.release.xcconfig */,
-			);
-			name = "Pods-server";
-			path = "Target Support Files/Pods-server";
-			sourceTree = "<group>";
-		};
-		773D5DC93D9C89ADF354226AA10F90B1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				28E7B4F6B49E1B4BE395BDA4631C2864 /* Pods-IBLSocket */,
-				76E14DD4FCD99414E59E055033C125F7 /* Pods-server */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		78A42296DE8B314F8EFC62F6C966FF60 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				176FFF1B7C052C5372AF6209E6479D02 /* IBLSocket.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				856E590B780F0B237F8DED73841B85BF /* Development Pods */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				DDBEC0CA7A4C521BCCFD8D0BFA6BB3D2 /* Products */,
-				773D5DC93D9C89ADF354226AA10F90B1 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		856E590B780F0B237F8DED73841B85BF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BEFCD0C5B6AF7AAF9D00E256A0A07E80 /* IBLSocket */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		8D0E092AC8FDFCA74FEB5CD17F7D63E5 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				AC3C7D1B785D36A3CAA23FF094664B2C /* IBLSocketDefine.h */,
-				3E46904395CFC23716B7417B23BC27A9 /* IBLSocketUtil.h */,
-				C21E457B020A45B740FC4C62132B321E /* IBLSocketUtil.m */,
-			);
-			name = util;
-			path = util;
-			sourceTree = "<group>";
-		};
-		BEFCD0C5B6AF7AAF9D00E256A0A07E80 /* IBLSocket */ = {
-			isa = PBXGroup;
-			children = (
-				098A3C570FDEA91469FC27C8E9335599 /* IBLSocket.h */,
-				793776BD76058DFBC00E6F5F3B89D1A0 /* IBLSocket.m */,
-				12003499C223BA4E0E33D7AA19205F72 /* IBLTcpSoket.h */,
-				DF6F93655C107FA493E8DE18A7C7493C /* IBLTcpSoket.m */,
-				47D62773E185026F34DCF2A51898769C /* IBLUdpSocket.h */,
-				1009B65E660B5837BDF915B7E71A6EF5 /* IBLUdpSocket.m */,
-				E23A59987E40CE745E23916E3F4A561F /* modle */,
-				78A42296DE8B314F8EFC62F6C966FF60 /* Pod */,
-				526ED4858443726C0AF51BE2F4E4C43B /* Support Files */,
-				8D0E092AC8FDFCA74FEB5CD17F7D63E5 /* util */,
-			);
-			name = IBLSocket;
-			path = ../../socket;
-			sourceTree = "<group>";
-		};
-		DDBEC0CA7A4C521BCCFD8D0BFA6BB3D2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2193172F193862B4D79EA4C0935DDA05 /* libIBLSocket.a */,
-				A9787DA3A5C0F64742636FE7BB5774CA /* libPods-IBLSocket.a */,
-				EB0AB691FACCB3AB067B2C418DC3B148 /* libPods-server.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E23A59987E40CE745E23916E3F4A561F /* modle */ = {
-			isa = PBXGroup;
-			children = (
-				1E57A8784ECE4275677C2FB3B11660D1 /* IBLSocketAddr.h */,
-				DF4E466FD7412B6D5C1A37E3D7ADDF72 /* IBLSocketAddr.m */,
-				D545C3A056E9F163AF597AFB03FE3F77 /* IBLSocketConnector.h */,
-				5AC67321D28A53EC097E55D057E5F9F0 /* IBLSocketConnector.m */,
-			);
-			name = modle;
-			path = modle;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3A9D8F794DF63FF0533B7A5CEBEA5165 /* Headers */ = {
+		0858FC48514FCD978983F75EB6A89202 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD5E2A9FB5D01D76D23ECC6AF0CAAA6 /* IBLSocket.h in Headers */,
+				27927EE15CA3456CA5541548671AC63A /* IBLSocketAddr.h in Headers */,
+				1602A12C523DBFCFA53D5C143D098732 /* IBLSocketConnector.h in Headers */,
+				5A7791086E07918231AB92531A1A5C95 /* IBLSocketDefine.h in Headers */,
+				3DA91C8E1EDC399F23FC680847E44562 /* IBLSocketUtil.h in Headers */,
+				83531AB2302E1BE1C956CEAB347E691F /* IBLTcpSoket.h in Headers */,
+				6AF19A56839E77BC121374D355621EA2 /* IBLUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14585EF9BB44CD7D5CE526341E442CEA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79EB575BD46083A39B82B85C646BF12F /* Headers */ = {
+		25BD6CC199278E53C86103EE62FCF8F1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9D05B1E7E0478F95E033B542C88054 /* IBLSocket.h in Headers */,
-				26E46C369A04443D0197CF9935E0B197 /* IBLSocketAddr.h in Headers */,
-				E37C07BF2247B81672195FC5D3E34132 /* IBLSocketConnector.h in Headers */,
-				B35953911ACD707F596F9E5449EE0A93 /* IBLSocketDefine.h in Headers */,
-				E1FB97FA213338947A866ADFC5B90971 /* IBLSocketUtil.h in Headers */,
-				129247EDD1AF44C227BA2BF81F3E5B65 /* IBLTcpSoket.h in Headers */,
-				41EC272C18AD45890B41FB1B1D1CEF7E /* IBLUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8E58A7D0387338F27738E0B6BDA04300 /* Headers */ = {
+		5BC2025989214845798C4721930781D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE625EC2B95439F352BFFEB91374FE /* IBLSocket.h in Headers */,
+				DC1106119F16CA1C1FAE0EA652FE9200 /* IBLSocketAddr.h in Headers */,
+				5CFD414AE0FCD909F4C0FE684C650EE6 /* IBLSocketConnector.h in Headers */,
+				4CB7ED8F60E4176627022BA646E3D159 /* IBLSocketDefine.h in Headers */,
+				E5CE36155215DB7A14BEC76F35812AF6 /* IBLSocketUtil.h in Headers */,
+				58592D0B3D5765221126AE714C839B87 /* IBLTcpSoket.h in Headers */,
+				B1D407F6DA1557A904ABCE35DDCCE615 /* IBLUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D3AC3601CF92D5CE5C86489F1041873 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,13 +345,83 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		76624B734A275C4D6E3595638B365720 /* Pods-server */ = {
+		0EAFE7208E5C252CF5ED9EF7342C3D0A /* IBLSocket-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8454C09E77D3A7D15A667F5C1BD4096D /* Build configuration list for PBXNativeTarget "Pods-server" */;
+			buildConfigurationList = D481B7DAF969C16553001608E6F330FE /* Build configuration list for PBXNativeTarget "IBLSocket-iOS" */;
 			buildPhases = (
-				3A9D8F794DF63FF0533B7A5CEBEA5165 /* Headers */,
-				B0E4DAC53D35C6B3FEEAE27D36DEEDE2 /* Sources */,
-				C64756576037A3F7CBB9EAD35C3F65A9 /* Frameworks */,
+				0858FC48514FCD978983F75EB6A89202 /* Headers */,
+				39BF80E53FEFABEA4525A4DBB7A679FD /* Sources */,
+				B88517F9DE7B63EBAA3B244E215D24E3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IBLSocket-iOS";
+			productName = "IBLSocket-iOS";
+			productReference = 54800D6D164514125C8542F1351EDBBD /* libIBLSocket-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		117273F594942014D114CB5AC7EF099C /* Pods-IBLSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC760FD3B98CCC261D7E9E2F2DDE670 /* Build configuration list for PBXNativeTarget "Pods-IBLSocket" */;
+			buildPhases = (
+				25BD6CC199278E53C86103EE62FCF8F1 /* Headers */,
+				BA4AABE1075F13953282E4280AE01B56 /* Sources */,
+				F7B037A1E85A4E48CD388D88239E4922 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE149D1B9740D27E7DE030D6A7913468 /* PBXTargetDependency */,
+			);
+			name = "Pods-IBLSocket";
+			productName = "Pods-IBLSocket";
+			productReference = FD546620E329F222E3ED110DC5F5D734 /* libPods-IBLSocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		35C263C5F6AEFDC23CA1F339BA5CDE26 /* IBLSocket-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7522A46973A495623BD7F91DF123D0FF /* Build configuration list for PBXNativeTarget "IBLSocket-macOS" */;
+			buildPhases = (
+				5BC2025989214845798C4721930781D4 /* Headers */,
+				31A1B00F05FD069D0A5B4A32C057798F /* Sources */,
+				4C834A56F53569CD6B578D524F32B310 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IBLSocket-macOS";
+			productName = "IBLSocket-macOS";
+			productReference = 3563A9CF5E4040E73EBE9FA2E7107CA5 /* libIBLSocket-macOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		776CE74ADF172AD011B7BC109EDBA662 /* Pods-IMClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9C5013C18A8797B2C131B6615890AA /* Build configuration list for PBXNativeTarget "Pods-IMClient" */;
+			buildPhases = (
+				8D3AC3601CF92D5CE5C86489F1041873 /* Headers */,
+				30D785BD6A341C43DCD5B9145D8B2DFB /* Sources */,
+				97E6A30A150954C1BDFE56B8DA9244A9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2FB4DAEF0D413E4D95E8D27706FEB6 /* PBXTargetDependency */,
+			);
+			name = "Pods-IMClient";
+			productName = "Pods-IMClient";
+			productReference = C9AF646944A172931BA2AF6FF09749F2 /* libPods-IMClient.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C7E9AAD46F0D6C647418648972FB3204 /* Pods-server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3076EFC23D3B667BDC02CABDF00BB6B6 /* Build configuration list for PBXNativeTarget "Pods-server" */;
+			buildPhases = (
+				14585EF9BB44CD7D5CE526341E442CEA /* Headers */,
+				0690D7852E1953B893A8AFC74E6E61B7 /* Sources */,
+				54BC3D20B8BEAC7EAF6B01A68A151CB3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,118 +429,113 @@
 			);
 			name = "Pods-server";
 			productName = "Pods-server";
-			productReference = EB0AB691FACCB3AB067B2C418DC3B148 /* libPods-server.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		DCE15E4FD1D3B82FE3B45A74D73AE126 /* Pods-IBLSocket */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12F292AF69D42CB6DAC375DEBEED72FE /* Build configuration list for PBXNativeTarget "Pods-IBLSocket" */;
-			buildPhases = (
-				8E58A7D0387338F27738E0B6BDA04300 /* Headers */,
-				64BE469409AF80D0A5DFB5E40D0BC220 /* Sources */,
-				771809C1523E409261E3EF39CB77C3D7 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B19EF75349A63B1DAE998E14EA5345C1 /* PBXTargetDependency */,
-			);
-			name = "Pods-IBLSocket";
-			productName = "Pods-IBLSocket";
-			productReference = A9787DA3A5C0F64742636FE7BB5774CA /* libPods-IBLSocket.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E99C1881080FD4143375523698D64E2B /* IBLSocket */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 89A1E84A7B09819AED9E3CF9AD515466 /* Build configuration list for PBXNativeTarget "IBLSocket" */;
-			buildPhases = (
-				79EB575BD46083A39B82B85C646BF12F /* Headers */,
-				0A585C6BD3A4806DD74D586ECC8BA8CF /* Sources */,
-				B926CA277934EA579F9DE19FC38B9586 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = IBLSocket;
-			productName = IBLSocket;
-			productReference = 2193172F193862B4D79EA4C0935DDA05 /* libIBLSocket.a */;
+			productReference = 12D03686EFC4E0C617AAEB67088E841A /* libPods-server.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DDBEC0CA7A4C521BCCFD8D0BFA6BB3D2 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3CD2B4D13356E647D6710DBA80196A4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E99C1881080FD4143375523698D64E2B /* IBLSocket */,
-				DCE15E4FD1D3B82FE3B45A74D73AE126 /* Pods-IBLSocket */,
-				76624B734A275C4D6E3595638B365720 /* Pods-server */,
+				0EAFE7208E5C252CF5ED9EF7342C3D0A /* IBLSocket-iOS */,
+				35C263C5F6AEFDC23CA1F339BA5CDE26 /* IBLSocket-macOS */,
+				117273F594942014D114CB5AC7EF099C /* Pods-IBLSocket */,
+				776CE74ADF172AD011B7BC109EDBA662 /* Pods-IMClient */,
+				C7E9AAD46F0D6C647418648972FB3204 /* Pods-server */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A585C6BD3A4806DD74D586ECC8BA8CF /* Sources */ = {
+		0690D7852E1953B893A8AFC74E6E61B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB94338FC21F30B16521ACF07DDD3506 /* IBLSocket-dummy.m in Sources */,
-				D4FBC7F1C407414E36ECBE5097AC9CA6 /* IBLSocket.m in Sources */,
-				238906E6279105F5E225D49E1BBB996E /* IBLSocketAddr.m in Sources */,
-				209A5B51C3C5DBC1AC07DB90B03C7443 /* IBLSocketConnector.m in Sources */,
-				BEB43330E7BCFA2ECC872A4487C6990C /* IBLSocketUtil.m in Sources */,
-				70DD3557470DD589FC52A37DBEB4957F /* IBLTcpSoket.m in Sources */,
-				B7E675603AAF64EB477F60AAC09D7631 /* IBLUdpSocket.m in Sources */,
+				9D972DE5314AACE09B681B625677374F /* Pods-server-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64BE469409AF80D0A5DFB5E40D0BC220 /* Sources */ = {
+		30D785BD6A341C43DCD5B9145D8B2DFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4944A1E7E7396175BCC4BCB03A0F669B /* Pods-IBLSocket-dummy.m in Sources */,
+				25722FFC14DB9AF5129A077FD217371B /* Pods-IMClient-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0E4DAC53D35C6B3FEEAE27D36DEEDE2 /* Sources */ = {
+		31A1B00F05FD069D0A5B4A32C057798F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E50FBB5F880CD36E8919827EC9F1647 /* Pods-server-dummy.m in Sources */,
+				7DC78D146A245912FB038FC1D16E1909 /* IBLSocket-macOS-dummy.m in Sources */,
+				B0E3E29C1C8C1E48D8D3E80E242CD397 /* IBLSocket.m in Sources */,
+				88E5DF0692E59545BBB698BA32FE4A39 /* IBLSocketAddr.m in Sources */,
+				0AA38004A038DD0A532F6665B4E93446 /* IBLSocketConnector.m in Sources */,
+				22D11DF04B16C1C0AF0ABC5AC7090FEC /* IBLSocketUtil.m in Sources */,
+				995DD70AA3B6281AC17CDD1B9862009C /* IBLTcpSoket.m in Sources */,
+				6F7001F3BFFA2BA5C859CEF4520DA060 /* IBLUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39BF80E53FEFABEA4525A4DBB7A679FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B1AAE3BD9700626EBE910BF579D4DD /* IBLSocket-iOS-dummy.m in Sources */,
+				5883B876C5C6E0A1313EAAC9D49F9B88 /* IBLSocket.m in Sources */,
+				41E013F2D67849D52A7715F31C5B537A /* IBLSocketAddr.m in Sources */,
+				2DBB9ADB1BC856700CB188A4F91FF944 /* IBLSocketConnector.m in Sources */,
+				7AFC239473E50B8E9AE8898C049C8724 /* IBLSocketUtil.m in Sources */,
+				F767DB218FFA2C0A0F9BCDD51EF9BA63 /* IBLTcpSoket.m in Sources */,
+				2DD61238AED961CCD6A2F4CA6B42387C /* IBLUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4AABE1075F13953282E4280AE01B56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3799EC885B6077ADF92B26DD9E5D085 /* Pods-IBLSocket-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B19EF75349A63B1DAE998E14EA5345C1 /* PBXTargetDependency */ = {
+		4E2FB4DAEF0D413E4D95E8D27706FEB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = IBLSocket;
-			target = E99C1881080FD4143375523698D64E2B /* IBLSocket */;
-			targetProxy = 74EA86352D96E8513559F5B9A529004A /* PBXContainerItemProxy */;
+			name = "IBLSocket-macOS";
+			target = 35C263C5F6AEFDC23CA1F339BA5CDE26 /* IBLSocket-macOS */;
+			targetProxy = 60CB45774C9663839671365CEB7C61E6 /* PBXContainerItemProxy */;
+		};
+		BE149D1B9740D27E7DE030D6A7913468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "IBLSocket-iOS";
+			target = 0EAFE7208E5C252CF5ED9EF7342C3D0A /* IBLSocket-iOS */;
+			targetProxy = DC26235739A433CFF6202F6003F0DF3E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		134444C9809902FAE75A109B23247F8D /* Release */ = {
+		1C288A029E8F314682BEA443B6C9ADE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC219CECDA34E2757DF947EECB088EDC /* Pods-IBLSocket.release.xcconfig */;
+			baseConfigurationReference = B6566750C248CCD0B0AF7CEF6C1A6E34 /* Pods-IBLSocket.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -413,21 +556,137 @@
 			};
 			name = Release;
 		};
-		37E5213775FDDE4972730A92AE19AC55 /* Debug */ = {
+		228BBD5CAA16510B4AAA816499DE5665 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7802AF33DB8FFA8B9D08008BD67D617 /* IBLSocket.xcconfig */;
+			baseConfigurationReference = 194874E6B63A2B0FA2DB76B7B4F3B860 /* Pods-IBLSocket.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38EFCA4851748705CB892746BB678F47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFC56A5415091A4646C2323ECA22AFB3 /* IBLSocket-macOS.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/IBLSocket-macOS/IBLSocket-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IBLSocket;
+				PRODUCT_NAME = "IBLSocket-macOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		58B3ADC785F0A2230DF513D5A6661D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E4E40974275510F32C7F944D0F93EF6 /* Pods-IMClient.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5DB8F90EF0C1F9ECE75B829E83F2F12D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8561BD5BC7D5F15906B0E98144858DC6 /* IBLSocket-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/IBLSocket/IBLSocket-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/IBLSocket-iOS/IBLSocket-iOS-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = IBLSocket;
-				PRODUCT_NAME = IBLSocket;
+				PRODUCT_NAME = "IBLSocket-iOS";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71E89699EEFD04B9794C5961DF00C7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340B52630EB0F4C50A5A5BBB206C0B57 /* Pods-IMClient.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		80F080C7D9C5CEFA1FE6E2BB44298FB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8561BD5BC7D5F15906B0E98144858DC6 /* IBLSocket-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IBLSocket-iOS/IBLSocket-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IBLSocket;
+				PRODUCT_NAME = "IBLSocket-iOS";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -436,7 +695,30 @@
 			};
 			name = Debug;
 		};
-		413BF45C5B120FD53C9CE718FB7D7AF1 /* Debug */ = {
+		B38854CE63E31012013BD92B5DC4179B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66141E02BF60F177244EAD6CEA2B1597 /* Pods-server.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C0D0E315CF206615F56673167DA99D5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -468,8 +750,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -503,35 +783,36 @@
 			};
 			name = Debug;
 		};
-		4FCADD171A63A14B17D619D8F94EAD51 /* Release */ = {
+		D1D9889F3A2DC5FB6E162ACFAF27A1F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7802AF33DB8FFA8B9D08008BD67D617 /* IBLSocket.xcconfig */;
+			baseConfigurationReference = AFC56A5415091A4646C2323ECA22AFB3 /* IBLSocket-macOS.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/IBLSocket/IBLSocket-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/IBLSocket-macOS/IBLSocket-macOS-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = IBLSocket;
-				PRODUCT_NAME = IBLSocket;
+				PRODUCT_NAME = "IBLSocket-macOS";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		7287972AC9A0A1270CAA6D20A26B7967 /* Debug */ = {
+		ED8757C09FEE24D5D2EE97D8501DA887 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95AAB098C253D76F12045130114618A6 /* Pods-server.debug.xcconfig */;
+			baseConfigurationReference = 62FB039A2112049B4C006FBD5835DE29 /* Pods-server.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -549,51 +830,7 @@
 			};
 			name = Debug;
 		};
-		AC8AC03220A2E85C47B78BD41AF90CA4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E75D6D65FD72414FF80ADB90A5BD0B5 /* Pods-IBLSocket.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CFC934DC1D6F0841951BD9B2B12E7272 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 693A5A6492C0D9694F859B642915945E /* Pods-server.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D06087066218DD8165408B7481C2D3AE /* Release */ = {
+		F7AF1C9864731355A01783A2F1FE42C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -625,8 +862,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -659,43 +894,61 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12F292AF69D42CB6DAC375DEBEED72FE /* Build configuration list for PBXNativeTarget "Pods-IBLSocket" */ = {
+		3076EFC23D3B667BDC02CABDF00BB6B6 /* Build configuration list for PBXNativeTarget "Pods-server" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC8AC03220A2E85C47B78BD41AF90CA4 /* Debug */,
-				134444C9809902FAE75A109B23247F8D /* Release */,
+				ED8757C09FEE24D5D2EE97D8501DA887 /* Debug */,
+				B38854CE63E31012013BD92B5DC4179B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				413BF45C5B120FD53C9CE718FB7D7AF1 /* Debug */,
-				D06087066218DD8165408B7481C2D3AE /* Release */,
+				C0D0E315CF206615F56673167DA99D5C /* Debug */,
+				F7AF1C9864731355A01783A2F1FE42C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8454C09E77D3A7D15A667F5C1BD4096D /* Build configuration list for PBXNativeTarget "Pods-server" */ = {
+		7522A46973A495623BD7F91DF123D0FF /* Build configuration list for PBXNativeTarget "IBLSocket-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7287972AC9A0A1270CAA6D20A26B7967 /* Debug */,
-				CFC934DC1D6F0841951BD9B2B12E7272 /* Release */,
+				38EFCA4851748705CB892746BB678F47 /* Debug */,
+				D1D9889F3A2DC5FB6E162ACFAF27A1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89A1E84A7B09819AED9E3CF9AD515466 /* Build configuration list for PBXNativeTarget "IBLSocket" */ = {
+		7AC760FD3B98CCC261D7E9E2F2DDE670 /* Build configuration list for PBXNativeTarget "Pods-IBLSocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37E5213775FDDE4972730A92AE19AC55 /* Debug */,
-				4FCADD171A63A14B17D619D8F94EAD51 /* Release */,
+				228BBD5CAA16510B4AAA816499DE5665 /* Debug */,
+				1C288A029E8F314682BEA443B6C9ADE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC9C5013C18A8797B2C131B6615890AA /* Build configuration list for PBXNativeTarget "Pods-IMClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71E89699EEFD04B9794C5961DF00C7EB /* Debug */,
+				58B3ADC785F0A2230DF513D5A6661D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D481B7DAF969C16553001608E6F330FE /* Build configuration list for PBXNativeTarget "IBLSocket-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F080C7D9C5CEFA1FE6E2BB44298FB6 /* Debug */,
+				5DB8F90EF0C1F9ECE75B829E83F2F12D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

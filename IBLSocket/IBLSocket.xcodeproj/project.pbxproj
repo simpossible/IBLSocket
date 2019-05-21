@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261515C1229419DF006571C6 /* IBLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285771EBF54E800E6D780 /* IBLClient.m */; };
+		261515C2229419DF006571C6 /* IBLComm.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857A1EBF54E800E6D780 /* IBLComm.m */; };
+		261515C3229419DF006571C6 /* IBLConnectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857E1EBF54E800E6D780 /* IBLConnectorManager.m */; };
+		261515C4229419DF006571C6 /* IBLMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285801EBF54E800E6D780 /* IBLMessageDispatcher.m */; };
+		261515C5229419DF006571C6 /* IBLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285821EBF54E800E6D780 /* IBLServer.m */; };
+		26AD1F0B22940FE200607090 /* TCPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F0A22940FE200607090 /* TCPViewController.m */; };
+		26AD1F142294184000607090 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F132294184000607090 /* AppDelegate.m */; };
+		26AD1F172294184000607090 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F162294184000607090 /* ViewController.m */; };
+		26AD1F192294184200607090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26AD1F182294184200607090 /* Assets.xcassets */; };
+		26AD1F1C2294184200607090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26AD1F1A2294184200607090 /* Main.storyboard */; };
+		26AD1F1F2294184200607090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F1E2294184200607090 /* main.m */; };
+		26AD1F2A2294184200607090 /* IMClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F292294184200607090 /* IMClientTests.m */; };
+		26AD1F352294184200607090 /* IMClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F342294184200607090 /* IMClientUITests.m */; };
+		63E12C58F29B7286B57E2EAD /* libPods-IMClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF2C982E05E9A03BB1211AB /* libPods-IMClient.a */; };
 		745230EA3D6EA1E1403B60D5 /* libPods-server.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1940EE5B99A19BDE4EDFDBE1 /* libPods-server.a */; };
 		A41862B21EB322C400030C79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862B11EB322C400030C79 /* ViewController.m */; };
 		A41862C51EB341A800030C79 /* ServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41862C41EB341A800030C79 /* ServerController.m */; };
@@ -34,9 +48,45 @@
 		B6BE73DFF76DFD9EE36DA1A7 /* libPods-IBLSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCC9BF5335C89FE693D0B05 /* libPods-IBLSocket.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		26AD1F262294184200607090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A44D20271E9B27D100966E63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26AD1F0F2294184000607090;
+			remoteInfo = IMClient;
+		};
+		26AD1F312294184200607090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A44D20271E9B27D100966E63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26AD1F0F2294184000607090;
+			remoteInfo = IMClient;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		17C817989E69578A0CEC8CCF /* Pods-IMClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMClient/Pods-IMClient.release.xcconfig"; sourceTree = "<group>"; };
 		1940EE5B99A19BDE4EDFDBE1 /* libPods-server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA4C20C57B819CEF61835F8 /* Pods-IBLSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBLSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBLSocket/Pods-IBLSocket.release.xcconfig"; sourceTree = "<group>"; };
+		26AD1F0922940FE200607090 /* TCPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPViewController.h; sourceTree = "<group>"; };
+		26AD1F0A22940FE200607090 /* TCPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPViewController.m; sourceTree = "<group>"; };
+		26AD1F102294184000607090 /* IMClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AD1F122294184000607090 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		26AD1F132294184000607090 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26AD1F152294184000607090 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		26AD1F162294184000607090 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		26AD1F182294184200607090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26AD1F1B2294184200607090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26AD1F1D2294184200607090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26AD1F1E2294184200607090 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26AD1F202294184200607090 /* IMClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IMClient.entitlements; sourceTree = "<group>"; };
+		26AD1F252294184200607090 /* IMClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AD1F292294184200607090 /* IMClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMClientTests.m; sourceTree = "<group>"; };
+		26AD1F2B2294184200607090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26AD1F302294184200607090 /* IMClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AD1F342294184200607090 /* IMClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMClientUITests.m; sourceTree = "<group>"; };
+		26AD1F362294184200607090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A8D44D49906376CFF9DBA5 /* Pods-server.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-server.release.xcconfig"; path = "Pods/Target Support Files/Pods-server/Pods-server.release.xcconfig"; sourceTree = "<group>"; };
 		57EDF4ED80D17D7C1DC5B33F /* Pods-server.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-server.debug.xcconfig"; path = "Pods/Target Support Files/Pods-server/Pods-server.debug.xcconfig"; sourceTree = "<group>"; };
 		A41862B01EB322C400030C79 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -74,11 +124,35 @@
 		A44D203E1E9B27D200966E63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44D20411E9B27D200966E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44D20431E9B27D200966E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4049A06B33490A736501899 /* Pods-IMClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMClient/Pods-IMClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BD98212345DF1BD834C2A631 /* Pods-IBLSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBLSocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBLSocket/Pods-IBLSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		CFF2C982E05E9A03BB1211AB /* libPods-IMClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IMClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCC9BF5335C89FE693D0B05 /* libPods-IBLSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IBLSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		26AD1F0D2294184000607090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E12C58F29B7286B57E2EAD /* libPods-IMClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26AD1F222294184200607090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26AD1F2D2294184200607090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A442855C1EBF54CA00E6D780 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,8 +179,44 @@
 				1DA4C20C57B819CEF61835F8 /* Pods-IBLSocket.release.xcconfig */,
 				57EDF4ED80D17D7C1DC5B33F /* Pods-server.debug.xcconfig */,
 				35A8D44D49906376CFF9DBA5 /* Pods-server.release.xcconfig */,
+				B4049A06B33490A736501899 /* Pods-IMClient.debug.xcconfig */,
+				17C817989E69578A0CEC8CCF /* Pods-IMClient.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		26AD1F112294184000607090 /* IMClient */ = {
+			isa = PBXGroup;
+			children = (
+				26AD1F122294184000607090 /* AppDelegate.h */,
+				26AD1F132294184000607090 /* AppDelegate.m */,
+				26AD1F152294184000607090 /* ViewController.h */,
+				26AD1F162294184000607090 /* ViewController.m */,
+				26AD1F182294184200607090 /* Assets.xcassets */,
+				26AD1F1A2294184200607090 /* Main.storyboard */,
+				26AD1F1D2294184200607090 /* Info.plist */,
+				26AD1F1E2294184200607090 /* main.m */,
+				26AD1F202294184200607090 /* IMClient.entitlements */,
+			);
+			path = IMClient;
+			sourceTree = "<group>";
+		};
+		26AD1F282294184200607090 /* IMClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				26AD1F292294184200607090 /* IMClientTests.m */,
+				26AD1F2B2294184200607090 /* Info.plist */,
+			);
+			path = IMClientTests;
+			sourceTree = "<group>";
+		};
+		26AD1F332294184200607090 /* IMClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				26AD1F342294184200607090 /* IMClientUITests.m */,
+				26AD1F362294184200607090 /* Info.plist */,
+			);
+			path = IMClientUITests;
 			sourceTree = "<group>";
 		};
 		2C0A75E8001A3A498084B5C8 /* Frameworks */ = {
@@ -114,6 +224,7 @@
 			children = (
 				FCCC9BF5335C89FE693D0B05 /* libPods-IBLSocket.a */,
 				1940EE5B99A19BDE4EDFDBE1 /* libPods-server.a */,
+				CFF2C982E05E9A03BB1211AB /* libPods-IMClient.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +234,8 @@
 			children = (
 				A41862C91EB341D500030C79 /* ClientController.h */,
 				A41862CA1EB341D500030C79 /* ClientController.m */,
+				26AD1F0922940FE200607090 /* TCPViewController.h */,
+				26AD1F0A22940FE200607090 /* TCPViewController.m */,
 				A41862B01EB322C400030C79 /* ViewController.h */,
 				A41862B11EB322C400030C79 /* ViewController.m */,
 				A41862C31EB341A800030C79 /* ServerController.h */,
@@ -209,6 +322,9 @@
 			children = (
 				A44D20311E9B27D100966E63 /* IBLSocket */,
 				A44285601EBF54CA00E6D780 /* server */,
+				26AD1F112294184000607090 /* IMClient */,
+				26AD1F282294184200607090 /* IMClientTests */,
+				26AD1F332294184200607090 /* IMClientUITests */,
 				A44D20301E9B27D100966E63 /* Products */,
 				0E931C83F49FDDBAF151415A /* Pods */,
 				2C0A75E8001A3A498084B5C8 /* Frameworks */,
@@ -220,6 +336,9 @@
 			children = (
 				A44D202F1E9B27D100966E63 /* IBLSocket.app */,
 				A442855F1EBF54CA00E6D780 /* server.app */,
+				26AD1F102294184000607090 /* IMClient.app */,
+				26AD1F252294184200607090 /* IMClientTests.xctest */,
+				26AD1F302294184200607090 /* IMClientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +379,60 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		26AD1F0F2294184000607090 /* IMClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26AD1F372294184200607090 /* Build configuration list for PBXNativeTarget "IMClient" */;
+			buildPhases = (
+				94AD71C5B659A48B6B1587B5 /* [CP] Check Pods Manifest.lock */,
+				26AD1F0C2294184000607090 /* Sources */,
+				26AD1F0D2294184000607090 /* Frameworks */,
+				26AD1F0E2294184000607090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMClient;
+			productName = IMClient;
+			productReference = 26AD1F102294184000607090 /* IMClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26AD1F242294184200607090 /* IMClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26AD1F3A2294184200607090 /* Build configuration list for PBXNativeTarget "IMClientTests" */;
+			buildPhases = (
+				26AD1F212294184200607090 /* Sources */,
+				26AD1F222294184200607090 /* Frameworks */,
+				26AD1F232294184200607090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26AD1F272294184200607090 /* PBXTargetDependency */,
+			);
+			name = IMClientTests;
+			productName = IMClientTests;
+			productReference = 26AD1F252294184200607090 /* IMClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		26AD1F2F2294184200607090 /* IMClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26AD1F3D2294184200607090 /* Build configuration list for PBXNativeTarget "IMClientUITests" */;
+			buildPhases = (
+				26AD1F2C2294184200607090 /* Sources */,
+				26AD1F2D2294184200607090 /* Frameworks */,
+				26AD1F2E2294184200607090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26AD1F322294184200607090 /* PBXTargetDependency */,
+			);
+			name = IMClientUITests;
+			productName = IMClientUITests;
+			productReference = 26AD1F302294184200607090 /* IMClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A442855E1EBF54CA00E6D780 /* server */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44285701EBF54CB00E6D780 /* Build configuration list for PBXNativeTarget "server" */;
@@ -305,6 +478,28 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Ahead;
 				TargetAttributes = {
+					26AD1F0F2294184000607090 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 4SND9369ME;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					26AD1F242294184200607090 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 4SND9369ME;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 26AD1F0F2294184000607090;
+					};
+					26AD1F2F2294184200607090 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 4SND9369ME;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 26AD1F0F2294184000607090;
+					};
 					A442855E1EBF54CA00E6D780 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = MHZFCBBQ75;
@@ -332,11 +527,37 @@
 			targets = (
 				A44D202E1E9B27D100966E63 /* IBLSocket */,
 				A442855E1EBF54CA00E6D780 /* server */,
+				26AD1F0F2294184000607090 /* IMClient */,
+				26AD1F242294184200607090 /* IMClientTests */,
+				26AD1F2F2294184200607090 /* IMClientUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		26AD1F0E2294184000607090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AD1F192294184200607090 /* Assets.xcassets in Resources */,
+				26AD1F1C2294184200607090 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26AD1F232294184200607090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26AD1F2E2294184200607090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A442855D1EBF54CA00E6D780 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +602,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		94AD71C5B659A48B6B1587B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E4AAE317D708CA95F1CA911B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +649,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		26AD1F0C2294184000607090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261515C4229419DF006571C6 /* IBLMessageDispatcher.m in Sources */,
+				261515C1229419DF006571C6 /* IBLClient.m in Sources */,
+				26AD1F172294184000607090 /* ViewController.m in Sources */,
+				261515C2229419DF006571C6 /* IBLComm.m in Sources */,
+				261515C5229419DF006571C6 /* IBLServer.m in Sources */,
+				261515C3229419DF006571C6 /* IBLConnectorManager.m in Sources */,
+				26AD1F1F2294184200607090 /* main.m in Sources */,
+				26AD1F142294184000607090 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26AD1F212294184200607090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AD1F2A2294184200607090 /* IMClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26AD1F2C2294184200607090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AD1F352294184200607090 /* IMClientUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A442855B1EBF54CA00E6D780 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,6 +705,7 @@
 				A41862B21EB322C400030C79 /* ViewController.m in Sources */,
 				A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */,
 				A41862C51EB341A800030C79 /* ServerController.m in Sources */,
+				26AD1F0B22940FE200607090 /* TCPViewController.m in Sources */,
 				A44285981EBF54E800E6D780 /* IBLConnectorManager.m in Sources */,
 				A41862CB1EB341D500030C79 /* ClientController.m in Sources */,
 				A442859C1EBF54E800E6D780 /* IBLServer.m in Sources */,
@@ -440,7 +715,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		26AD1F272294184200607090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26AD1F0F2294184000607090 /* IMClient */;
+			targetProxy = 26AD1F262294184200607090 /* PBXContainerItemProxy */;
+		};
+		26AD1F322294184200607090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26AD1F0F2294184000607090 /* IMClient */;
+			targetProxy = 26AD1F312294184200607090 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		26AD1F1A2294184200607090 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26AD1F1B2294184200607090 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		A442856C1EBF54CB00E6D780 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -468,6 +764,203 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		26AD1F382294184200607090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4049A06B33490A736501899 /* Pods-IMClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = IMClient/IMClient.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SND9369ME;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
+				INFOPLIST_FILE = IMClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.particle.IMClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		26AD1F392294184200607090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C817989E69578A0CEC8CCF /* Pods-IMClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = IMClient/IMClient.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SND9369ME;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
+				INFOPLIST_FILE = IMClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.particle.IMClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		26AD1F3B2294184200607090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SND9369ME;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = IMClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.particle.IMClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMClient.app/Contents/MacOS/IMClient";
+			};
+			name = Debug;
+		};
+		26AD1F3C2294184200607090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SND9369ME;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = IMClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.particle.IMClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMClient.app/Contents/MacOS/IMClient";
+			};
+			name = Release;
+		};
+		26AD1F3E2294184200607090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SND9369ME;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = IMClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.particle.IMClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = IMClient;
+			};
+			name = Debug;
+		};
+		26AD1F3F2294184200607090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4SND9369ME;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = IMClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibellar.particle.IMClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = IMClient;
+			};
+			name = Release;
+		};
 		A44285711EBF54CB00E6D780 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57EDF4ED80D17D7C1DC5B33F /* Pods-server.debug.xcconfig */;
@@ -633,6 +1126,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		26AD1F372294184200607090 /* Build configuration list for PBXNativeTarget "IMClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AD1F382294184200607090 /* Debug */,
+				26AD1F392294184200607090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26AD1F3A2294184200607090 /* Build configuration list for PBXNativeTarget "IMClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AD1F3B2294184200607090 /* Debug */,
+				26AD1F3C2294184200607090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26AD1F3D2294184200607090 /* Build configuration list for PBXNativeTarget "IMClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AD1F3E2294184200607090 /* Debug */,
+				26AD1F3F2294184200607090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A44285701EBF54CB00E6D780 /* Build configuration list for PBXNativeTarget "server" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

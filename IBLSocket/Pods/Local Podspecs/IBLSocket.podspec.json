@@ -9,7 +9,8 @@
     "simpossible": "ljfsteven@163.com"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "7.0",
+    "osx": "10.7"
   },
   "source": {
     "git": "https://github.com/simpossible/IBLSocket",

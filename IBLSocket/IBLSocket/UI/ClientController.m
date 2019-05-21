@@ -34,7 +34,8 @@
     [self.view addSubview:self.textview];
     
     self.client = [[IBLClient alloc] init];
-    [self.client findServerOnPort:43210];
+//    [self.client findServerOnPort:8877];
+    [self.client connectToserver:[IBLServer serverWithName:@"hehe" andIp:@"127.0.0.1" andPort:61101]];
     
     self.client.delegate = self;
 

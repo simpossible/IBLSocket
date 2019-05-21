@@ -13,7 +13,7 @@
  socket 通信协议
  */
 typedef struct  {
-    size_t len;//当前数据的总长度
+    int32_t len;//当前数据的总长度
     int8_t protoType;// 1.tcp 2.udp    
 }IBLSocketHeader;
 

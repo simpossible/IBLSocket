@@ -54,6 +54,9 @@
 - (int)connectToIp:(NSString *)ip atPort:(NSInteger)port{
     struct sockaddr_in addr = [IBLSocketAddr v4AddrForIp:ip andPort:port];
     int state = connect(_socket, (struct sockaddr *)&addr, addr.sin_len);
+    if (state == -1) {
+        perror("tcp 链接失败");
+    }
     return state;
 }
 
@@ -80,7 +83,7 @@
         if ([self.acceptThread isCancelled]) {
             [NSThread exit];
         }
-         struct sockaddr_in client;
+        struct sockaddr_in client;
         socklen_t leng = sizeof(client);
         int acc = accept(_socket, (struct sockaddr*)&client, &leng);
         IBLSocketConnector *connector = [IBLSocketConnector connectorForAddr:client andIndex:acc];
