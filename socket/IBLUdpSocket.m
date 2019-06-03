@@ -73,7 +73,8 @@
     IBLSocketHeader *header = malloc(headerlen);
     header->len = headerlen + data.length;
     header->protoType =2;
-    
+    header->version = iblsocketversion;
+    IBLSocketVerify(header)
     void * protocolData = malloc(header->len);
     memcpy(protocolData, header, headerlen);//拷贝头
     memcpy(protocolData+headerlen, [data bytes], data.length);

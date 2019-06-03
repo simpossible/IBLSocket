@@ -34,10 +34,11 @@
     [self.view addSubview:self.textview];
     
     self.client = [[IBLClient alloc] init];
-//    [self.client findServerOnPort:8877];
-    [self.client connectToserver:[IBLServer serverWithName:@"hehe" andIp:@"127.0.0.1" andPort:61101]];
     
     self.client.delegate = self;
+//    [self.client findServerOnPort:8877];
+    [self.client connectToserver:[IBLServer serverWithName:@"hehe" andIp:@"127.0.0.1" andPort:8877]];
+    
 
     
 //    self.stopButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 60, 60)];

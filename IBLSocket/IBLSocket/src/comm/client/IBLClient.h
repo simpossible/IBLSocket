@@ -28,6 +28,8 @@ typedef NS_ENUM(NSUInteger,IBLClientState) {
 @end
 
 
+typedef void (^IBLClientErrorCallBack)(NSError *error);
+
 
 @interface IBLClient : NSObject
 
@@ -49,6 +51,10 @@ typedef NS_ENUM(NSUInteger,IBLClientState) {
  @param name 他人显示的昵称
  */
 - (void)loginWithName:(NSString *)name;
+
+//- (void)sendTcpData:(NSData *)data;
+
+- (void)tcpSendData:(NSData *)data forCmd:(UInt32)cmd withCallBack:(IBLClientErrorCallBack)callBack;
 
 - (void)stop;
 @end

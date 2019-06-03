@@ -11,6 +11,7 @@
 #import "IBLUdpSocket.h"
 #import "IBLTcpSoket.h"
 #import "IBLSocketAddr.h"
+#import "IBLRequest.h"
 
 @interface IBLClient ()<IBLSocketProtocol>
 
@@ -29,6 +30,7 @@
 @property (nonatomic, assign) NSInteger recvServerUdpPort;
 
 @property (nonatomic, strong) NSMutableArray * servers;//发现的服务端
+
 
 @end
 
@@ -161,8 +163,7 @@
             NSLog(@"连接服务器失败");
             NSString *error = [NSString stringWithFormat:@"error is %s",strerror(state)];
         }
-    }
-   
+    }   
 }
 
 #pragma mark - 登录
@@ -184,6 +185,17 @@
     }
 }
 
+- (void)sendTcpData:(NSData *)data {
+    if (data) {
+        [self.tcpScokt sendData:data result:^(int code, NSString *msg) {
+            if (code == 0) {
+                //连接已断开
+                NSLog(@"error");
+            }
+        }];
+    }
+}
+
 #pragma mark - 停止
 - (void)stop {
     [self.udpSocket stop];
@@ -201,4 +213,7 @@
     [self.tcpScokt stop];
 }
 
+- (void)tcpSendData:(NSData *)data forCmd:(UInt32)cmd withCallBack:(IBLClientErrorCallBack)callBack {
+    
+}
 @end

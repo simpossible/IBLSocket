@@ -1,0 +1,10 @@
+syntax = "proto3";
+package tutorial;
+
+import "google/protobuf/timestamp.proto";
+
+message IBLBaseReq {    
+    uint32 app_id = 1; 
+    uint32 market_id = 2;
+    string sendName = 3;
+}

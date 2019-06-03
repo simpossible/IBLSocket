@@ -1,8 +1,16 @@
 PODS:
   - IBLSocket (0.0.1)
+  - SDWebImage (5.0.3):
+    - SDWebImage/Core (= 5.0.3)
+  - SDWebImage/Core (5.0.3)
 
 DEPENDENCIES:
   - IBLSocket (from `../socket`)
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
 
 EXTERNAL SOURCES:
   IBLSocket:
@@ -10,7 +18,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   IBLSocket: a440a82a1ab760cefdde718c9c60b9f0cbb54924
+  SDWebImage: d4f87d7d36c8a4d9f9459dc282e0caa057fdf935
 
-PODFILE CHECKSUM: d3db569bc29b617166311d11922a5811678a8bb0
+PODFILE CHECKSUM: c6c513317a295c5a085744658659ebe8cd090c8f
 
 COCOAPODS: 1.6.1

@@ -12,7 +12,12 @@
 		261515C3229419DF006571C6 /* IBLConnectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A442857E1EBF54E800E6D780 /* IBLConnectorManager.m */; };
 		261515C4229419DF006571C6 /* IBLMessageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285801EBF54E800E6D780 /* IBLMessageDispatcher.m */; };
 		261515C5229419DF006571C6 /* IBLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A44285821EBF54E800E6D780 /* IBLServer.m */; };
-		26AD1F0B22940FE200607090 /* TCPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F0A22940FE200607090 /* TCPViewController.m */; };
+		261515C92294F3AC006571C6 /* IMTCPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261515C72294F3AC006571C6 /* IMTCPViewController.m */; };
+		261515CA2294F3AC006571C6 /* IMTCPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261515C82294F3AC006571C6 /* IMTCPViewController.xib */; };
+		269AA5BF2296813D0022A8BD /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269AA5BE2296813D0022A8BD /* Protobuf.framework */; };
+		269AA5C5229681B30022A8BD /* im.proto in Sources */ = {isa = PBXBuildFile; fileRef = 269AA5C1229681B30022A8BD /* im.proto */; };
+		269AA5C6229681B30022A8BD /* Im.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 269AA5C3229681B30022A8BD /* Im.pbobjc.m */; };
+		269AA5C92296A2FC0022A8BD /* IBLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 269AA5C82296A2FB0022A8BD /* IBLRequest.m */; };
 		26AD1F142294184000607090 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F132294184000607090 /* AppDelegate.m */; };
 		26AD1F172294184000607090 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD1F162294184000607090 /* ViewController.m */; };
 		26AD1F192294184200607090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26AD1F182294184200607090 /* Assets.xcassets */; };
@@ -69,8 +74,15 @@
 		17C817989E69578A0CEC8CCF /* Pods-IMClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMClient/Pods-IMClient.release.xcconfig"; sourceTree = "<group>"; };
 		1940EE5B99A19BDE4EDFDBE1 /* libPods-server.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-server.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA4C20C57B819CEF61835F8 /* Pods-IBLSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBLSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBLSocket/Pods-IBLSocket.release.xcconfig"; sourceTree = "<group>"; };
-		26AD1F0922940FE200607090 /* TCPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCPViewController.h; sourceTree = "<group>"; };
-		26AD1F0A22940FE200607090 /* TCPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPViewController.m; sourceTree = "<group>"; };
+		261515C62294F3AC006571C6 /* IMTCPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMTCPViewController.h; sourceTree = "<group>"; };
+		261515C72294F3AC006571C6 /* IMTCPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMTCPViewController.m; sourceTree = "<group>"; };
+		261515C82294F3AC006571C6 /* IMTCPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IMTCPViewController.xib; sourceTree = "<group>"; };
+		269AA5BE2296813D0022A8BD /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
+		269AA5C1229681B30022A8BD /* im.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = im.proto; sourceTree = "<group>"; };
+		269AA5C3229681B30022A8BD /* Im.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Im.pbobjc.m; sourceTree = "<group>"; };
+		269AA5C4229681B30022A8BD /* Im.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Im.pbobjc.h; sourceTree = "<group>"; };
+		269AA5C72296A2FB0022A8BD /* IBLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBLRequest.h; sourceTree = "<group>"; };
+		269AA5C82296A2FB0022A8BD /* IBLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBLRequest.m; sourceTree = "<group>"; };
 		26AD1F102294184000607090 /* IMClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AD1F122294184000607090 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26AD1F132294184000607090 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -166,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6BE73DFF76DFD9EE36DA1A7 /* libPods-IBLSocket.a in Frameworks */,
+				269AA5BF2296813D0022A8BD /* Protobuf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +196,33 @@
 				17C817989E69578A0CEC8CCF /* Pods-IMClient.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		269AA56F2296760C0022A8BD /* pb */ = {
+			isa = PBXGroup;
+			children = (
+				269AA5C0229681B30022A8BD /* pbfiles */,
+				269AA5BE2296813D0022A8BD /* Protobuf.framework */,
+			);
+			path = pb;
+			sourceTree = SOURCE_ROOT;
+		};
+		269AA5C0229681B30022A8BD /* pbfiles */ = {
+			isa = PBXGroup;
+			children = (
+				269AA5C1229681B30022A8BD /* im.proto */,
+				269AA5C2229681B30022A8BD /* objc */,
+			);
+			path = pbfiles;
+			sourceTree = "<group>";
+		};
+		269AA5C2229681B30022A8BD /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				269AA5C3229681B30022A8BD /* Im.pbobjc.m */,
+				269AA5C4229681B30022A8BD /* Im.pbobjc.h */,
+			);
+			path = objc;
 			sourceTree = "<group>";
 		};
 		26AD1F112294184000607090 /* IMClient */ = {
@@ -234,12 +274,13 @@
 			children = (
 				A41862C91EB341D500030C79 /* ClientController.h */,
 				A41862CA1EB341D500030C79 /* ClientController.m */,
-				26AD1F0922940FE200607090 /* TCPViewController.h */,
-				26AD1F0A22940FE200607090 /* TCPViewController.m */,
 				A41862B01EB322C400030C79 /* ViewController.h */,
 				A41862B11EB322C400030C79 /* ViewController.m */,
 				A41862C31EB341A800030C79 /* ServerController.h */,
 				A41862C41EB341A800030C79 /* ServerController.m */,
+				261515C62294F3AC006571C6 /* IMTCPViewController.h */,
+				261515C72294F3AC006571C6 /* IMTCPViewController.m */,
+				261515C82294F3AC006571C6 /* IMTCPViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -290,6 +331,8 @@
 			children = (
 				A44285761EBF54E800E6D780 /* IBLClient.h */,
 				A44285771EBF54E800E6D780 /* IBLClient.m */,
+				269AA5C72296A2FB0022A8BD /* IBLRequest.h */,
+				269AA5C82296A2FB0022A8BD /* IBLRequest.m */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -346,6 +389,7 @@
 		A44D20311E9B27D100966E63 /* IBLSocket */ = {
 			isa = PBXGroup;
 			children = (
+				269AA56F2296760C0022A8BD /* pb */,
 				A41862AF1EB322C400030C79 /* UI */,
 				A44285731EBF54E800E6D780 /* src */,
 				A44D20491E9B27FD00966E63 /* include */,
@@ -571,6 +615,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				261515CA2294F3AC006571C6 /* IMTCPViewController.xib in Resources */,
 				A44D20421E9B27D200966E63 /* LaunchScreen.storyboard in Resources */,
 				A44D203F1E9B27D200966E63 /* Assets.xcassets in Resources */,
 				A44D203D1E9B27D100966E63 /* Main.storyboard in Resources */,
@@ -700,12 +745,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44285941EBF54E800E6D780 /* IBLClient.m in Sources */,
+				269AA5C92296A2FC0022A8BD /* IBLRequest.m in Sources */,
 				A442859A1EBF54E800E6D780 /* IBLMessageDispatcher.m in Sources */,
 				A44285961EBF54E800E6D780 /* IBLComm.m in Sources */,
 				A41862B21EB322C400030C79 /* ViewController.m in Sources */,
 				A44D20371E9B27D100966E63 /* AppDelegate.m in Sources */,
+				261515C92294F3AC006571C6 /* IMTCPViewController.m in Sources */,
+				269AA5C5229681B30022A8BD /* im.proto in Sources */,
 				A41862C51EB341A800030C79 /* ServerController.m in Sources */,
-				26AD1F0B22940FE200607090 /* TCPViewController.m in Sources */,
+				269AA5C6229681B30022A8BD /* Im.pbobjc.m in Sources */,
 				A44285981EBF54E800E6D780 /* IBLConnectorManager.m in Sources */,
 				A41862CB1EB341D500030C79 /* ClientController.m in Sources */,
 				A442859C1EBF54E800E6D780 /* IBLServer.m in Sources */,
@@ -788,6 +836,11 @@
 				DEVELOPMENT_TEAM = 4SND9369ME;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1",
+				);
 				INFOPLIST_FILE = IMClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -823,6 +876,11 @@
 				DEVELOPMENT_TEAM = 4SND9369ME;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1",
+				);
 				INFOPLIST_FILE = IMClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
@@ -1094,6 +1152,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SND9369ME;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pb",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
 				INFOPLIST_FILE = IBLSocket/Info.plist;
@@ -1113,6 +1175,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4SND9369ME;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pb",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/IBLSocket/include/Prefix.h";
 				INFOPLIST_FILE = IBLSocket/Info.plist;

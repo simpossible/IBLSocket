@@ -69,4 +69,6 @@ typedef void (^IBLCOMMErrorBlock)(IBLCommError code);
  */
 + (void)deCodeData:(NSData *)orgData succ:(IBLCOMMDataBlock)succ fail:(IBLCOMMErrorBlock)error;
 
++ (NSData*)tcpSendDataForData:(NSData *)data;
+
 @end

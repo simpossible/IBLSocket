@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ClientController.h"
 #import "ServerController.h"
-
+#import "IMTCPViewController.h"
 #import "IBLServer.h"
 #import "IBLClient.h"
 
@@ -48,7 +48,7 @@
 }
 
 - (void)toclient {
-    [self presentViewController:[[ClientController alloc] init] animated:YES completion:nil];
+    [self presentViewController:[[IMTCPViewController alloc] init] animated:YES completion:nil];
 }
 
 

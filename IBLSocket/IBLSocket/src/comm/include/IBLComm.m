@@ -56,6 +56,7 @@ NSString * const  COMMLOGIN = @"login";
 }
 
 
+
 + (void)deCodeData:(NSData *)orgData succ:(IBLCOMMDataBlock)succ fail:(IBLCOMMErrorBlock)error {
     if (succ) {
         size_t headerLen = sizeof(IBLCommHeader);
