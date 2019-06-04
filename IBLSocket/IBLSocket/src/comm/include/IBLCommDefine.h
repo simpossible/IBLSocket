@@ -36,6 +36,11 @@ typedef NS_ENUM(int8_t,IBLCommType) {
     IBLCommTypeVoice,
 };
 
+typedef NS_ENUM(UInt32,IBLClientErrorCode) {
+    IBLSocketOK = 0,
+    IBLClientErrorCodeTcpSendFail = 1,
+};
+
 
 @protocol IBLCommProtocol <NSObject>
 

@@ -21,6 +21,7 @@
 #import <sys/ioctl.h>
 #include <sys/sysctl.h>
 #import "IBLSocketUtil.h"
+#import "IBLSocketDefine.h"
 
 @implementation IBLSocketUtil
 + (NSArray *)getAllIPAddresses {
@@ -179,5 +180,7 @@
     
 }
 
-
+void IBLSocketVerify(IBLSocketHeader * header) {
+    header->verify = (uint16_t)(header->len + header->protoType + header->version);
+}
 @end

@@ -13,6 +13,8 @@
 #import "IBLSocketAddr.h"
 #import "IBLRequest.h"
 
+NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
+
 @interface IBLClient ()<IBLSocketProtocol>
 
 @property (nonatomic, strong) IBLUdpSocket * udpSocket;
@@ -32,6 +34,9 @@
 @property (nonatomic, strong) NSMutableArray * servers;//发现的服务端
 
 
+@property (nonatomic, strong) NSMutableDictionary * requests;
+
+
 @end
 
 @implementation IBLClient
@@ -46,6 +51,7 @@
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
         self.broadCastData = [IBLComm jsonDataForData:jsonData];
         self.servers = [NSMutableArray array];
+        self.requests = [NSMutableDictionary dictionaryWithCapacity:100];
     }
     return self;
 }
@@ -185,14 +191,9 @@
     }
 }
 
-- (void)sendTcpData:(NSData *)data {
+- (void)sendTcpData:(NSData *)data callBack:(IBLSocketError)callback{
     if (data) {
-        [self.tcpScokt sendData:data result:^(int code, NSString *msg) {
-            if (code == 0) {
-                //连接已断开
-                NSLog(@"error");
-            }
-        }];
+        [self.tcpScokt sendData:data result:callback];
     }
 }
 
@@ -214,6 +215,29 @@
 }
 
 - (void)tcpSendData:(NSData *)data forCmd:(UInt32)cmd withCallBack:(IBLClientErrorCallBack)callBack {
-    
+//   IBLRequest *req = [IBLRequest withData:data andCmd:cmd];
 }
+
+
+#pragma mark - 请求
+
+- (void)sendRequest:(IBLRequest *)req withCallBack:(IBLClientReqCallBack)callBack {
+    __weak typeof(self)wself = self;
+   
+    [self sendTcpData:req.sendData callBack:^(int code, NSString *msg) {
+        if (code == 0) {
+            [wself.requests setObject:req forKey:@(req.seq)];
+        }else {
+            if (callBack) {
+                callBack([NSError errorWithDomain:IBLErrorTCPSendError code:IBLClientErrorCodeTcpSendFail userInfo:@{@"userinfo":msg}],nil);
+            }
+        }
+    }];
+}
+
+- (void)sendPBRequest:(GPBMessage *)pb withCMD:(UInt32)cmd withCallBack:(IBLClientReqCallBack)callBack {
+    IBLRequest *req = [IBLRequest requestWithPB:pb andCmd:cmd];
+    [self sendRequest:req withCallBack:callBack];
+}
+
 @end

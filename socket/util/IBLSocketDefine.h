@@ -6,7 +6,11 @@
 //  Copyright © 2017年 Ahead. All rights reserved.
 //
 
+#ifndef KIBLSocketDefine
+#define KIBLSocketDefine 
+
 #import <Foundation/Foundation.h>
+
 
 static int16_t iblsocketversion = 1;
 
@@ -22,9 +26,9 @@ typedef struct  {
     uint16_t verify;//校验码
 }IBLSocketHeader;
 
-void IBLSocketVerify(IBLSocketHeader * header) {
-    header->verify = (uint16_t)(header->len + header->protoType + header->version);
-}
+extern void IBLSocketVerify(IBLSocketHeader * header);
+
+
 
 
 @class IBLSocketConnector;
@@ -58,3 +62,5 @@ typedef void (^IBLSocketError)(int code,NSString *msg);
 - (void)udpDataComes:(NSData *)data from:(IBLSocketAddr*)addr;
 
 @end
+
+#endif

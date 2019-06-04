@@ -38,8 +38,11 @@
     [req setAppId:1];
     [req setSendName:str];
     [req setMarketId:0];
-    NSData *data = [req data];
-    [self.client sendTcpData:data];
+
+//    [self.client sendTcpData:data];
+    [self.client sendPBRequest:req withCMD:1 withCallBack:^(NSError * _Nonnull error, IBLRequest * _Nonnull resp) {
+        NSLog(@"error");
+    }];
 }
 - (IBAction)udpSendClicked:(id)sender {
 }

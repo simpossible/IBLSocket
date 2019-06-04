@@ -22,7 +22,7 @@ static UInt32 gloableSeq = 0;
 
 @implementation IBLRequest
 
-+ (IBLRequest *)withData:(NSData *)data andCmd:(UInt32)cmd {
++ (IBLRequest *)requestWithData:(NSData *)data andCmd:(UInt32)cmd {
     IBLRequest *request = [[IBLRequest alloc] init];
     request.cmd = cmd;
     request.seq = ++ gloableSeq;
@@ -38,6 +38,15 @@ static UInt32 gloableSeq = 0;
     [muteData appendBytes:&aa length:4];//增加序列号
     [muteData appendData:data];
     self.sendData = muteData;
+}
+
++ (IBLRequest *)requestWithPB:(GPBMessage *)pb andCmd:(UInt32)cmd {
+    NSData *sendData = [pb data];
+    return  [self requestWithData:sendData andCmd:cmd];
+}
+
+- (void)clear {
+    self.sendData = nil;
 }
 
 @end

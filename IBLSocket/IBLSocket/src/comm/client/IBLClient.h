@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IBLServer.h"
+#import "IBLRequest.h"
 
 typedef NS_ENUM(NSUInteger,IBLClientState) {
     IBLClientStateNone,
@@ -16,6 +17,8 @@ typedef NS_ENUM(NSUInteger,IBLClientState) {
     IBLClientStateConnFail,
     IBLClientStateConnected,
 };
+
+typedef NSErrorDomain IBLSocketErrorDomain;
 
 @protocol IBLClientProtocol <IBLCommProtocol>
 
@@ -57,4 +60,8 @@ typedef void (^IBLClientErrorCallBack)(NSError *error);
 - (void)tcpSendData:(NSData *)data forCmd:(UInt32)cmd withCallBack:(IBLClientErrorCallBack)callBack;
 
 - (void)stop;
+
+- (void)sendRequest:(IBLRequest *)req withCallBack:(IBLClientReqCallBack)callBack;
+
+- (void)sendPBRequest:(GPBMessage *)pb withCMD:(UInt32)cmd withCallBack:(IBLClientReqCallBack)callBack;
 @end
