@@ -31,14 +31,24 @@ static UInt32 gloableSeq = 0;
 }
 
 - (void)generalSenDataWithData:(NSData *)data {
-    NSMutableData *muteData = [NSMutableData dataWithCapacity:data.length + 4];
-    int cmd = self.cmd;
-    int aa = self.seq;
-    [muteData appendBytes:&cmd length:4];//增加命令号
-    [muteData appendBytes:&aa length:4];//增加序列号
+    NSMutableData *muteData = [NSMutableData dataWithCapacity:data.length + 8];
+    UInt32 cmd = self.cmd;
+    UInt32 aa = self.seq;
+    [self appendInt:cmd toData:muteData];//增加命令号
+    [self appendInt:aa toData:muteData];//增加序列号
     [muteData appendData:data];
     self.sendData = muteData;
 }
+
+- (void)appendInt:(UInt32)value toData:(NSMutableData *)data{
+    Byte byte[4] = {};
+    byte[0] =  (Byte) ((value>>24) & 0xFF);
+    byte[1] =  (Byte) ((value>>16) & 0xFF);
+    byte[2] =  (Byte) ((value>>8) & 0xFF);
+    byte[3] =  (Byte) (value & 0xFF);
+    [data appendBytes:byte length:4];
+}
+
 
 + (IBLRequest *)requestWithPB:(GPBMessage *)pb andCmd:(UInt32)cmd {
     NSData *sendData = [pb data];
