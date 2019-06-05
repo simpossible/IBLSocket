@@ -36,6 +36,8 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
 
 @property (nonatomic, strong) NSMutableDictionary * requests;
 
+@property (nonatomic) dispatch_queue_t sendMsgQueue;
+
 
 @end
 
@@ -53,6 +55,7 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
         self.servers = [NSMutableArray array];
         self.requests = [NSMutableDictionary dictionaryWithCapacity:100];
         self.recvServerUdpPort = 9929;
+        self.sendMsgQueue = dispatch_queue_create("client_send_data", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
@@ -62,6 +65,7 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
     self.broadCastPort = port;
     if (!self.udpSocket) {
         self.udpSocket = [[IBLUdpSocket alloc] init];
+        [self.udpSocket setSendDataQueue:self.sendMsgQueue];
         [self.udpSocket setEnableBroadCast:YES];
         
         NSInteger recvServerport = port +1;
@@ -94,24 +98,23 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
 - (void)udpDataComes:(NSData *)data from:(IBLSocketAddr *)addr{
     
     NSLog(@"the data from is %@ %ld",addr.ip,addr.port);
-    [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader commheader) {
-        if (commheader.type == IBLCommTypeJson) {
-            NSError *error;
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:finaldata options:NSJSONReadingAllowFragments error:&error];
-            if (!dic) {
-                return ;
-            }
-            [self dealUpdJsonMessage:dic andMessageSender:addr];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                if ([self.delegate respondsToSelector:@selector(recvBroadast:)]) {
-                    [self.delegate recvBroadast:[NSString stringWithFormat:@"%@",dic]];
-                }
-            });
-            
-        }
-    } fail:^(IBLCommError code) {
-        
-    }];
+//    [IBLComm deCodeData:data succ:^(NSData *finaldata, IBLCommHeader commheader) {
+//        if (commheader.type == IBLCommTypeJson) {
+//            NSError *error;
+//            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:finaldata options:NSJSONReadingAllowFragments error:&error];
+//            if (!dic) {
+//                return ;
+//            }
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                if ([self.delegate respondsToSelector:@selector(recvBroadast:)]) {
+//                    [self.delegate recvBroadast:[NSString stringWithFormat:@"%@",dic]];
+//                }
+//            });
+//
+//        }
+//    } fail:^(IBLCommError code) {
+//
+//    }];
 }
 
 
@@ -120,6 +123,7 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
 - (void)initialTcpSocket {
     if (!self.tcpScokt) {
         self.tcpScokt = [[IBLTcpSoket alloc] init];
+        [self.tcpScokt setSendDataQueue:self.sendMsgQueue];
     }
 }
 
@@ -151,7 +155,7 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
 
 - (void)sendUDPData:(NSData *)data callBack:(IBLSocketError)callback {
     if (data) {
-        [self.udpSocket sendData:data ToIp:@"" atPort:9929];
+        [self.udpSocket sendData:data ToIp:@"" atPort:9929 callBack:callback];
     }
 }
 
@@ -207,14 +211,20 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
 - (void)sendUDPRequest:(IBLRequest *)req withCallBack:(IBLClientReqCallBack)callBack {
     __weak typeof(self)wself = self;
     
-    [self sendTcpData:req.sendData callBack:^(int code, NSString *msg) {
+    [self sendUDPData:req.sendData callBack:^(int code, NSString *msg) {
         if (code == 0) {
             [wself.requests setObject:req forKey:@(req.seq)];
         }else {
             if (callBack) {
-                callBack([NSError errorWithDomain:IBLErrorTCPSendError code:IBLClientErrorCodeTcpSendFail userInfo:@{@"userinfo":msg}],nil);
+                callBack([NSError errorWithDomain:IBLErrorTCPSendError code:IBLClientErrorCodeTcpSendFail userInfo:@{@"userinfo":msg.length == 0 ? @"" : msg}],nil);
             }
         }
     }];
+    
+}
+
+- (void)sendUDPPBRequest:(GPBMessage *)pb withCMD:(UInt32)cmd withCallBack:(IBLClientReqCallBack)callBack {
+    IBLRequest *req = [IBLRequest requestWithPB:pb andCmd:cmd];
+    [self sendUDPRequest:req withCallBack:callBack];
 }
 @end

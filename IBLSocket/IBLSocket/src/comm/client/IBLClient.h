@@ -63,7 +63,20 @@ typedef void (^IBLClientErrorCallBack)(NSError *error);
 
 - (void)sendRequest:(IBLRequest *)req withCallBack:(IBLClientReqCallBack)callBack;
 
+/**
+ 发送pb 与命令号
+ 使用 upd 发送命令 与数据
+ @param pb google protobuf
+ @param cmd 命令号
+ */
 - (void)sendPBRequest:(GPBMessage *)pb withCMD:(UInt32)cmd withCallBack:(IBLClientReqCallBack)callBack;
+
+/**
+ 使用 upd 发送命令 与数据
+ @param pb google protobuf
+ @param cmd 命令号
+ */
+- (void)sendUDPPBRequest:(GPBMessage *)pb withCMD:(UInt32)cmd withCallBack:(IBLClientReqCallBack)callBack;
 
 
 @end
