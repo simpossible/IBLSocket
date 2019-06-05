@@ -181,6 +181,6 @@
 }
 
 void IBLSocketVerify(IBLSocketHeader * header) {
-    header->verify = (uint16_t)(header->len + header->protoType + header->version);
+    header->verify = (uint16_t)(header->len | (header->protoType << 8) | (header->version << 4));
 }
 @end

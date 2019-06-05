@@ -52,6 +52,7 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
         self.broadCastData = [IBLComm jsonDataForData:jsonData];
         self.servers = [NSMutableArray array];
         self.requests = [NSMutableDictionary dictionaryWithCapacity:100];
+        self.recvServerUdpPort = 9929;
     }
     return self;
 }
@@ -78,28 +79,16 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
     self.clientState = IBLClientStateFindingServer;
 }
 
-- (NSData *)heartData {
-    static int clientcount = 0;
-    clientcount ++;
-    NSDictionary *dic = @{
-                          @"key":COMMLOOKFORSERVER,
-                          @"count":@(clientcount),
-                          @"port":@(self.recvServerUdpPort)
-                          };
-    
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
-    return [IBLComm jsonDataForData:jsonData];
-}
 
-- (void)toBroadCast {
-    int state =  [self.udpSocket sendData:[self heartData] ToIp:nil atPort:self.broadCastPort];    
-    
-    if (state == 0) {
-        if ([self.delegate respondsToSelector:@selector(toLogMsg:)]) {
-            [self.delegate toLogMsg:[NSString stringWithFormat:@"客户端发送数据成功 len %ld",self.broadCastData.length]];
-        }
-    }
-}
+//- (void)toBroadCast {
+//    int state =  [self.udpSocket sendData:[self heartData] ToIp:nil atPort:self.broadCastPort];    
+//    
+//    if (state == 0) {
+//        if ([self.delegate respondsToSelector:@selector(toLogMsg:)]) {
+//            [self.delegate toLogMsg:[NSString stringWithFormat:@"客户端发送数据成功 len %ld",self.broadCastData.length]];
+//        }
+//    }
+//}
 
 
 - (void)udpDataComes:(NSData *)data from:(IBLSocketAddr *)addr{
@@ -125,26 +114,6 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
     }];
 }
 
-/**
- *  udp 连接逻辑
- */
-- (void)dealUpdJsonMessage:(NSDictionary *)info andMessageSender:(IBLSocketAddr *)senderAddr{
-    NSString *key = info[COMMMODULEKEY];
-    if ([key isEqualToString:COMMSERVERHERE]) {//服务端发回自己的消息
-        
-        //停止广播进入tcp 连接状态
-        [self.broadCastTimer invalidate];
-        self.broadCastTimer = nil;
-        NSInteger port = [info[@"port"] integerValue];
-        NSString *name = info[@"name"]?:@"";
-        
-        IBLServer *server = [IBLServer serverWithName:name andIp:senderAddr.ip andPort:port];
-        
-        if ([self.delegate respondsToSelector:@selector(serverFinded:)]) {
-            [self.delegate serverFinded:server];
-        }
-    }
-}
 
 #pragma mark - 开始进行tcp 连接
 
@@ -172,30 +141,23 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
     }   
 }
 
-#pragma mark - 登录
-
-- (void)loginWithName:(NSString *)name {
-    if (self.clientState == IBLClientStateConnected) {
-        NSDictionary *loginDic = @{
-                                   @"key":@"login",
-                                   @"name":name?:@"",
-                                   };
-        NSData *logData = [IBLComm jsonDataForJsonObj:loginDic dest:0];
-        [self.tcpScokt sendData:logData result:^(int code, NSString *msg) {
-            if (code == 0) {
-                //连接已断开
-            }
-        }];
-        
-        
-    }
-}
+#pragma mark - 数据发送
 
 - (void)sendTcpData:(NSData *)data callBack:(IBLSocketError)callback{
     if (data) {
         [self.tcpScokt sendData:data result:callback];
     }
 }
+
+- (void)sendUDPData:(NSData *)data callBack:(IBLSocketError)callback {
+    if (data) {
+        [self.udpSocket sendData:data ToIp:@"" atPort:9929];
+    }
+}
+
+
+
+
 
 #pragma mark - 停止
 - (void)stop {
@@ -240,4 +202,19 @@ NSString * const IBLErrorTCPSendError = @"IBLErrorTCPSendError";
     [self sendRequest:req withCallBack:callBack];
 }
 
+#pragma mark - udp 请求
+
+- (void)sendUDPRequest:(IBLRequest *)req withCallBack:(IBLClientReqCallBack)callBack {
+    __weak typeof(self)wself = self;
+    
+    [self sendTcpData:req.sendData callBack:^(int code, NSString *msg) {
+        if (code == 0) {
+            [wself.requests setObject:req forKey:@(req.seq)];
+        }else {
+            if (callBack) {
+                callBack([NSError errorWithDomain:IBLErrorTCPSendError code:IBLClientErrorCodeTcpSendFail userInfo:@{@"userinfo":msg}],nil);
+            }
+        }
+    }];
+}
 @end

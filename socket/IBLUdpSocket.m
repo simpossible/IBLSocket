@@ -81,7 +81,7 @@
     
     struct sockaddr_in addr = [IBLSocketAddr v4BoradCastAddrForPort:port];
    
-    NSData *protocoldt = [NSData dataWithBytes:protocolData length:header->len];
+//    NSData *protocoldt = [NSData dataWithBytes:protocolData length:header->len];
     
     size_t state = sendto(_socket, protocolData, header->len, 0, (struct sockaddr*)&addr, sizeof(addr));
     
@@ -94,6 +94,39 @@
     free(header);
     free(protocolData);
     return 0;
+}
+
+- (void)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port callBack:(IBLSocketError)callBack {
+    __weak typeof(self)wself = self;
+    dispatch_async(self.dataSendQueue, ^{
+        int headerlen = sizeof(IBLSocketHeader);
+        IBLSocketHeader *header = malloc(headerlen);
+        header->len = headerlen + data.length;
+        header->protoType =2;
+        header->version = iblsocketversion;
+        IBLSocketVerify(header);
+        void * protocolData = malloc(header->len);
+        memcpy(protocolData, header, headerlen);//拷贝头
+        memcpy(protocolData+headerlen, [data bytes], data.length);
+        
+        struct sockaddr_in addr = [IBLSocketAddr v4BoradCastAddrForPort:port];
+        
+//        NSData *protocoldt = [NSData dataWithBytes:protocolData length:header->len];
+        
+        size_t state = sendto(wself.socket, protocolData, header->len, 0, (struct sockaddr*)&addr, sizeof(addr));
+        
+        int result = 0;
+        NSString *erro ;
+        if (state != header->len) {
+            erro = [NSString stringWithFormat:@"result:%ld,msg:%s",state,strerror((int)state)];
+            result = 2;
+        }
+        free(header);
+        free(protocolData);
+        if (callBack) {
+            callBack(result,erro);
+        }
+    });
 }
 
 - (int)sendData:(NSData *)data toAddr:(IBLSocketAddr *)addr {

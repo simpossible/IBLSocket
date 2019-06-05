@@ -23,6 +23,8 @@
 
 @property (nonatomic, assign) NSInteger currentBindedPort;
 
+@property (nonatomic) dispatch_queue_t dataSendQueue;
+
 
 @end
 
@@ -112,4 +114,11 @@
         [self.delegate socketError:IBLSocketErrorCodeUDPRecvSizeError message:@"UDP：收到包与实际大小不匹配"];
     }
 }
+
+- (void)setSendDataQueue:(dispatch_queue_t)queue {
+    self.dataSendQueue = queue;
+}
+
+- (void)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port callBack:(IBLSocketError)callBack {}
+
 @end

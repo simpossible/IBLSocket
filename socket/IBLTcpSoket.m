@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSThread *recvThread;
 
-@property (nonatomic) dispatch_queue_t tcpSendDataQueue;
+- (void)setDataSendQueue:(dispatch_queue_t)dataSendQueue;
 
 @end
 
@@ -30,8 +30,8 @@
 }
 
 - (void)initialDataSendQueue {
-    if (!self.tcpSendDataQueue) {
-        self.tcpSendDataQueue = dispatch_queue_create("tcp_send_data", DISPATCH_QUEUE_SERIAL);
+    if (!self.dataSendQueue) {
+        self.dataSendQueue = dispatch_queue_create("tcp_send_data", DISPATCH_QUEUE_SERIAL);
     }
 }
 
@@ -47,7 +47,7 @@
 
 - (void)sendData:(NSData *)data ToConnector:(IBLSocketConnector *)connctor result:(IBLSocketError)result{
     [self initialDataSendQueue];
-    dispatch_async(self.tcpSendDataQueue, ^{
+    dispatch_async(self.dataSendQueue, ^{
         int headerlen = sizeof(IBLSocketHeader);
         IBLSocketHeader *header = malloc(headerlen);
         header->len = headerlen + data.length;
@@ -84,7 +84,8 @@
 
 - (void)sendData:(NSData *)data result:(IBLSocketError)result{
     [self initialDataSendQueue];
-    dispatch_async(self.tcpSendDataQueue, ^{
+    __weak typeof(self)wself = self;
+    dispatch_async(self.dataSendQueue, ^{
         int headerlen = sizeof(IBLSocketHeader);
         IBLSocketHeader *header = malloc(headerlen);
         header->len = headerlen + data.length;
@@ -95,7 +96,7 @@
         memcpy(protocolData, header, headerlen);//拷贝头
         memcpy(protocolData+headerlen, [data bytes], data.length);
         
-        ssize_t size = send(_socket, protocolData,header->len, 0);
+        ssize_t size = send(wself.socket, protocolData,header->len, 0);
         if (size < 0) {
             if (result) {
                 result(1,[NSString stringWithFormat:@"%s",strerror((int)size)]);

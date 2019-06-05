@@ -19,6 +19,10 @@
     NSInteger _currentBindedPort;
 }
 
+@property (nonatomic, assign, readonly) int socket;
+
+@property (nonatomic, readonly) dispatch_queue_t dataSendQueue;
+
 @property (nonatomic, weak) id<IBLSocketProtocol> delegate;
 
 - (instancetype)init;
@@ -97,6 +101,15 @@
  */
 - (int)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port;
 
+/**
+ 异步点对点发送数据
+ 目前支持协议 udp
+ @param data data
+ @param ip 目标ip  如果ip 为nil 或者 @“” 那么会广播数据。广播数据 需要开启广播选项 setEnableBroadCast
+ @param port 数据发送端口
+ */
+- (void)sendData:(NSData *)data ToIp:(NSString *)ip atPort:(NSInteger)port callBack:(IBLSocketError)callBack;
+
 
 /**
  udp 点对点发送数据
@@ -121,5 +134,8 @@
 
 
 - (void)reportError:(IBLSocketErrorCode)code msg:(NSString *)msg;
+
+/**设置异步发送的队列*/
+- (void)setSendDataQueue:(dispatch_queue_t)queue;
 
 @end

@@ -64,4 +64,6 @@ typedef void (^IBLClientErrorCallBack)(NSError *error);
 - (void)sendRequest:(IBLRequest *)req withCallBack:(IBLClientReqCallBack)callBack;
 
 - (void)sendPBRequest:(GPBMessage *)pb withCMD:(UInt32)cmd withCallBack:(IBLClientReqCallBack)callBack;
+
+
 @end
